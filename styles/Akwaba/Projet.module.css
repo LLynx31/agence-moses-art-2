@@ -1,0 +1,250 @@
+.layout_section_projets {
+    display: flex;
+    flex-direction: column;
+    margin: auto;
+    margin-top: 150px;
+    position: relative;
+    
+}
+
+.quiz {
+    color: #000;
+font-family: 'Montserrat';
+font-size: 15px;
+font-style: normal;
+font-weight: 400;
+line-height: normal;
+margin-left: 170px;
+width: auto;
+}
+
+.section_title {
+    color: #000;
+    font-family: 'Montserrat';
+font-size: 28px;
+font-style: normal;
+font-weight: 600;
+line-height: normal;
+margin-left: 170px;
+}
+
+.projet_range {
+    display: flex;
+    margin: auto;
+    flex-wrap: wrap;
+    justify-content:center ;
+
+}
+
+
+.layout_projet {
+    width: 300px;
+    height: 400px;
+    margin-left: 20px;
+    margin-right: 20px;
+    border-radius: 20px;
+    /*background-image: url('/assets/projet2.png');*/
+    background-size: cover;
+    transition: all 500ms;
+    margin-top: 50px;
+    box-shadow: 0px 0px 30px rgba(0, 0, 0, 0.3);
+}
+
+.layout_projet:hover {
+    background-size: contain;
+    scale: 1.05;
+}
+
+.layout_projet div {
+    width: 100%;
+    height: 100%;
+    text-align: center;
+    border-radius: 20px;
+    background: rgba(0, 0, 0, 0.53);
+    opacity: 0;
+    transition: opacity 500ms;
+    
+    padding-top: 150px;
+}
+
+.layout_projet div:hover {
+    opacity: 1;
+}
+
+.layout_projet h1 {
+    color: #FFF;
+    font-family: 'Montserrat';
+    font-size: 18px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: normal;
+}
+
+.layout_projet a {
+    display: block;
+    color: #21FBFB;
+    font-family: 'Montserrat';
+    font-size: 18px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: normal;
+    border-bottom: 1px solid #21FBFB;
+    text-decoration: none;
+    width: -moz-fit-content;
+    width: fit-content;
+    margin: auto;
+}
+
+
+
+.projet_range2 {
+    margin-top: 100px;
+}
+
+
+.layout_section_projets button {
+    border-radius: 50px;
+border: 2px solid #000;
+background: #FFF;
+width: 150px;
+display: flex;
+margin: auto;
+margin-top: 50px;
+padding: 15px 30px;
+justify-content: space-between;
+}
+
+
+.illustration1 {
+    position: absolute;
+    left: 500px;
+    top: 20px;
+}
+
+.layout_detail {
+    display: flex;
+    width: -moz-fit-content;
+    width: fit-content;
+    margin: auto;
+    margin-top: 50px;
+    padding: 30px;
+    border: 1px solid gray;
+    border-radius: 10px;
+}
+
+.detail_text {
+    display: flex;
+    flex-direction: column;
+    width: 500px;
+}
+
+.detail_text p, .detail_text h1 {
+    width: 500px;
+    color: #000;
+    font-family: Montserrat;
+    font-style: normal;
+    line-height: 142.4%; /* 19.936px */
+}
+
+.detail_text h1 {
+    font-weight: 600;
+    font-size: 25px;
+}
+
+.detail_text p {
+    font-size: 18px;
+    margin: 0;
+    padding: 8px;
+}
+
+
+.detail_img {
+    border-radius: 10px;
+    background-size: contain;
+    width: 400px;
+    height: 300px;
+}
+
+
+@media screen and (max-width:1024px) {
+    .detail_text {
+        display: flex;
+        flex-direction: column;
+        width: 300px;
+    }
+
+    .detail_img {
+        width: 400px;
+        height: 300px;
+    }
+
+    .detail_text p, .detail_text h1 {
+        width: 300px;
+    }
+}
+
+
+
+
+
+@media screen and (max-width:768px) {
+    .quiz, .section_title {
+        width: -moz-fit-content;
+        width: fit-content;
+        margin: auto;
+    }
+
+    .illustration1 {
+        left: 50px;
+        top: 10px;
+    }
+
+}
+
+
+
+@media screen and (max-width:425px) {
+    .layout_section_projets {
+        align-items: center;
+        margin-top: 0px;
+    }
+
+    .quiz {
+        margin: auto;
+    }
+
+    .section_title {
+        margin: auto;
+        margin-top: 20px;
+    }
+
+    .projet_range {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .projet_range2 {
+        margin-top: 0;
+    }
+
+    .layout_projet {
+        width: 280px;
+    }
+
+
+    .layout_detail {
+        display: flex;
+        flex-direction: column-reverse;
+        width: 300px;
+        margin: auto;
+        margin-top: 50px;
+    }
+
+    .detail_img {
+        width: 240px;
+        height: 410px;
+    }
+
+}

@@ -1,0 +1,76 @@
+.layout_footer {
+    display: flex;
+    flex-direction: column;
+    margin-top: 60px;
+    background: rgba(15, 131, 131, 0.03);
+    width:100%
+}
+
+.layout_info {
+    margin-top: 80px;
+    display: flex;
+    justify-content: space-evenly;
+ }
+
+.contact, .localiation, .suivez_nous{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.title {
+    color: #0F8383;
+font-family: Montserrat;
+font-size: 20px;
+font-style: normal;
+font-weight: 600;
+line-height: normal;
+}
+
+.number {
+    color: #000;
+font-family: Montserrat;
+font-size: 18px;
+font-style: normal;
+font-weight: 500;
+line-height: normal;
+}
+
+.lieu {
+    color: #000;
+font-family: Montserrat;
+font-size: 18px;
+font-style: normal;
+font-weight: 500;
+line-height: normal;
+}
+
+
+.layout_copyright {
+    background: #0F8383;
+    padding: 10px;
+    margin-top: 10px;
+}
+
+.copyright {
+    color: #FFF;
+font-family: Montserrat;
+font-size: 15px;
+font-style: normal;
+font-weight: 600;
+line-height: normal;
+text-align: center;
+}
+
+@media screen and (max-width:425px) {
+    .layout_info {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .logo {
+        width: 125px;
+        height: 100px;
+        margin: auto;
+    }
+}

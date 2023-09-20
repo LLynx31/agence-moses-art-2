@@ -1,0 +1,235 @@
+.Banner {
+    height: 90vh;
+    background-image: url('../../public/assets/bannerService.svg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    z-index: 0;
+}
+
+.Banner_title {
+    padding-top: 200px;
+    color: #FFF;
+    font-family: Montserrat;
+    font-size: 64px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: 130%; /* 83.2px */
+    letter-spacing: 1.28px;
+    padding-left: 400px;
+}
+
+.layout_section_service {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    margin: auto;
+    margin-top: 100px;
+    width: 90%;
+}
+
+.section_service_title {
+    color: #000;
+text-align: center;
+font-family: 'Montserrat';
+font-size: 20px;
+font-style: normal;
+font-weight: 700;
+line-height: 120%; /* 57.6px */
+text-transform: capitalize;
+margin-bottom: 0px;
+}
+
+.section_service_title span {
+    color: #F6AA06;
+}
+
+.layout_section_service .section_service_description {
+    color: rgba(0, 0, 0, 0.80);
+text-align: center;
+font-family: Montserrat;
+font-size: 18px;
+font-style: normal;
+font-weight: 500;
+line-height: 160%; /* 38.4px */
+letter-spacing: 0.48px;
+}
+
+.illustration_service {
+width: 100px;
+height: 100px;
+background-color: #F6AA06;;
+border: 1px solid #F6AA06;;
+border-radius: 100%;
+}
+
+
+.service_title {
+    color: #000;
+font-family: 'Montserrat';
+font-size: 22px;
+font-style: normal;
+font-weight: 600;
+line-height: 120%; /* 28.8px */
+margin-left: 10px;
+}
+
+.layout_service p {
+    color: rgba(0, 0, 0, 0.50);
+font-family: 'Montserrat';
+font-size: 16px;
+font-style: normal;
+font-weight: 500;
+line-height: 150%; /* 27px */
+margin-top: 10px;
+}
+
+
+.layout_service {
+    border-radius: 10px;
+    background: #FFF;
+    box-shadow: 0px 0px 40px 0px rgba(0, 0, 0, 0.10);
+    width: 500px;
+    padding: 25px;
+    position: relative;
+    z-index: 1;
+    cursor: pointer;
+}
+
+.enteteService {
+    display: flex;
+    align-items: center;
+}
+
+.layout_services {
+    margin-top: 20px;
+    display: grid;
+    grid-template-columns: 500px 500px;
+    gap: 50px;
+    margin: auto
+}
+
+
+.group3 {
+    position: absolute;
+    top: 50px;
+    right: -15px;
+}
+
+
+.illustrationRond, .illustrationCroixOrange, .illustrationCroixVert,.illustrationRond1, .illustrationCroixOrange1, .illustrationCroixVert1, .illustrationRond2, .illustrationCroixOrange2, .illustrationCroixVert2, .illustrationRond3, .illustrationCroixOrange3, .illustrationCroixVert3, .illustrationRond4, .illustrationCroixOrange4, .illustrationCroixVert4, .illustrationRond5, .illustrationCroixOrange5, .illustrationCroixVert5{
+    position: absolute;
+    z-index: 0;
+}
+
+
+.illustrationRond {
+    left: 50px;
+    top: 300px
+}
+
+.illustrationCroixOrange {
+    right: 10px;
+    top: 300px
+}
+
+.illustrationCroixVert {
+    left: 100px;
+    top: 600px
+}
+
+.illustrationRond1 {
+    right: 60px;
+    top: 110px
+}
+
+.illustrationCroixOrange1 {
+    left: 90px;
+    top: 100px
+}
+
+.illustrationCroixVert1 {
+    right: 80px;
+    top: 500px
+}
+
+.illustrationCroixOrange1 {
+    left: 450px;
+    top: 730px
+}
+
+.illustrationCroixVert1{
+    right: 450px;
+    top: 730px
+} 
+.illustrationRond2{
+    right: 2px;
+    top: 730px
+
+} .illustrationCroixOrange2{
+    left: 800px;
+    top: 690px
+
+} .illustrationCroixVert2{
+    right: 80px;
+    top: 600px
+
+} 
+.illustrationRond3{
+    left: 350px;
+    top: 90px
+    
+} 
+.illustrationCroixOrange3{
+
+    left: 30px;
+    top: 90px
+} 
+.illustrationCroixVert3{
+    left: 250px;
+    bottom: -15px
+
+} .illustrationRond4{
+    right: 350px;
+    top: 90px
+
+} .illustrationCroixOrange4{
+    right: 350px;
+    top: 400px
+
+} 
+
+
+@media screen and (max-width:425px) {
+    .layout_services {
+        grid-template-columns: 300px;
+    } 
+
+    .layout_service {
+        width: 300px;
+    }
+
+    .service_title {
+    width: 150px;
+    }
+
+
+    .Banner {
+        height: 90vh;
+    }
+    
+    .Banner_title {
+        padding-top: 30vh;
+        margin-left: 10px;
+        font-size: 40px;
+        padding-left: 10px;
+    }
+
+
+
+    .illustrationCroixOrange1, .illustrationRond3, .illustrationCroixOrange2{
+        display: none;
+    }
+    
+}

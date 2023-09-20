@@ -1,0 +1,162 @@
+.banner {
+    width: 100%;
+    padding: 20px 100px;
+    display: flex;
+    align-items: center;
+    height: 60vh;
+}
+
+.banner_left {
+    width: 80%;
+}
+
+.rectangle {
+    width: 130px;
+    height: 16px;
+    flex-shrink: 0;
+    background: #F6AA06;
+    position: absolute;
+    z-index: 0;
+    left: -20px;
+    bottom: 0;
+}
+
+.titre_banner {
+    color: #000;
+    font-family: Montserrat;
+    font-size: x-large;
+    font-style: normal;
+    font-weight: 600;
+    line-height: normal;
+    z-index: 1;
+    position: relative;
+}
+
+.layout_titre_banner {
+    position: relative;
+    margin-top: 50px;
+}
+
+
+.description_banner{
+    color: #000;
+    font-family: Montserrat;
+    font-size: 40px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+}
+
+.description_banner span{
+    font-weight: 600; 
+}
+
+.description{
+    width: 100%;
+    padding: 50px 30px;
+    background-color:#0F8383;
+}
+
+.titre_description {
+    color: #FFF;
+    font-family: Montserrat;
+    font-size: 40px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 161%;
+    text-align: center;
+    margin: 0;
+}
+
+.titre_description span {
+    font-weight: 600;
+    text-align: center;
+    
+}
+
+.description_description {
+    color: #FFF;
+    text-align: center;
+    font-family: Montserrat;
+    font-size: large;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 161%; /* 38.64px */
+    width: 700px;
+    margin: auto;
+    margin-top: 15px;
+}
+
+.service {
+    width: 700px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 40px;
+    box-shadow: 0px 0px 30px 0px rgba(0, 0, 0, 0.25);
+    margin-top: 50px;
+    margin-bottom: 50px;
+}
+
+
+
+.service_name {
+    color: #000;
+    font-family: Montserrat;
+    font-size: larger;
+    font-style: normal;
+    font-weight: 600;
+    line-height: normal;
+    margin: auto;
+    width: -moz-fit-content;
+    width: fit-content;
+    text-align: center;
+}
+
+.avant_propos {
+    width: 900px;
+    margin: auto;
+}
+
+.avant_propos_1 {
+    text-align: center;
+    color: #000;
+    text-align: center;
+    font-family: Montserrat;
+    font-size: large;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+    margin-bottom: 30px;
+    margin-top: 20px;
+}
+
+.avant_propos_2 {
+    text-align: center;
+    color: #000;
+    text-align: center;
+    font-family: Montserrat;
+    font-size: large;
+    font-style: normal;
+    font-weight: 700;
+    line-height: normal;
+}
+
+
+.offre {
+    width: 500px;
+}
+
+.offre_head {
+    width: 100%;
+    background-color: black;
+    padding: 30px 50px;
+    color: #FFF;
+    font-family: Montserrat;
+    font-size: 24px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: normal;
+    text-align: center;
+}
+

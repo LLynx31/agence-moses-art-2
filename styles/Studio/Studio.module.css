@@ -1,0 +1,182 @@
+.Banner {
+    background-color: #000;
+    height: 60vh;
+    padding-top: 200px;
+    color: #FFF;
+    color: #FFF;
+    text-align: center;
+    font-family: Montserrat;
+    font-size: 30px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: normal;
+}
+
+.Banner span {
+    font-size: 40px;
+    color: #F6AA06; 
+}
+
+
+.layoutProjet {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 30px;
+    width: 100%;
+    border-bottom: 1px solid #B8B8B8;;
+    padding: 10px;
+
+}
+
+.img_projet {
+    display: block;
+    background-size: 350px 450px;
+    height: 450px;
+    width: 350px;
+    border-radius: 30px;
+    box-shadow: 0px 0px 40px 0px rgba(0, 0, 0, 0.09);
+    margin-bottom: 10px;
+
+}
+
+.type_projet {
+    color: #000;
+    font-family: Montserrat;
+        font-size: 16px;
+        font-style: normal;
+        font-weight: 500;
+        line-height: normal;
+        letter-spacing: 0.4px;
+        margin-top: 10px;
+}
+
+
+.titre_projet {
+    color: #000;
+        font-family: Montserrat;
+        font-size: 27px;
+        font-style: normal;
+        font-weight: 600;
+        line-height: normal;
+        letter-spacing: 0.8px;
+}
+
+.layout_section_projet {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    position: relative;
+    top: -50px;
+    margin: auto;
+    gap: 20px;
+    width: 1200px;
+
+
+}
+
+.btn_retour {
+    border-radius: 15px;
+border: 0px solid #000;
+background: #000;
+box-shadow: 0px 0px 40px 1px rgba(0, 0, 0, 0.15);
+color: #FFF;
+font-family: 'Montserrat';
+font-size: 16px;
+font-style: normal;
+font-weight: 600;
+line-height: normal;
+padding: 15px 25px;
+cursor:pointer;
+z-index: 2;
+width: -moz-fit-content;
+width: fit-content;
+margin: auto;
+display: block;
+margin-bottom: 50px;
+}
+
+.btn_retour a, .btn_section_contact a {
+    text-decoration: none;
+    color: black;
+}
+
+.btn_retour a {
+    color: #FFF;
+}
+
+
+
+.layout_contact {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: auto;
+    margin-top: 100px;
+}
+
+.section_titre, .layout_contact p {
+    width: 100%;
+    text-align: center
+}
+
+.section_titre {
+    color: #000;
+        font-family: Montserrat;
+        font-size: 25px;
+        font-style: normal;
+        font-weight: 700;
+        line-height: normal;
+}
+
+
+.layout_contact p {
+    color: #000;
+        text-align: center;
+        font-family: Montserrat;
+        font-size: 18px;
+        font-style: normal;
+        font-weight: 400;
+        line-height: normal;
+}
+
+
+
+
+.btn_section_contact {
+    padding: 10px 10px;
+    border-radius: 35px;
+    border: 2px solid #000;
+    background: #FFF;
+    color: #000;
+        text-align: center;
+        font-family: Montserrat;
+        font-size: 18px;
+        font-style: normal;
+        font-weight: 500;
+        line-height: normal;
+        width: 150px;
+        margin: auto;
+}
+
+@media screen and (max-width:425px) {
+    .Banner {
+        padding-top: 150px;
+        font-size: 20px;
+    }
+
+    .Banner span {
+        font-size: 36px;
+    }
+
+
+    .layout_section_projet {
+        width: 310px;
+        margin: auto;
+        grid-template-columns: 310px;
+    }
+
+    .img_projet {
+       background-size: 310px 450px;
+       width: 290px;
+    }
+}

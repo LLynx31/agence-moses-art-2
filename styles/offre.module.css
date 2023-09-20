@@ -1,0 +1,92 @@
+.titre {
+    background-color: #FFF;
+    color: #0F8383;
+    font-size: medium;
+    font-family: 'montserrat';
+    width: -moz-fit-content;
+    width: fit-content;
+    padding: 10px;
+    font-weight: 400;
+    letter-spacing: 2px;
+    margin-left: 25px;
+}
+
+.layout_prix {
+    color: #FFF;
+    font-size: x-small;
+    font-family: 'montserrat';
+    width: -moz-fit-content;
+    width: fit-content;
+    margin-left: 50px;
+    letter-spacing: 2px;
+}
+
+.prix {
+    font-size: 30px;
+    margin-left: 10px;
+    font-weight: 400;
+}
+
+
+.layout_section {
+    background-color: #0F8383;
+}
+
+.layout_offre ul li {
+    color: #FFF;
+    font-family: 'montserrat';
+    margin-bottom: 20px;
+    font-size: small;
+    letter-spacing: 1.5px;
+}
+
+.layout_offre {
+    width: 300px;
+    display: flex;
+    flex-direction: column;
+}
+
+.layout_section_title {
+    background-color: #F6AA06;
+    color: #FFF;
+    font-family: 'montserrat';
+    width: -moz-fit-content;
+    width: fit-content;
+    padding: 5px;
+    margin: auto;
+    margin-bottom: 50px;
+    margin-top: 50px;
+}
+
+.layout_section {
+    padding: 20px;
+}
+
+
+.layout_bottom {
+    display: grid;
+    grid-template-columns: 300px 300px 300px;
+    gap: 50px;
+    width: 1000px;
+    margin: auto;
+}
+
+
+@media screen and (max-width: 1000px)  {
+    .layout_bottom {
+        grid-template-columns: 300px 300px;
+        gap: 50px;
+        width: 650px;
+
+    }
+}
+
+
+@media screen and (max-width: 475px)  {
+    .layout_bottom {
+        grid-template-columns: 300px;
+        gap: 25px;
+        width: 300px;
+
+    }
+}

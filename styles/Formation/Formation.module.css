@@ -1,0 +1,287 @@
+.Banner {
+    height: 75vh;
+    background: linear-gradient(147deg, #1BBDBD 0%, #035B5B 100%);
+    background-repeat: no-repeat;
+    background-size: cover;
+    z-index: 0;
+}
+
+.Banner_title {
+    padding-top: 200px;
+    color: #FFF;
+font-family: Montserrat;
+font-size: 64px;
+font-style: normal;
+font-weight: 600;
+line-height: 130%; /* 83.2px */
+letter-spacing: 1.28px;
+padding-left: 450px;
+}
+
+.Banner_title span {
+    color: #F6AA06;
+}
+
+.section_title {
+    color: #000;
+text-align: center;
+font-family: Montserrat;
+font-size: 20px;
+font-style: normal;
+font-weight: 700;
+line-height: normal;
+margin-bottom: 50px;
+margin-top: 100px;
+}
+
+
+.section_description p {
+    margin-left: 40%;
+    margin-right: 10%;
+
+    color: #000;
+font-family: Montserrat;
+font-size: 18px;
+font-style: normal;
+font-weight: 400;
+line-height: normal;
+}
+
+.section_description {
+    margin-bottom: 75px;
+}
+
+.section_ofrre {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.section_ofrre .intro {
+    color: #000;
+text-align: center;
+font-family: Montserrat;
+font-size: 20px;
+font-style: normal;
+font-weight: 600;
+line-height: normal;
+margin: auto;
+margin-bottom: 50px;
+}
+
+.layoutFormation {
+    width: 400px;
+    padding: 20px;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    border-radius: 20px;
+    background: #FFF;
+    box-shadow: 0px 0px 10px 3px rgba(0, 0, 0, 0.10);
+}
+
+.layoutFormation img {
+    width: 100%;
+    height: 400px;
+}
+
+.bloc_text {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: baseline;
+    padding:20px ;
+}
+
+.title_formation {
+    color: #DC9701;
+text-align: center;
+font-family: Montserrat;
+font-size: 18px;
+font-style: normal;
+font-weight: 700;
+line-height: normal;
+margin-bottom: 15px;
+}
+
+.description_formation {
+    color: #000;
+text-align: center;
+font-family: Montserrat;
+font-size: 14px;
+font-style: normal;
+font-weight: 400;
+line-height: normal;
+}
+
+.link_formation {
+    color: #FFF;
+text-align: center;
+font-family: Montserrat;
+font-size: 20px;
+font-style: normal;
+font-weight: 600;
+line-height: normal;
+text-decoration: none;
+display: block;
+padding: 10px 20px;
+border-radius: 30px;
+width: -moz-fit-content;
+width: fit-content;
+margin: auto;
+
+}
+
+.layout_formation_div {
+    display: grid;
+    grid-template-columns: 400px 400px;
+    gap: 50px;
+}
+
+.imageFormation {
+    margin: auto;
+}
+
+
+.layout_info_formation {
+    border-radius: 30px;
+    background: rgba(15, 131, 131, 0.02);
+    box-shadow: 0px 0px 4px 4px rgba(0, 0, 0, 0.25);
+    margin-top:100px;
+    padding: 30px;
+    margin: auto;
+    width: 950px;
+    margin-top: 70px;
+    margin-bottom: 100px;
+}
+
+.layout_info_formation h1 {
+    color: #000;
+font-family: Montserrat;
+font-size: 20px;
+font-style: normal;
+font-weight: 600;
+line-height: normal;
+margin-left: 80px;
+margin-bottom: 50px;
+}
+
+
+.layout_info_formation h2 {
+    color: #0F8383;
+font-family: Montserrat;
+font-size: 18px;
+font-style: normal;
+font-weight: 600;
+line-height: normal;
+margin: 20px 10px;
+}
+
+
+.layout_info_formation p, .layout_info_formation li{
+    color: #000;
+font-family: Montserrat;
+font-size: 15px;
+font-style: normal;
+font-weight: 500;
+line-height: normal;
+margin-left: 50px;
+}
+
+.layout_info_formation li {
+    
+    list-style:disc;
+    margin-left: 55px;
+}
+
+
+@media screen and (max-width:425px) {
+    .Banner {
+        height: 90vh;
+    }
+    
+    .Banner_title {
+        padding-top: 30vh;
+        margin-left: 10px;
+        font-size: 40px;
+        padding-left: 10px;
+    }
+
+    .section_description p {
+        width: 300px;
+        margin: auto;
+        font-size: small;
+        text-align: center;
+    }
+
+    .section_ofrre .intro {
+        width: 300px;
+        margin: auto;
+        font-size: medium;
+        text-align: center;
+    }
+
+    .layout_formation_div {
+        grid-template-columns: 300px;
+        gap: 50px;
+        margin: auto;
+    }
+
+    .layoutFormation img {
+        width: 100%;
+        height: 300px;
+    }
+
+    .layoutFormation {
+        width: 300px;
+    }
+
+    .title_formation {
+        font-size: medium;
+    }
+
+    .description_formation {
+        font-size: small;
+    }
+
+    .link_formation {
+        width: 100px;
+        padding: 8px 10px;
+        font-size: small;
+    }
+
+    .layout_info_formation {
+        width: 310px;
+        margin: auto;
+        margin-top: 100px;
+        padding: 8px;
+
+    }
+
+    .layout_info_formation h1 {
+        width: 200px;
+        margin: auto;
+        margin-bottom: 20px;
+        font-size: medium;
+    }
+
+    .layout_info_formation h2 {
+        width: 200px;
+        text-align: center;
+        margin: auto;
+    }
+
+    .layout_info_formation p {
+        margin: auto;
+        width: 200;
+        margin-top: 10px;
+        text-align: center;
+        margin-bottom: 10px;
+    }
+
+    .layout_info_formation li {
+        margin-left: 0;
+        font-size: small;
+    }
+}

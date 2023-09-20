@@ -1,0 +1,250 @@
+.layout_contactez_nous {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    margin: auto;
+    position: relative;
+    margin-top:  70px;
+}
+
+
+
+.contactez_nous_title {
+    color: #000;
+font-family: Montserrat;
+font-size: 2.8125rem;
+font-style: normal;
+font-weight: 700;
+line-height: normal;
+font-size: 25px;
+text-align: center;
+margin-bottom: 0px;
+width: -moz-fit-content;
+width: fit-content;
+margin: auto;
+}
+
+.formulaire {
+border-bottom-right-radius: 25px;
+border-top-right-radius: 25px;
+background: #D9D9D9;
+display: flex;
+width: 900px;
+margin: auto;
+}
+
+.formulaire .champ{
+    display:flex;
+    flex-direction: column;
+    width: 50%;
+    margin-top: 15px;
+    
+}
+
+.illustrationFormulaire {
+    width: 50%;
+}
+
+
+.champ input{
+    width: 90%;
+    margin: 15px 15px;
+    padding: 10px 20px;
+    border: none;
+    border-bottom: 2px solid #928E8E;
+    color: black;
+    font-family: Montserrat;
+    font-size: 18px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+    background-color: #D9D9D9;
+}
+
+
+.formulaire .champ input:focus {
+    outline: none;
+}
+.div_message {
+    grid-column-start: 1;
+    grid-column-end: 3;
+}
+
+.div_submit {
+    margin-top: 20px;
+    margin: auto;
+    border: 0;
+    border-radius: 25px;
+background: #000;
+color: white;
+padding: 10px 30px;
+color: #FFF;
+text-align: center;
+font-family: 'Montserrat';
+font-size: 20px;
+font-style: normal;
+font-weight: 400;
+line-height: normal;
+letter-spacing: 0.72px;
+box-shadow: 0px 0px 30px rgba(0, 0, 0, 0.5);
+    
+}
+.submit {
+    margin-top: 40px;
+    border-radius: 5px;
+    border: none;
+background: #0F8383;
+box-shadow: 0px 0px 40px 4px rgba(0, 0, 0, 0.17);
+    padding: 10px 40px;
+color: #FFF;
+font-family: Montserrat;
+font-size: 14px;
+font-style: normal;
+font-weight: 700;
+line-height: normal;
+}
+
+.rs {
+    margin: 50px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.title_rs {
+    color: #015F5F;
+text-align: center;
+font-family: Montserrat;
+font-size: 18px;
+font-style: normal;
+font-weight: 600;
+line-height: normal;
+margin-bottom: 20px;
+}
+
+
+.back_form p{
+    color: #000;
+    text-align: center;
+    font-family: Montserrat;
+    font-size: 18px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+}
+
+.illustration1 {
+    position: absolute;
+    right: 80px;
+    top: 0;
+}
+
+.illustration2 {
+    position: absolute;
+    left: 80px;
+    top: 0;
+}
+
+
+.back_form{
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 50px;
+}
+.reseau {
+    margin: auto;
+}
+
+.reseau img{
+    display: inline-block;
+    margin: 0px 6px;
+}
+
+
+@media screen and (max-width: 1024px) {
+    .formulaire {
+        width: 650px;
+        padding: 20px;
+    }
+
+    .illustrationFormulaire {
+        display: none;
+        width: 0;
+    }
+
+    .formulaire .champ {
+        width: 100%;
+        justify-content: center;
+        align-items: center;
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .formulaire {
+        width: 450px;
+        padding: 20px;
+    }
+}
+
+@media screen and (max-width: 425px) {
+    .illustration1, .illustration2 {
+        width: 50px;
+        height: 50px;
+        top: -40px;
+    }
+
+    .illustration1 {
+        right: 0;
+    }
+
+    .illustration2 {
+        left: 0;
+    }
+
+    .layout_contactez_nous {
+        align-items: center;
+        width: 300px;
+        margin: auto;
+    }
+
+    .contactez_nous_title {
+        width: 100%;
+        font-size:x-large
+    }
+
+    .layout_contactez_nous p {
+        font-size: medium;
+    }
+
+    .formulaire {
+        width: 300px;
+        display: block;
+        padding: 10px 25px;
+        border-bottom-right-radius: 0px;
+        border-top-right-radius: 0px;
+    }
+
+    .illustrationFormulaire {
+        display: none;
+    }
+
+    .formulaire .champ {
+        display: flex;
+        width: 100%;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .formulaire .champ input{
+        margin: 10px 0;
+        font-size: medium;
+    }
+
+    .div_submit {
+        width: 100px;
+        margin: auto;
+        padding: 8px 13px;
+        font-size:small
+    }
+}

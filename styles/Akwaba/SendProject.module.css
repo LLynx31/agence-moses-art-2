@@ -1,0 +1,73 @@
+.layout_send_project {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding-bottom: 50px;
+    background-image: url("/assets/arrierePlanSendProjet.jpg");
+    height: 350px;
+    margin-top: 200px;
+    margin-bottom: 100px;
+}
+
+
+.send_project_title {
+    color: black;
+font-family: Montserrat;
+font-size: 30px;
+font-style: normal;
+font-weight: 700;
+line-height: normal;
+margin-top: 50px;
+margin-bottom: 15px;
+}
+
+.layout_send_project p {
+    color: #000;
+text-align: center;
+font-family: Montserrat;
+font-size: 20px;
+font-style: normal;
+font-weight: 400;
+line-height: normal;
+}
+
+
+.link_send_project {
+    width: 257px;
+height: 82px;
+flex-shrink: 0;
+padding: 10px 20px;
+border-radius: 35px;
+border: 2px solid #FFF;
+background: #FFF;
+text-decoration: none;
+color: #000;
+text-align: center;
+font-family: Montserrat;
+font-size: 18px;
+font-style: normal;
+font-weight: 500;
+line-height: normal;
+}
+
+
+
+@media screen and (max-width:425px) {
+    .send_project_title {
+        width: 310px;
+        margin: auto;
+        font-size: larger;
+        margin-bottom: 10px;
+        margin-top: 10px;
+    }
+
+
+    .layout_send_project p {
+        width: 310px;
+        margin: auto;
+        font-size: medium;
+        margin-top: 10px;
+        margin-bottom: 50px;
+    }
+}

@@ -2,7 +2,6 @@ import styleContactezNous from '../../../styles/ContactezNous.module.css'
 import Image from 'next/image'
 import { motion } from 'framer-motion'
 import {useState} from 'react'
-import { sendContactForm } from '@/pages/lib/api'
 
 function FormContact(){
     const illustrationFormulaire = '/assets/illustrationForm.jpg'
@@ -38,7 +37,7 @@ function FormContact(){
             }
 
 
-            //await sendContactForm(isFullName, isEmail, isTelephone, isSecteur, isMessage)*/
+            
         };        
     
 

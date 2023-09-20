@@ -25,9 +25,9 @@ export default function Service() {
     return (
 
             <div className={stylesService.layout_services}>
-                <DivService img={'/assets/logos_service/Communication.svg'} alt={'logo communication'} titre={'Conseils en communication 360'}>Nous vous conseillons sur des stratégies qui mettent à profit tous les canaux de communication disponibles entre vous et votre cible.</DivService>
+                <DivService img={'/assets/logos_service/communication.svg'} alt={'logo communication'} titre={'Conseils en communication 360'}>Nous vous conseillons sur des stratégies qui mettent à profit tous les canaux de communication disponibles entre vous et votre cible.</DivService>
 
-                <DivService img={'/assets/logos_service/communication.svg'} alt={'logo publicité'} titre={'Publicité'}>Nous develeppons des pubs dans le but d’influencer le consommateur vis-à-vis de votre marque, votre produit ou de vos services afin d’ augmenter votre notoriété, de développer l’image, inciter à l’achat. </DivService>
+                <DivService img={'/assets/logos_service/publicité.svg'} alt={'logo publicité'} titre={'Publicité'}>Nous develeppons des pubs dans le but d’influencer le consommateur vis-à-vis de votre marque, votre produit ou de vos services afin d’ augmenter votre notoriété, de développer l’image, inciter à l’achat. </DivService>
 
                 <DivService img={'/assets/logos_service/marketing.svg'} alt={'logo communication'} titre={'Marketing digital'}>Nous avons la stratégie marketing indéniable qu’il vous faut pour vendre vos produits et promouvoir votre marque auprès des consommateurs </DivService>
 

@@ -162,7 +162,7 @@ function Description(){
 
                 <motion.p variants={animP}>Si vous êtes à la recherche d’une agence de communication 360 qui peut vous aider à atteindre vos objectifs commerciaux contactez-nous dès aujourd’hui !</motion.p>
 
-                <motion.button variants={animBtn} whileHover="onHover">Contactez Nous</motion.button>
+                <motion.button variants={animBtn} whileHover="onHover" onClick={() => document.location.href = '/contact'}>Rapprochez vous</motion.button>
             </div>
             <div className={styleTemoignage.layout_right}>
                 <Image alt="illustration" src={illustration1} className={styleTemoignage.illustration_1} width={400}
@@ -180,10 +180,6 @@ function Description(){
 
 export default function Temoignage() {
 
-    const img_1 = 'assets/img-1.png'
-    const img_2 = 'assets/img-2.png'
-    const img_3 = 'assets/img-3.png'
-    const img_4 = 'assets/img-4.png'
   
     const illustration = '/assets/Calque8.svg'
 
@@ -218,12 +214,7 @@ export default function Temoignage() {
             <div className={styleTemoignage.layout_temoignage}>
                 <h1 className={styleTemoignage.temoignage_title}><span className={styleTemoignage.span}>Témoignages</span><br></br>de nos clients</h1>
                 <CarouselTemoignage></CarouselTemoignage>
-                <motion.img whileInView={{x: [0,2,4,6,4,2,0,-2,-4,-6,-4,-2,0]}} transition={{duration:10}} className={styleTemoignage.img_1} src={img_1}  alt="personne en mignature"  ></motion.img>
-                <motion.img whileInView={{x: [0,2,4,6,4,2,0,-2,-4,-6,-4,-2,0]}} transition={{duration:10}} className={styleTemoignage.img_2} src={img_1}  alt="personne en mignature" ></motion.img>
-                <motion.img whileInView={{x: [0,2,4,6,4,2,0,-2,-4,-6,-4,-2,0]}} transition={{duration:10}} className={styleTemoignage.img_3} src={img_2}  alt="personne en mignature" ></motion.img>
-                <motion.img whileInView={{x: [0,2,4,6,4,2,0,-2,-4,-6,-4,-2,0]}} transition={{duration:10}} className={styleTemoignage.img_4} src={img_2}  alt="personne en mignature" ></motion.img>
-                <motion.img whileInView={{x: [0,2,4,6,4,2,0,-2,-4,-6,-4,-2,0]}} transition={{duration:10}} className={styleTemoignage.img_5} src={img_3}  alt="personne en mignature" ></motion.img>
-                <motion.img whileInView={{x: [0,2,4,6,4,2,0,-2,-4,-6,-4,-2,0]}} transition={{duration:10}} className={styleTemoignage.img_6} src={img_4}  alt="personne en mignature"  ></motion.img>
+                
             </div>
 
             <Description></Description>

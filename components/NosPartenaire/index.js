@@ -25,7 +25,6 @@ export default function NosPartenaire(){
     const logo11 = '/assets/LOGO10.svg'
     const logo12 = '/assets/LOGO11.svg'
     const logo13 = '/assets/LOGO12.svg'
-    const logo14 = '/assets/LOGO13.svg'
     const logo15 = '/assets/LOGO14.svg'
     const logo16 = '/assets/LOGO15.svg'
     const logo17 = '/assets/LOGO16.svg'
@@ -85,18 +84,10 @@ export default function NosPartenaire(){
                 <motion.div variants={animPartenaire}><Partenaire imgPartenaire={logo11}></Partenaire></motion.div>
                 <motion.div variants={animPartenaire}><Partenaire imgPartenaire={logo12}></Partenaire></motion.div>
                 <motion.div variants={animPartenaire}><Partenaire imgPartenaire={logo13}></Partenaire></motion.div>
-                <motion.div variants={animPartenaire}><Partenaire imgPartenaire={logo14}></Partenaire></motion.div>
                 <motion.div variants={animPartenaire}><Partenaire imgPartenaire={logo15}></Partenaire></motion.div>
                 <motion.div variants={animPartenaire}><Partenaire imgPartenaire={logo16}></Partenaire></motion.div>
                 <motion.div variants={animPartenaire}><Partenaire imgPartenaire={logo17}></Partenaire></motion.div>
                 <motion.div variants={animPartenaire}><Partenaire imgPartenaire={logo18}></Partenaire></motion.div>
-                
-                
-                
-                
-                
-                
-                
                 
                 
             </div>

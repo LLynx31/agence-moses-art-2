@@ -181,7 +181,7 @@ export default function ContatezNous({children}) {
     }
     
     return (
-        <motion.div variants={animSec} whileInView="visible" initial="hidden" viewport={{once: true}}  className={styleContactezNous.layout_contactez_nous}>
+        <motion.div id='contact' variants={animSec} whileInView="visible" initial="hidden" viewport={{once: true}}  className={styleContactezNous.layout_contactez_nous}>
             <motion.img variants={animIllustration} whileInView="whileInView" className={styleContactezNous.illustration1} alt='illustration' src={illustration1} width={80} height={80}></motion.img>
             <motion.img variants={animIllustration} whileInView="whileInView" className={styleContactezNous.illustration2} alt='illustration' src={illustration2} width={80} height={80}></motion.img>
             <div className={styleContactezNous.back_form}> 

@@ -2,8 +2,11 @@ import style from "@/styles/components-service.module.css"
 import Image from "next/image"
 
 
-
 export function Banner({titre, children, imgService, imgAlt}){
+    
+/* <div className={style.banner_right}> 
+                <div className={style.layout_img_service}><Image className={style.img_banner} src={imgService} alt={imgAlt} width={150} height={150}></Image></div>
+            </div>*/
     return(
         <div className={style.banner}>
             <div className={style.banner_left}>
@@ -11,9 +14,7 @@ export function Banner({titre, children, imgService, imgAlt}){
                 <p className={style.description_banner}>{children}</p>
             </div>
 
-            <div className={style.banner_right}> 
-                <div className={style.layout_img_service}><Image className={style.img_banner} src={imgService} alt={imgAlt} width={150} height={150}></Image></div>
-            </div>
+            
         </div>
     )
 }
@@ -56,6 +57,19 @@ export function Description({children}){
         <div className={style.description}>
             <h1 className={style.titre_description}>chez <span>l&apos;Agence MOSES ART,</span></h1>
             <p className={style.description_description}>{children}</p>
+        </div>
+    )
+}
+
+export function Block({titre,children,color=""}){
+    return (
+        <div className={style.block}>
+            <div className={style.block_top} style={{backgroundColor: color}}></div>
+            <div className={style.block_text}>
+                <h1 className={style.block_titre}>{titre}</h1>
+                <p className={style.block_description}>{children}</p>
+            </div>
+            
         </div>
     )
 }

@@ -25,17 +25,18 @@ export default function Marketing(){
 
             <div className={style.avantage}>
                 <h1 className={style.avantage_titre}>Nos avantages</h1>  
-                <p className={style.avantage_description}>Les avantages de l&apos;utilisation des services de notre agence de digitalisation sont nombreux :</p>
+                <p className={style.avantage_description}>Quelques avantages de l&apos;utilisation des services de notre agence de design graphique :</p>
 
                 <div className={style.avantage_block_layout}>
-                    <Block titre={"Amélioration de l'expérience client"} color="#F6AA06">  La digitalisation permet de proposer des services en ligne, de faciliter les transactions et d&apos;offrir une expérience client plus fluide et personnalisée.</Block>
-                    <Block titre={"Augmentation de l'efficacité opérationnelle "} color="#F6AA06"> La digitalisation permet d&apos;automatiser des processus, de réduire les tâches manuelles et d&apos;améliorer l&apos;efficacité globale de l&apos;entreprise.</Block>
-                    <Block titre={"Accès à de nouvelles opportunités de croissance "} color="#F6AA06">  La digitalisation ouvre de nouvelles possibilités commerciales, telles que la vente en ligne, le marketing numérique et l&apos;expansion sur de nouveaux marchés.</Block>
-                    <Block titre={"Collecte et analyse de données "} color="#F6AA06">  La digitalisation permet de collecter et d&apos;analyser des données précieuses sur les clients, les opérations et les performances, ce qui permet de prendre des décisions plus éclairées.</Block>
+                    <Block titre={"Créativité et expertise"} color="#F6AA06"> Nous avons une équipe de designers talentueux et créatifs qui sont experts dans l&apos;utilisation des principes de design pour créer des visuels accrocheurs et esthétiquement plaisants.</Block>
+                    <Block titre={"Image de marque cohérente"} color="#F6AA06"> Nous aidons à créer une identité visuelle cohérente pour votre entreprise, en utilisant des éléments de design tels que des couleurs, des typographies et des logos, ce qui renforce la reconnaissance de la marque.</Block>
+                    <Block titre={"Professionnalisme et qualité "} color="#F6AA06"> Nous avons l&apos;expérience et les compétences nécessaires pour fournir des designs de haute qualité qui répondent aux normes professionnelles. Cela donne une image positive de votre entreprise et renforce sa crédibilité.</Block>
+                    <Block titre={"Gain de temps  "} color="#F6AA06"> En confiant le travail de design à notre agence spécialisée, votre entreprise peut économiser du temps et se concentrer sur ses activités principales, tandis que les designers se chargent de créer des designs percutants.</Block>
+                    <Block titre={"Adaptation aux tendances"} color="#F6AA06">Nous sommes au courant des dernières tendances en matière de design et nous pouvons créer des visuels modernes et à la pointe de la technologie qui captent l&apos;attention du public.</Block>
                     
                 </div>
 
-                <div className={style.avantage_conclusion}>En utilisant notre service d&apos;impression sur tout support, vous pouvez obtenir des supports imprimés de haute qualité, personnalisés et adaptés à vos besoins, tout en vous libérant du temps et de l&apos;effort nécessaires pour les produire vous-même.</div>
+                <div className={style.avantage_conclusion}>Le processus d&apos;utilisation de notre agence de design graphique se déroule en plusieurs étapes :</div>
                 
             </div> 
 
@@ -44,13 +45,13 @@ export default function Marketing(){
                 <h1 className={style.processus_titre} style={{marginTop: '100px', marginBottom: '50px'}}>Processus d&apos;utlisation</h1>   
 
                 <div className={style.processus_block_layout}>
-                    <Block titre={"Évaluation des besoins  "} color="#0F8383CF"> Vous discutez avec nous de vos objectifs, de vos défis et de vos besoins spécifiques en matière de digitalisation.</Block>
-                    <Block titre={"Analyse et planification"} color="#0F8383CF"> Nous analysons vos processus existants, identifions les opportunités d&apos;amélioration et élaborons un plan de digitalisation adapté à votre entreprise.</Block>
-                    <Block titre={"Formation et support "} color="#0F8383CF"> Nous formons votre équipe à l&apos;utilisation des nouveaux outils et assurons un support technique continu pour garantir une transition réussie vers la digitalisation.</Block>
-                    <Block titre={"Développement et mise en œuvre"} color="#0F8383CF"> Nous développons les solutions numériques nécessaires, telles que des applications, des plateformes en ligne ou des outils de gestion, et les mettons en œuvre dans votre entreprise.</Block>
-                    <Block titre={"Suivi et optimisation "} color="#0F8383CF">Nous surveillons les performances de vos nouveaux services numériques, recueillons des données et apportons des ajustements pour optimiser leur efficacité.</Block>
+                    <Block titre={"Briefing"} color="#0F8383CF"> Vous nous rencontrez pour discuter de vos besoins, objectifs et attentes en matière de design. Vous partagez des informations sur votre entreprise, votre public cible et vos idées créatives.</Block>
+                    <Block titre={"Recherche et analyse"} color="#0F8383CF"> Nous effectuons des recherches sur votre secteur d&apos;activité, votre concurrence et les tendances actuelles du design afin de mieux comprendre votre environnement et de proposer des concepts pertinents.</Block>
+                    <Block titre={"Concept et création"} color="#0F8383CF"> Les designers de notre agence commencent à travailler sur des concepts de design en tenant compte des informations recueillies lors du briefing. Ils créent des maquettes et des prototypes pour vous présenter leurs idées.</Block>
+                    <Block titre={"Révisions et feedback"} color="#0F8383CF"> Vous examinez les concepts proposés et vous nous donnez votre feedback. Vous pouvez demander des modifications ou des ajustements pour vous assurer que le design correspond à vos attentes.</Block>
+                    <Block titre={"Finalisation et livraison "} color="#0F8383CF"> Une fois que vous êtes satisfait du design, nous finalisons les fichiers et nous vous les livrons dans les formats appropriés pour une utilisation dans différents supports de communication.</Block>
                 </div>
-                
+                <div className={style.avantage_conclusion}>En utilisant les services de notre agence de design graphique, votre entreprise bénéficie d&apos;un design professionnel et attrayant qui renforce son image de marque, attire l&apos;attention du public et communique efficacement son message.</div>
             </div>
 
            

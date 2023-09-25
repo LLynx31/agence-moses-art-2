@@ -29,7 +29,7 @@ export default function Marketing(){
                     <Block titre={"Analyse des besoins "} color="#F6AA06">Nous travaillons en étroite collaboration avec nos clients pour comprendre leurs besoins et leurs objectifs commerciaux afin de développer une application adaptée.</Block>
                     <Block titre={"Conception et développement "} color="#F6AA06"> Nous créons une interface utilisateur attrayante et conviviale, tout en développant les fonctionnalités et les caractéristiques de l&apos;application.</Block>
                     <Block titre={"Programmation et codage"} color="#F6AA06"> Nous utilisons des langages de programmation et des outils de développement pour coder l&apos;application et la rendre fonctionnelle.</Block>
-                    <Block titre={"STests et débogage"} color="#F6AA06"> Nous effectuons des tests rigoureux pour nous assurer que l&apos;application fonctionne correctement, corrigeons les erreurs et les bugs éventuels.</Block>
+                    <Block titre={"Tests et débogages"} color="#F6AA06"> Nous effectuons des tests rigoureux pour nous assurer que l&apos;application fonctionne correctement, corrigeons les erreurs et les bugs éventuels.</Block>
                     <Block titre={"Déploiement et maintenance"} color="#F6AA06">Nous déployons l&apos;application sur les plateformes web et mobiles appropriées (comme iOS, Android, etc.) et assurons la maintenance continue de l&apos;application pour garantir sa performance et sa sécurité.</Block>
                 </div>
                 

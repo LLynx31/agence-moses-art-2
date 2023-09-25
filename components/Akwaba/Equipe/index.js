@@ -1,6 +1,6 @@
 import React from 'react';
 import { Swiper, SwiperSlide } from 'swiper/react';
-
+import Image from 'next/image';
 import 'swiper/css';
 import 'swiper/css/effect-coverflow';
 import 'swiper/css/pagination';
@@ -10,10 +10,10 @@ import { EffectCoverflow, Pagination, Navigation, Autoplay } from 'swiper/module
 
 import { motion } from "framer-motion"
 
-function Profil({children}){
+function Profil({imgSrc, altImg}){
     return(
         <div className="layout-profil">
-            {children}
+            {/*<Image src={imgSrc} alt={altImg} width={400} height={500}></Image>*/}
         </div>
     )
 }
@@ -49,31 +49,31 @@ function CarouselEquipe(){
         className="swiper_container"
       >
         <SwiperSlide>
-            <Profil>1</Profil>
+            <Profil imgSrc={'/assets/Image_Equipe/Moise_yapo.jpg'}></Profil>
         </SwiperSlide>
         <SwiperSlide>
-            <Profil>2</Profil>
+            <Profil></Profil>
         </SwiperSlide>
         <SwiperSlide>
-            <Profil>3</Profil>
+            <Profil></Profil>
         </SwiperSlide>
         <SwiperSlide>
-            <Profil>4</Profil> 
+            <Profil></Profil> 
         </SwiperSlide>
         <SwiperSlide>
-            <Profil>5</Profil>        
+            <Profil></Profil>        
         </SwiperSlide>
         <SwiperSlide>
-            <Profil>6</Profil>       
+            <Profil></Profil>       
         </SwiperSlide>
         <SwiperSlide>
-            <Profil>7</Profil>        
+            <Profil></Profil>        
         </SwiperSlide>
         <SwiperSlide>
-            <Profil>8</Profil>        
+            <Profil></Profil>        
         </SwiperSlide>
         <SwiperSlide>
-            <Profil>9</Profil>        
+            <Profil></Profil>        
         </SwiperSlide>
 
         <div className="slider-controler">

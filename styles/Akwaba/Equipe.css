@@ -48,6 +48,9 @@
   object-fit: cover;
   border-radius: 15px;
   background-color: rgb(201, 138, 23);
+  background-image: url('/assets/Image_Equipe/Moise_yapo.jpg');
+  background-size: contain;
+  background-repeat: no-repeat;
 }
 
 @media screen and (max-width: 1024px) {
@@ -71,7 +74,10 @@
   border-radius: 2rem;
   object-fit: cover;
   border-radius: 15px;
-background: #F6AA06;
+  background: #F6AA06;
+  background-image: url('/assets/Image_Equipe/Moise_yapo.jpg');
+  background-size: contain;
+  background-repeat: no-repeat;
 }
 
 

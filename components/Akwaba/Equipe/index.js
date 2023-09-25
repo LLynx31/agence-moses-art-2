@@ -10,10 +10,10 @@ import { EffectCoverflow, Pagination, Navigation, Autoplay } from 'swiper/module
 
 import { motion } from "framer-motion"
 
-function Profil({imgSrc, altImg}){
+function Profil({imgSrc, alt}){
     return(
         <div className="layout-profil">
-            {/*<Image src={imgSrc} alt={altImg} width={400} height={500}></Image>*/}
+            <Image src={imgSrc} alt={alt} width={400} height={500}></Image>
         </div>
     )
 }
@@ -49,31 +49,31 @@ function CarouselEquipe(){
         className="swiper_container"
       >
         <SwiperSlide>
-            <Profil imgSrc={'/assets/Image_Equipe/Moise_yapo.jpg'}></Profil>
+            <Profil imgSrc={'/assets/Image_Equipe/Moise_yapo.jpg'} alt="Moise Yapo"></Profil>
         </SwiperSlide>
         <SwiperSlide>
-            <Profil></Profil>
+            <Profil imgSrc={'/assets/Image_Equipe/yves_pascal_niamba.jpg'} alt="Yves Pascal Niamba"></Profil>
+        </SwiperSlide>
+        <SwiperSlide >
+            <Profil imgSrc={'/assets/Image_Equipe/Abibata_Camara.jpg'} alt="Abibata_Camara"></Profil>
         </SwiperSlide>
         <SwiperSlide>
-            <Profil></Profil>
+            <Profil imgSrc={'/assets/Image_Equipe/christian_sagoe.jpg'} alt="Christian Sagoe"></Profil> 
         </SwiperSlide>
         <SwiperSlide>
-            <Profil></Profil> 
+            <Profil imgSrc={'/assets/Image_Equipe/clarisse_molou.jpg'} alt="clarisse molou"></Profil>        
         </SwiperSlide>
         <SwiperSlide>
-            <Profil></Profil>        
+            <Profil imgSrc={'/assets/Image_Equipe/fatima_kone.jpg'} alt="Fatima Kone"></Profil>       
         </SwiperSlide>
         <SwiperSlide>
-            <Profil></Profil>       
+            <Profil imgSrc={"/assets/Image_Equipe/lionnel_n'da.jpg"} alt="Lionnel N'da"></Profil>        
         </SwiperSlide>
         <SwiperSlide>
-            <Profil></Profil>        
+            <Profil imgSrc={'/assets/Image_Equipe/pacome_brou.jpg'} alt="Pacome Brou"></Profil>        
         </SwiperSlide>
-        <SwiperSlide>
-            <Profil></Profil>        
-        </SwiperSlide>
-        <SwiperSlide>
-            <Profil></Profil>        
+        <SwiperSlide >
+            <Profil imgSrc={'/assets/Image_Equipe/URIELLE_KOUAKOU.jpg'} alt="URIELLE KOUAKOU"></Profil>        
         </SwiperSlide>
 
         <div className="slider-controler">

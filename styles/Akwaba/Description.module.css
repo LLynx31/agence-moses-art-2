@@ -71,9 +71,9 @@ width: 50%;
 
 .image {
     position: absolute;
-    top: -70px;
+    top: -25px;
     z-index: 1;
-    right: 40px;
+    right: 50px;
 }
 
 .illustration1, .illustration2, .illustration3 {

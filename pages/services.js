@@ -15,12 +15,12 @@ import {useEffect, useState} from "react"
 
 export function Banner() {
 
-    const formation = ["Conseils en communication 360", "Publicité", "marketing.svg", "Web & Webdesign" ]
+    const formation = ["Conseils en communication 360", "Publicité", "Marketing Digital", "Developpement d'appli Web et Mobile", "Design graphic", "Digitalisation des Services", "Production Audio Visuelle", "Events", "Impression tout support" ]
     const [isNumFormation, setNumFormation] = useState(0)
     const [scopes,animate] = useAnimate()
     useEffect(()=>{
        const time = setInterval(()=>{
-            if(isNumFormation >= 3){
+            if(isNumFormation >= 8){
                 setNumFormation(0)
             }
 

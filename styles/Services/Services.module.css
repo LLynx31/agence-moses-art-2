@@ -1,6 +1,6 @@
 .Banner {
-    height: 90vh;
-    background-image: url('../../public/assets/bannerService.svg');
+    height: 100vh;
+    background-image: url('../../public/assets/Images_Service/banières_nos_services_.jpg');
     background-repeat: no-repeat;
     background-size: cover;
     z-index: 0;
@@ -15,7 +15,7 @@
     font-weight: 600;
     line-height: 130%; /* 83.2px */
     letter-spacing: 1.28px;
-    padding-left: 400px;
+    padding-left: 200px;
 }
 
 .layout_section_service {

@@ -2,17 +2,19 @@
     display: flex;
     flex-direction: column;
     justify-content: center;
-    align-items: center;
-    padding-bottom: 50px;
-    background-image: url("/assets/arrierePlanSendProjet.jpg");
-    height: 350px;
+    width: 100%;
+    background-image: url("/assets/Images_Service/banières_nos_service2.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 500px;
     margin-top: 200px;
     margin-bottom: 100px;
+    padding-left: 80px;
 }
 
 
 .send_project_title {
-    color: black;
+    color: rgba(255, 255, 255, 0.87);
 font-family: Montserrat;
 font-size: 30px;
 font-style: normal;
@@ -23,26 +25,22 @@ margin-bottom: 15px;
 }
 
 .layout_send_project p {
-    color: #000;
-text-align: center;
+    color: white;
 font-family: Montserrat;
 font-size: 20px;
 font-style: normal;
 font-weight: 400;
 line-height: normal;
+margin-bottom: 22px;
+margin-top: 0;
 }
 
 
 .link_send_project {
-    width: 257px;
-height: 82px;
-flex-shrink: 0;
-padding: 10px 20px;
-border-radius: 35px;
-border: 2px solid #FFF;
-background: #FFF;
+    
+
 text-decoration: none;
-color: #000;
+color: white;
 text-align: center;
 font-family: Montserrat;
 font-size: 18px;
@@ -51,23 +49,51 @@ font-weight: 500;
 line-height: normal;
 }
 
+.btn {
+    width: -moz-fit-content;
+    width: fit-content;
+    flex-shrink: 0;
+    padding: 10px 20px;
+    border-radius: 35px;
+    background: #000;
+    margin-bottom: 50px;
+}
+
 
 
 @media screen and (max-width:425px) {
+
+    .layout_send_project {
+        display: flex;
+        flex-direction: column;
+        justify-content: start;
+        background-image: url("/assets/Images_Service/banières_nos_service2.jpg");
+        background-repeat: no-repeat;
+        background-size: 100vw 300px;
+        margin-top: 0px;
+        margin-bottom: 0px;
+        padding-left: 0px;
+    }
+    
+
     .send_project_title {
-        width: 310px;
-        margin: auto;
+        margin-left: 12px;
         font-size: larger;
         margin-bottom: 10px;
-        margin-top: 10px;
+        margin-top: 70px;
     }
 
 
     .layout_send_project p {
-        width: 310px;
-        margin: auto;
+        margin-left: 12px;
         font-size: medium;
         margin-top: 10px;
-        margin-bottom: 50px;
+        margin-bottom: 0px;
     }
+
+    .btn {
+        margin-left: 12px;
+        margin-top: 10px;
+    }
+    
 }

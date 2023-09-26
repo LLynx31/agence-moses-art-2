@@ -18,6 +18,7 @@ export function Banner() {
     const formation = ["Conseils en communication 360", "Publicité", "Marketing Digital", "Developpement d'appli Web et Mobile", "Design graphic", "Digitalisation des Services", "Production Audio Visuelle", "Events", "Impression tout support" ]
     const [isNumFormation, setNumFormation] = useState(0)
     const [scopes,animate] = useAnimate()
+
     useEffect(()=>{
        const time = setInterval(()=>{
             if(isNumFormation >= 8){
@@ -235,7 +236,6 @@ export default function Service(){
             <Banner></Banner></motion.div>
             <SectionService></SectionService>
             <div style={{height: 50, backgroundColor: '#0F83838C', width: '100%', margin: '100px 0px', opacity:0.5}}></div>
-            <SectionOffre></SectionOffre>
             <SendProject></SendProject>
             <Footer></Footer>
         </motion.div>

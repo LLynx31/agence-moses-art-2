@@ -17,10 +17,10 @@ function SectionDescription(){
     const illustrationDescriptionOrange = 'assets/illustrationDescriptionOrange.svg'
     const illustrationDescriptionVert = 'assets/illustrationDescriptionVert.svg'
     const subtract = '/assets/Subtract.svg'
-    const illustrationRole = '/assets/illustrationRole.png'
+    const illustrationRole = '/assets/Image_Presentation/Nous_creons_concevons.jpg'
 
     const polygon = '/assets/Polygon3.svg'
-    const subtractVert = '/assets/Subtract.png'
+    //const subtractVert = '/assets/Subtract.png'
 
     const animSec = {
         hidden: {
@@ -209,10 +209,10 @@ function SectionDescription(){
 
 
 function SectionPrincipes (){
-    const principeImg1 = '/assets/principeImage1.png'
-    const carreOrange = '/assets/carreOrange.svg'
+    const principeImg1 = '/assets/Image_Presentation/Nos_principes_image1_1.jpg'
+    //const carreOrange = '/assets/carreOrange.svg'
     const illustrationRectangle  ='/assets/RectanglePrincipe.svg'
-    const principeImg2 = '/assets/principeImage2.png'
+    const principeImg2 = '/assets/Image_Presentation/Nos_principes_image2_2.jpg'
     const carreVert = '/assets/carreVert.svg'
     const ellipse = '/assets/EllipseIllustrationPrincipe.svg'
     const polygon2 = '/assets/Polygon2.svg'
@@ -300,9 +300,9 @@ function SectionPrincipes (){
 
                 <motion.div variants={animPrincipe1} className={stylePresentation.layout_principe_1}>
                     <Image alt="illustration"  src={principeImg1}
-                    width={350} height={350} className={stylePresentation.principe_img_1}></Image>
-                    <Image 
-                    width={94} alt="illustration"  height={94} src={carreOrange} className={stylePresentation.CarreOrange} ></Image>
+                    width={350} height={350} quality={100} className={stylePresentation.principe_img_1}></Image>
+                    {/*<Image 
+                    width={94} alt="illustration"  height={94} src={carreOrange} className={stylePresentation.CarreOrange} ></Image>*/}
 
                     
                     <p>Notre approche est selon laquelle ,les menaces
@@ -313,7 +313,7 @@ function SectionPrincipes (){
                 </motion.div>
                 
                 <motion.div variants={animPrincipe2} className={stylePresentation.layout_principe_2}>
-                    <Image  alt="illustration" width={94} height={94} src={carreVert} className={stylePresentation.carreVert} ></Image>
+                    <Image  alt="illustration" width={94} height={94} quality={100} src={carreVert} className={stylePresentation.carreVert} ></Image>
 
                     <p>Nous pensons qu’il n’existe pas de modèle de
                         communication pret à l’emploi. C’est pourquoi

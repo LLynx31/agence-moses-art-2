@@ -4,7 +4,7 @@ import { motion } from 'framer-motion'
 import {useState} from 'react'
 
 function FormContact(){
-    const illustrationFormulaire = '/assets/Image_formulaire/formulaire.jpg'
+    const illustrationFormulaire = '/assets/Image_formulaire/formulaire_.jpg'
 
     const [isFullName, setFullname] = useState('')
     const [isEmail, setEmail] = useState('')
@@ -44,7 +44,7 @@ function FormContact(){
     return(
         <form className={styleContactezNous.formulaire} onSubmit={handleSubmit}>
 
-            <Image src={illustrationFormulaire} width={450} height={500} className={styleContactezNous.illustrationFormulaire} alt="femme qui sourit"></Image>
+            <Image src={illustrationFormulaire} width={450} height={500} quality={100} className={styleContactezNous.illustrationFormulaire} alt="femme qui sourit"></Image>
 
             <div className={styleContactezNous.champ}>
                     <input type="text" name="full_name" className={styleContactezNous.full_name} onChange={(e) => setFullname(e.target.value)} placeholder='Nom & Prenom'  required></input>

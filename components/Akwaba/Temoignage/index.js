@@ -57,7 +57,7 @@ function CarouselTemoignage () {
 
 
 function Description(){
-    const illustration1 = '/assets/temoignageIllustration.png'
+    const illustration1 = '/assets/Image_Akwaba/temoignage.jpg'
     const illustration2 = '/assets/Rectangle115.svg'
     const illustration3 = '/assets/Rectangle116.svg'
     const illustration4 = '/assets/Calque4.svg'

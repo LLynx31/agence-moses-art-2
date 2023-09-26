@@ -4,7 +4,7 @@ import { motion } from 'framer-motion'
 import {useState} from 'react'
 
 function FormContact(){
-    const illustrationFormulaire = '/assets/illustrationForm.jpg'
+    const illustrationFormulaire = '/assets/Image_formulaire/formulaire.jpg'
 
     const [isFullName, setFullname] = useState('')
     const [isEmail, setEmail] = useState('')

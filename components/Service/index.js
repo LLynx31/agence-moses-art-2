@@ -107,7 +107,7 @@ export default function Service() {
 
                 <motion.div variants={animDivService}><DivService img={'/assets/logos_service/visuelle.svg'} alt={'logo visuelle'} titre={'Production Audiovisuelle'}>Cadrage , montage video , animation 2D et 3D , assistance en réalisation , direction en photographie , pose de voix off , redaction de script , couverture médiatique d’event.</DivService></motion.div>
 
-                <motion.div variants={animDivService}><DivService img={'/assets/logos_service/evenement.svg'} alt={'logo evenement'} titre={'Events'}>Nous vous conseillons sur des stratégies qui mettent à profit tous les canaux de communication disponibles entre vous et votre cible.</DivService></motion.div>
+                <motion.div variants={animDivService}><DivService img={'/assets/logos_service/evenement.svg'} alt={'logo evenement'} titre={'Events'}>De la conception jusqu’a l’implementation de votre évènement en passant par sa promotion  sur les canaux online et ofline</DivService></motion.div>
 
                 <motion.div variants={animDivService}><DivService img={'/assets/logos_service/impression.svg'} alt={'logo communication'} titre={'Impression sur tout support'}>Parce que vos réalisations mérittent d’etre imprimés sur des supports de qualité , nous gérons la production de tout type de support de communication.</DivService></motion.div>
 

@@ -187,7 +187,7 @@ function SectionDescription(){
                     MARQUE.</motion.h1>
                     <motion.p variants={animRoleP} initial="hidden" whileInView="visible" viewport={{once:true}}>Moses Art est une agence de communication 360 qui accompagne
                     ses clients dans le developpement de leur image de marque. Pour
-                    cela , elle couvre à la fois la création et le diffusion des campagnes
+                    cela , elle couvre à la fois la création et la diffusion des campagnes
                     de communication et marketing sur l’ensemble des supports 
                     indispensables à  la prise de contact avec les cibles. Cela prend en
                     compte les canaux online et offline globale.</motion.p> 

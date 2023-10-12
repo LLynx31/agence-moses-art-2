@@ -7,14 +7,14 @@
     background-repeat: no-repeat;
     background-size: cover;
     height: 500px;
-    margin-top: 200px;
+    margin-top:60px;
     margin-bottom: 100px;
     padding-left: 80px;
 }
 
 
 .send_project_title {
-    color: rgba(255, 255, 255, 0.87);
+    color: white;
 font-family: Montserrat;
 font-size: 30px;
 font-style: normal;

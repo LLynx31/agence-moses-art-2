@@ -117,7 +117,7 @@ function Presentation() {
         <motion.div variants={animLayout} whileInView="visible" initial="hidden" viewport={{once: true}} className={stylePresentation.layout_presentation}>
             <motion.div variants={animQuiz} className={stylePresentation.quiz}>QUI SOMMES NOUS ?</motion.div>
             <motion.h1 variants={animTitre} className={stylePresentation.title}>Nous vous offrons des solutions digitales innovantes et efficaces.</motion.h1>  
-            <motion.p variants={animP} className={stylePresentation.description}>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut laboreUt enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo con</motion.p>
+            <motion.p variants={animP} className={stylePresentation.description}>Nous sommes l’agence de pub qui porte le business de leurs clients avec soin en les aidants à se démarquer de toute concurrence tout en usant de la puissance de la communication à 360°. Nous sommes les partenaires des petites, moyennes et grandes entreprises. Devenons partenaire aujourd’hui.</motion.p>
         </motion.div>
         
     )
@@ -134,7 +134,7 @@ export default function SectionPresenattion (){
 
     return (
         <div className={stylePresentation.layout_section}>
-            <motion.img variants={animImg} initial= "hidden" whileInView="visible" viewport={{once:true}} width={400} height={400} className={stylePresentation.image} src={image} alt='Femme sur son telephone'></motion.img>
+            <motion.img variants={animImg} initial= "hidden" whileInView="visible" viewport={{once:true}} width={450} height={450} className={stylePresentation.image} src={image} alt='Femme sur son telephone'></motion.img>
             <Presentation></Presentation>
             <div className={stylePresentation.div_btn}><motion.button onClick={() => document.location.href = '#contact'} whileHover={{scale: 1.1}} className={stylePresentation.button_contact}>Contactez Nous</motion.button></div>
             <motion.img variants={animIllustration} animate="animate" initial="hidden" alt='illustration' width={40} height={40} className={stylePresentation.illustration1} src={illustration1}></motion.img>

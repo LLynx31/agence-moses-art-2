@@ -161,23 +161,23 @@ function SectionService() {
             <motion.p variants={animIllustration} className={styleServcie.section_service_description}>Découvrez l`ensemble de nos services</motion.p>
 
             <motion.div variants={animDivService} className={styleServcie.layout_services}>
-                <ServiceDiv serviceTitle={dataService[0].titleService} link={dataService[0].link}>{dataService[0].descriptionService}</ServiceDiv>
+                <ServiceDiv logo={'/assets/logos_service/communication.svg'} serviceTitle={dataService[0].titleService} link={dataService[0].link}>{dataService[0].descriptionService}</ServiceDiv>
 
-                <ServiceDiv serviceTitle={dataService[1].titleService} link={dataService[1].link}>{dataService[1].descriptionService}</ServiceDiv>
+                <ServiceDiv logo={'/assets/logos_service/publicité.svg'} serviceTitle={dataService[1].titleService} link={dataService[1].link}>{dataService[1].descriptionService}</ServiceDiv>
 
-                <ServiceDiv serviceTitle={dataService[2].titleService} link={dataService[2].link}>{dataService[2].descriptionService}</ServiceDiv>
+                <ServiceDiv logo={'/assets/logos_service/marketing.svg'} serviceTitle={dataService[2].titleService} link={dataService[2].link}>{dataService[2].descriptionService}</ServiceDiv>
 
-                <ServiceDiv serviceTitle={dataService[3].titleService} link={dataService[3].link}>{dataService[3].descriptionService}</ServiceDiv>
+                <ServiceDiv logo={'/assets/logos_service/dev.svg'} serviceTitle={dataService[3].titleService} link={dataService[3].link}>{dataService[3].descriptionService}</ServiceDiv>
 
-                <ServiceDiv serviceTitle={dataService[4].titleService} link={dataService[4].link}>{dataService[4].descriptionService}</ServiceDiv>
+                <ServiceDiv logo={'/assets/logos_service/design.svg'} serviceTitle={dataService[4].titleService} link={dataService[4].link}>{dataService[4].descriptionService}</ServiceDiv>
 
-                <ServiceDiv serviceTitle={dataService[5].titleService} link={dataService[5].link}>{dataService[5].descriptionService}</ServiceDiv>
+                <ServiceDiv logo={'/assets/logos_service/digital.svg'} serviceTitle={dataService[5].titleService} link={dataService[5].link}>{dataService[5].descriptionService}</ServiceDiv>
 
-                <ServiceDiv serviceTitle={dataService[6].titleService} link={dataService[6].link}>{dataService[6].descriptionService}</ServiceDiv>
+                <ServiceDiv logo={'/assets/logos_service/visuelle.svg'} serviceTitle={dataService[6].titleService} link={dataService[6].link}>{dataService[6].descriptionService}</ServiceDiv>
 
-                <ServiceDiv serviceTitle={dataService[7].titleService} link={dataService[7].link}>{dataService[7].descriptionService}</ServiceDiv>
+                <ServiceDiv logo={'/assets/logos_service/evenement.svg'} serviceTitle={dataService[7].titleService} link={dataService[7].link}>{dataService[7].descriptionService}</ServiceDiv>
 
-                <ServiceDiv serviceTitle={dataService[8].titleService} link={dataService[8].link}>{dataService[8].descriptionService}</ServiceDiv>
+                <ServiceDiv logo={'/assets/logos_service/impression.svg'} serviceTitle={dataService[8].titleService} link={dataService[8].link}>{dataService[8].descriptionService}</ServiceDiv>
 
             </motion.div>
 
@@ -202,7 +202,7 @@ function SectionService() {
 }
 
 
-function ServiceDiv({serviceTitle,children,link}){
+function ServiceDiv({serviceTitle,children,link,logo}){
     const img = "/assets/ampoule.svg"
     const group3 = "/assets/Group132.svg"
 
@@ -212,7 +212,7 @@ function ServiceDiv({serviceTitle,children,link}){
     return (
         <div className={styleServcie.layout_service} onClick={ () => handleDiv(link)}>
             <div className={styleServcie.enteteService}>
-                <div style={{position:'relative', height:'60px', width:'60px'}} className={styleServcie.ampoule}><Image fill  alt="ampoule d'idée" src={img}></Image></div>
+                <div style={{position:'relative', height:'60px', width:'60px'}} className={styleServcie.ampoule}><Image fill  alt="ampoule d'idée" src={logo}></Image></div>
                 <h1 className={styleServcie.service_title}>{serviceTitle}</h1>
             </div>
             <div className={styleServcie.group3} style={{width:'45px', height:'4px'}}><Image fill alt="illustration" src={group3}></Image></div>
@@ -235,7 +235,6 @@ export default function Service(){
             <ProgressBar></ProgressBar>
             <Banner></Banner></motion.div>
             <SectionService></SectionService>
-            <div style={{height: 50, backgroundColor: '#0F83838C', width: '100%', margin: '100px 0px', opacity:0.5}}></div>
             <SendProject></SendProject>
             <Footer></Footer>
         </motion.div>

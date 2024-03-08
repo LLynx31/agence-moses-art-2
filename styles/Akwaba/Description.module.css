@@ -141,7 +141,7 @@ width: 50%;
 
 
 
-@media screen and (max-width: 452px) {
+@media screen and (max-width: 640px) {
 
     .layout_section {
         display: flex;

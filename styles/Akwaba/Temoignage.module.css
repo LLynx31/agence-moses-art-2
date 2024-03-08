@@ -342,7 +342,7 @@ margin-top: 25px;
 }
 
 
-@media screen and (max-width: 425px) {
+@media screen and (max-width: 640px) {
     .titre_section {
         font-size: 23px;
     }

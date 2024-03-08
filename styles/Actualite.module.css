@@ -73,7 +73,7 @@
     padding: 60px 20px;
 }
 
-@media screen and (max-width:425px) {
+@media screen and (max-width:640px) {
     .section_mobile {
         display: block;
     }

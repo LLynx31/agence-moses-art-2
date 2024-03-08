@@ -62,7 +62,7 @@ line-height: normal;
 text-align: center;
 }
 
-@media screen and (max-width:425px) {
+@media screen and (max-width:640px) {
     .layout_info {
         display: flex;
         flex-direction: column;

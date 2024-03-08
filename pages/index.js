@@ -18,6 +18,7 @@ import stylePresentation from '@/styles/Presentation/Presentation.module.css'
 
 function App() {
 
+
   const illustrationVideo = '/assets/Group110.svg'
   return (
     

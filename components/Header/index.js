@@ -56,9 +56,16 @@ export default function Header({akwaba = false, presentation = false, service = 
                         <li ref={ formation ? scopes_1 : null} className={isOpen ? stylesHeader.liOpen : stylesHeader.li}><Link className={stylesHeader.link} href="/formation" style={formation ? stylePageActif : stylePageInactif}>formation</Link></li>
                         <li ref={ studio ? scopes_1 : null} className={isOpen ? stylesHeader.liOpen : stylesHeader.li}><Link className={stylesHeader.link} href="/studio" style={studio ? stylePageActif : stylePageInactif}>studio</Link></li>
                         <li ref={ contact ? scopes_1 : null} className={isOpen ? stylesHeader.liOpen : stylesHeader.li}><Link className={stylesHeader.link} href="/contact" style={contact ? stylePageActif : stylePageInactif}>contact</Link></li>
+                        
                     </ul>
+                       
                     <button className={isOpen ? stylesHeader.toogle_menu_close : stylesHeader.hidden} onClick={()=> {setOpen(false)}} ><Image alt="menu" src={closeMenu} width={26} height={27}></Image></button>
                 </nav>
+
+                <div className={isOpen ? stylesHeader.layout_whatsappOpen : stylesHeader.layout_whatsapp}>
+                        <div><Image alt='logo whatsapp' width={25} height={25} src={"/assets/logo_whatsapp.svg"}></Image></div>
+                        <div className={stylesHeader.numero_whatsapp}>+2250787444029</div>
+    </div>
                 <button className={isOpen ? stylesHeader.hidden : stylesHeader.toogle_menu} onClick={()=> {setOpen(true)}} ><Image alt="menu" src={menu} width={36} height={19}></Image></button>
             </div>
             <ProgressBar></ProgressBar>

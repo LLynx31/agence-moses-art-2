@@ -200,7 +200,7 @@
 }
 
 
-@media screen and (max-width:500px) {
+@media screen and (max-width:640px) {
     .description_description {
         color: #FFF;
         text-align: center;

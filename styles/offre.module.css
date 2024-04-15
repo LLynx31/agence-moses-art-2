@@ -73,7 +73,7 @@
 }
 
 
-@media screen and (max-width: 1000px)  {
+@media screen and (max-width: 1024px)  {
     .layout_bottom {
         grid-template-columns: 300px 300px;
         gap: 50px;
@@ -83,7 +83,7 @@
 }
 
 
-@media screen and (max-width: 475px)  {
+@media screen and (max-width: 640px)  {
     .layout_bottom {
         grid-template-columns: 300px;
         gap: 25px;

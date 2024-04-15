@@ -8,7 +8,7 @@
 }
 
 .logo {
-    margin-left: 20px;
+    margin-left: 30px;
 }
 
 .layoutHearder {
@@ -23,7 +23,6 @@
 
 
 .link {
-    font-family: 'Montserrat';
     color: #FFF;
     font-family: Montserrat;
     font-size: 14px;
@@ -42,8 +41,33 @@
     padding: 0%;
 }
 
+.numero_whatsapp {
+    color: #FFF;
+    margin-left: 8px;
+    font-family: Montserrat;
+    font-size: smaller;
+}
+
+.layout_whatsapp {
+    display: flex;
+    flex-direction: row;
+    padding: 8px;
+    border: 1px solid white;
+    align-items: center;
+    margin-right: 25px;
+}
+
+.layout_whatsappOpen {
+    display: flex;
+    flex-direction: row;
+    padding: 8px;
+    border: 1px solid white;
+    align-items: center;
+    margin-top: 20px;
+}
+
 .li {
-    margin-right: 56px;
+    margin: 0px 23px;
     display: inline-block;
     padding-bottom: 5px;
 }
@@ -100,6 +124,8 @@
     align-items: center;
 }
 
+
+
 .ulOpen {
     display: flex;
     flex-direction: column;
@@ -122,6 +148,10 @@
 @media screen and (max-width:1024px) {
     .li {
         margin-right: 40px;
+    }
+
+    .layout_whatsapp {
+        display: none;
     }
 }
 

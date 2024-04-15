@@ -217,7 +217,7 @@ text-transform: capitalize;
 }
 
 
-@media screen and (max-width:425px) {
+@media screen and (max-width:640px) {
 
     .section_contact{
         margin-bottom: 50px;

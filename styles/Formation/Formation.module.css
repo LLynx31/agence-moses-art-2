@@ -196,7 +196,7 @@ margin-left: 50px;
 }
 
 
-@media screen and (max-width:425px) {
+@media screen and (max-width:640px) {
     .Banner {
         height: 90vh;
     }

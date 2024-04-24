@@ -10,7 +10,7 @@ import { useRouter } from "next/router"
 import Link from "next/link"
 
 function Banner() {
-    return <div className={styleStudio.Banner}> <span>Studio</span> <br></br>Decouvrez notre univers créarif</div>
+    return <div className={styleStudio.Banner}> <div className={styleStudio.Banner_title}><span>Studio</span> <br></br>Bientot disponible</div></div>
 }
 
 function Projet({image,titre,lien}) {
@@ -98,12 +98,12 @@ export default function Studio() {
             </Head>
 
             <motion.div initial={{opacity: 0, y:300}} animate={{opacity:1, y:0}} transition={{ duration: 1 }}>
-            <Header studio={true} headerColor={'black'} scroll={'black'} />
+                <Header studio={true} headerColor={'black'} scroll={'black'} />
             <ProgressBar></ProgressBar>
             <Banner></Banner>
-            <SectionProjet></SectionProjet> 
+            {/*<SectionProjet></SectionProjet>*/} 
             <ContatezNous></ContatezNous>
-            <SectionRealisation></SectionRealisation>
+            {/*<SectionRealisation></SectionRealisation>*/}
             <SectionContact></SectionContact>
             <Footer></Footer>
 

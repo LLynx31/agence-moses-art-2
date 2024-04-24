@@ -6,8 +6,9 @@ import style from "@/styles/Approche.module.css"
 export default function SectionApproche(){
     return(
         <div className={style.layout_section}>
+            <h1 style={{fontFamily:'montserrat', textAlign:"center", marginTop:'60px', fontSize:'40px'}}>NOTRE APPROCHE</h1>
             <div>
-                <img className={style.img} src="/assets/Image_Akwaba/Notre_approche.png" alt="approche commerciale"  srcSet="/assets/Image_Akwaba/Notre_approche.png 1000w, /assets/version_mobile/notre_approche.jpg 640w" sizes="(max-width:640px)" ></img>
+                <img loading="lazy" className={style.img} src="/assets/site version web/Notre_approche_version_.jpg" alt="approche commerciale"  ></img>
             </div>
         </div>
     )

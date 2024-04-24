@@ -168,12 +168,12 @@ function SectionDescription(){
         
         <motion.section variants={animSec} initial="hidden" whileInView="visible" viewport={{once:true}} className="section_description">
             <div className={stylePresentation.layout_section_description}>
-                <motion.img variants={animBallonOrange}
+                <motion.img loading='lazy' variants={animBallonOrange}
                 width={158}
                 height={262} src={illustrationDescriptionOrange} className={stylePresentation.illustrationDescriptionOrange}></motion.img>
 
                 
-                <motion.img variants={animBallonBleu} width={158} height={262} src={illustrationDescriptionVert} className={stylePresentation.illustrationDescriptionVert}></motion.img>
+                <motion.img loading='lazy' variants={animBallonBleu} width={158} height={262} src={illustrationDescriptionVert} className={stylePresentation.illustrationDescriptionVert}></motion.img>
                 <h1 className={stylePresentation.section_description_title}>Qui sommes nous ?</h1>
                 <motion.p variants={animP}>Créée en 2019 dont l’objectif  est d’aider les Petites, Moyennes et Grandes <br></br>entreprises à mieux se faire connaitre et à résoudre l’ensemble de leurs <br></br>besoins et problématiques de communication</motion.p>
             </div>
@@ -182,9 +182,7 @@ function SectionDescription(){
 
                 
                 <div  className={stylePresentation.layout_section_description_text}>
-                    <motion.h1 variants={animRoleH1} initial="hidden" whileInView="visible" viewport={{once:true}} className = {stylePresentation.section_description_role}>NOUS CONCEVONS,CREONS L’IDENTITE
-                    VISUELLE DE VOTRE
-                    MARQUE.</motion.h1>
+                    <motion.h1 variants={animRoleH1} initial="hidden" whileInView="visible" viewport={{once:true}} className = {stylePresentation.section_description_role}>NOUS CONCEVONS,CREONS DES STARTEGIES DE COMMUNICATION ADAPTEES.</motion.h1>
                     <motion.p variants={animRoleP} initial="hidden" whileInView="visible" viewport={{once:true}}>Moses Art est une agence de communication 360 qui accompagne
                     ses clients dans le developpement de leur image de marque. Pour
                     cela , elle couvre à la fois la création et la diffusion des campagnes
@@ -195,13 +193,13 @@ function SectionDescription(){
                     
 
                 <div className={stylePresentation.illustration_role}>
-                    <motion.img width={450} height={500} variants={animImgRole} initial="hidden" whileInView="visible" viewport={{once:true}} src={illustrationRole} className={stylePresentation.illustrationRole}></motion.img>
+                    <motion.img loading='lazy' width={450} height={500} variants={animImgRole} initial="hidden" whileInView="visible" viewport={{once:true}} src={illustrationRole} className={stylePresentation.illustrationRole}></motion.img>
 
                 </div>
 
-                <motion.img variants={animSubtract} viewport={{once:true}} width={80} height={80} src={subtract} alt='subtract' className={stylePresentation.subtract}></motion.img>
+                <motion.img loading='lazy' variants={animSubtract} viewport={{once:true}} width={80} height={80} src={subtract} alt='subtract' className={stylePresentation.subtract}></motion.img>
 
-                <motion.img variants={animPolygon} viewport={{once:true}} width={40}height={40} src={polygon} alt='polygon' className={stylePresentation.polygon}></motion.img>
+                <motion.img loading='lazy' variants={animPolygon} viewport={{once:true}} width={40}height={40} src={polygon} alt='polygon' className={stylePresentation.polygon}></motion.img>
             </div>
         </motion.section>
     )
@@ -209,7 +207,7 @@ function SectionDescription(){
 
 
 function SectionPrincipes (){
-    const principeImg1 = '/assets/Image_Presentation/Nos_principes_image1_1.jpg'
+    const principeImg1 = '/assets/site version web/presentation_version_mobile_et_web.jpg'
     //const carreOrange = '/assets/carreOrange.svg'
     const illustrationRectangle  ='/assets/RectanglePrincipe.svg'
     const principeImg2 = '/assets/Image_Presentation/Nos_principes_image2_2.jpg'
@@ -240,7 +238,7 @@ function SectionPrincipes (){
     const animTitre = {
         hidden: {
             opacity: 0,
-            x: 100
+            x: 20
         },
 
         visible: {
@@ -290,18 +288,18 @@ function SectionPrincipes (){
 
     return (
         <motion.section variants={animSec} initial="hidden" whileInView="visible" viewport={{once:true}} className={stylePresentation.section_principes}>
-            <motion.img variants={animPolygon} animate="anim" width={50} height={50} src={polygon2} className={stylePresentation.polygon2}></motion.img>
+            <motion.img loading='lazy' variants={animPolygon} animate="anim" width={50} height={50} src={polygon2} className={stylePresentation.polygon2}></motion.img>
 
-            <motion.img variants={animPolygon} animate="anim" width={50} height={50} src={polygon2} className={stylePresentation.polygon_2}></motion.img>
-            <Image alt="illustration" width={400} height={40} src={illustrationRectangle} className={stylePresentation.RectanglePrincipe} ></Image>
-             <Image alt="illustration"  width={94} height={94} src={ellipse} className={stylePresentation.ellipse} ></Image>
+            <motion.img loading='lazy' variants={animPolygon} animate="anim" width={50} height={50} src={polygon2} className={stylePresentation.polygon_2}></motion.img>
+            <Image loading='lazy'  alt="illustration" width={400} height={40} src={illustrationRectangle} className={stylePresentation.RectanglePrincipe} ></Image>
+             <Image loading='lazy' alt="illustration"  width={94} height={94} src={ellipse} className={stylePresentation.ellipse} ></Image>
             <motion.h1 variants={animTitre} initial="hidden" whileInView="visible" viewport={{once:true}} className={stylePresentation.title_section_principes}> Nos Principes</motion.h1>
             <div className={stylePresentation.layout_principes}>
 
                 <motion.div variants={animPrincipe1} className={stylePresentation.layout_principe_1}>
-                    <Image alt="illustration"  src={principeImg1}
+                    <Image alt="illustration" loading='lazy'  src={principeImg1}
                     width={350} height={350} quality={100} className={stylePresentation.principe_img_1}></Image>
-                    {/*<Image 
+                    {/*<Image loading='lazy'  
                     width={94} alt="illustration"  height={94} src={carreOrange} className={stylePresentation.CarreOrange} ></Image>*/}
 
                     
@@ -313,14 +311,14 @@ function SectionPrincipes (){
                 </motion.div>
                 
                 <motion.div variants={animPrincipe2} className={stylePresentation.layout_principe_2}>
-                    <Image  alt="illustration" width={94} height={94} quality={100} src={carreVert} className={stylePresentation.carreVert} ></Image>
+                    <Image loading='lazy'   alt="illustration" width={94} height={94} quality={100} src={carreVert} className={stylePresentation.carreVert} ></Image>
 
                     <p>Nous pensons qu’il n’existe pas de modèle de
                         communication pret à l’emploi. C’est pourquoi
                         chaque projet est pensé , étudié et adapté à la
                         cible pour susciter le sentiment et faire jaillir les
                         émotions recherchées.</p>
-                    <Image alt="illustration"  className={stylePresentation.principe_img_2} width={500} height={500} src={principeImg2}></Image>
+                    <Image loading='lazy'  alt="illustration"  className={stylePresentation.principe_img_2} width={500} height={500} src={principeImg2}></Image>
                 </motion.div>
                 
             </div>
@@ -357,7 +355,7 @@ function DomaineCompetence({name, img}) {
     return (
         <div className={stylePresentation.domaine}>
             <motion.div whileHover={{rotate: 360, transition:{duration: 0.4}}} className={stylePresentation.img_domaine}>
-                <motion.div whileInView={{rotate: -360, transition:{duration: 0.4}}} ><Image className={stylePresentation.img_illustration} alt="illustration"  src={img} width={75} height={75}></Image></motion.div> 
+                <motion.div whileInView={{rotate: -360, transition:{duration: 0.4}}} ><Image loading='lazy'  className={stylePresentation.img_illustration} alt="illustration"  src={img} width={75} height={75}></Image></motion.div> 
             </motion.div> 
             <div className={stylePresentation.domaine_name}>
                 {name}
@@ -455,7 +453,7 @@ export function SectionDomaineCompetence() {
     return (
         <motion.div variants={animSec} initial="hidden" whileInView="visible" viewport={{ once: true }} className={stylePresentation.layout_section_domaine} >
             
-            <Image src={illustrationDomaineCompetence} width={96} height={96} 
+            <Image loading='lazy'  src={illustrationDomaineCompetence} width={96} height={96} 
             alt='illustration_domaine_competence'  className={stylePresentation.illustration_domaine_competence}></Image>
             <motion.div variants={animRoleH1} initial="hidden" whileInView="visible" viewport={{once:true}} className={stylePresentation.domaine_competence_title}
             >Domaines de Compétence
@@ -479,7 +477,7 @@ export function SectionDomaineCompetence() {
 function Realisation({srcImage, titre, number}){
     return(
         <div className={stylePresentation.realisation_projet}>
-                <Image alt="illustration"  src={srcImage} width={60} height={60}></Image>
+                <Image loading='lazy'  alt="illustration"  src={srcImage} width={60} height={60}></Image>
                 <div className={stylePresentation.number_realisation}>
                     +{number}
                 </div>
@@ -596,10 +594,10 @@ export function SectionRealisation() {
 
     return(
         <div id="counter" className={stylePresentation.layout_realisation}>
-            <motion.img variants={animIllustrationEllipse}  whileInView="whileInView" src={illustration1} alt="illustration" className={stylePresentation.realisation_illustration1} width={200} height={200}></motion.img>
-            <motion.img variants={animIllustrationEllipse}  whileInView="whileInView" src={illustration2} alt="illustration" className={stylePresentation.realisation_illustration2} width={600} height={600}></motion.img>
-            <motion.img variants={animIllustration}  whileInView="whileInView" src={calque61} className={stylePresentation.realisation_calque61} width={60} height={60}></motion.img>
-            <motion.img variants={animIllustration}  whileInView="whileInView"src={calque61} className={stylePresentation.realisation_calque81} width={50} height={50}></motion.img>
+            <motion.img loading='lazy' variants={animIllustrationEllipse}  whileInView="whileInView" src={illustration1} alt="illustration" className={stylePresentation.realisation_illustration1} width={200} height={200}></motion.img>
+            <motion.img loading='lazy' variants={animIllustrationEllipse}  whileInView="whileInView" src={illustration2} alt="illustration" className={stylePresentation.realisation_illustration2} width={600} height={600}></motion.img>
+            <motion.img loading='lazy' variants={animIllustration}  whileInView="whileInView" src={calque61} className={stylePresentation.realisation_calque61} width={60} height={60}></motion.img>
+            <motion.img loading='lazy' variants={animIllustration}  whileInView="whileInView"src={calque61} className={stylePresentation.realisation_calque81} width={50} height={50}></motion.img>
             <Realisation srcImage={imgProject} number={countProjet} titre={"Projet"}></Realisation>
             <Realisation srcImage={imgHandShake} number={countPartenaire} titre={"Partenaires"}></Realisation>
             <Realisation srcImage={imgOrganizationChartPeople} number={countMembre} titre={'Membre'}></Realisation>

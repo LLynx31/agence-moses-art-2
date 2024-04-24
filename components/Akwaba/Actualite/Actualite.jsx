@@ -8,11 +8,10 @@ function Actualité({img, imgAlt, titre, children}){
     return(
         <div className={style.actualite}>
             <div className={style.img_actualite}>
-                Photo
+                <img src={img} alt={imgAlt}></img>
             </div>
-            <div className={style.actualite_text}>
-                <h1 className={style.actualite_titre}>{titre}</h1>
-                <p className={style.actualite_description}>{children}</p>
+            <div style={{color:'white'}}>
+                ezfzefjezifzfzfnn
             </div>
         </div>
     )
@@ -37,19 +36,19 @@ export default function SectionActualite(){
             stopOnHover={true}
             >
                 <div className={style.layout_section}>
-                    <Actualité titre={'Titre'}>Contenue contenue lorem ipsum dolor sit amet dolor sit</Actualité>
+                    <Actualité img={"/assets/site version web/actualité_1.jpg"}></Actualité>
                     
-                    <Actualité titre={'Titre'}>Contenue contenue lorem ipsum dolor sit amet dolor sit</Actualité>  
+                    <Actualité img={"/assets/site version web/actualité_2.jpg"}></Actualité>  
 
-                    <Actualité titre={'Titre'}>Contenue contenue lorem ipsum dolor sit amet dolor sit</Actualité>
+                    <Actualité img={"/assets/site version web/actualité_3.jpg"}></Actualité>
                 </div>
 
                 <div className={style.layout_section}>
-                    <Actualité titre={'Titre'}>Contenue contenue lorem ipsum dolor sit amet dolor sit</Actualité>
+                    <Actualité></Actualité>
                     
-                    <Actualité titre={'Titre'}>Contenue contenue lorem ipsum dolor sit amet dolor sit</Actualité>  
+                    <Actualité></Actualité>  
 
-                    <Actualité titre={'Titre'}>Contenue contenue lorem ipsum dolor sit amet dolor sit</Actualité>
+                    <Actualité></Actualité>
                 </div>
                     
                 
@@ -72,19 +71,19 @@ export default function SectionActualite(){
             stopOnHover={true}
             >
                 
-                <Actualité titre={'Titre'}>Contenue contenue lorem ipsum dolor sit amet dolor sit</Actualité>
+                <Actualité></Actualité>
                     
-                <Actualité titre={'Titre'}>Contenue contenue lorem ipsum dolor sit amet dolor sit</Actualité>  
+                <Actualité></Actualité>  
 
-                <Actualité titre={'Titre'}>Contenue contenue lorem ipsum dolor sit amet dolor sit</Actualité>
+                <Actualité></Actualité>
 
-                <Actualité titre={'Titre'}>Contenue contenue lorem ipsum dolor sit amet dolor sit</Actualité>
+                <Actualité></Actualité>
 
-                <Actualité titre={'Titre'}>Contenue contenue lorem ipsum dolor sit amet dolor sit</Actualité>
+                <Actualité></Actualité>
                     
-                <Actualité titre={'Titre'}>Contenue contenue lorem ipsum dolor sit amet dolor sit</Actualité>  
+                <Actualité></Actualité>  
 
-                <Actualité titre={'Titre'}>Contenue contenue lorem ipsum dolor sit amet dolor sit</Actualité>
+                <Actualité></Actualité>
                 
                   
             </Carousel>

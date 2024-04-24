@@ -34,7 +34,7 @@ function Info({srcImage,altImage, text}) {
     }
     return(
         <motion.div variants={Parent} whileInView="animate" className={styleContact.layout_info}>
-            <motion.div className={styleContact.div_Image_info}><motion.div variants={enfant} animate="animate" ><Image alt="illustration" src={srcImage} width={50} height={50}></Image></motion.div></motion.div> 
+            <motion.div className={styleContact.div_Image_info}><motion.div variants={enfant} animate="animate" ><Image loading="lazy" alt="illustration" src={srcImage} width={50} height={50}></Image></motion.div></motion.div> 
             <div className={styleContact.text_info}>{text}</div>
         </motion.div>
     )
@@ -101,7 +101,7 @@ export default function Contact() {
                         <motion.h2 initial={{opacity:0,x:-100}} animate={{opacity:1, x: 0,scale:1.06, rotate:[0,30,0]}} transition={{delay:0.6, duration:1.3}}  className={styleContact.contact_title}>N’hésité Pas. <br></br>Contactez Nous !</motion.h2>
                         <motion.p initial={{opacity:0,x:-100}} whileInView={{opacity:1, x: 0}} transition={{delay:1, duration:0.3}}  viewport={{once:true}} >Si vous souhaitez en savoir plus sur Triple, ou si vous pensez qu’un partenariat de longue date pourrait aider votre entreprise, écrivez-nous! Nous serions ravis de parler.</motion.p>
                         <motion.div  initial={{opacity:0}} animate={{opacity:1}} whileInView={{scale:[1,1.1,1], transition:{delay:1.4, duration:0.6, repeat:Infinity, repeatDelay:5}}} transition={{delay:1.4, duration:0.3}} className={styleContact.layout_link_contact}>
-                            <Link className={styleContact.link_contact_img} href ='#formContact'><Image alt="homme au telephone" src={illustartionEmail} width={30} height={30}></Image></Link> 
+                            <Link className={styleContact.link_contact_img} href ='#formContact'><Image loading="lazy" alt="homme au telephone" src={illustartionEmail} width={30} height={30}></Image></Link> 
                             <Link href ='#formContact' className={styleContact.link_contact_text}>Ecrivez nous</Link> 
                         </motion.div>
 
@@ -110,22 +110,22 @@ export default function Contact() {
                     </motion.div>
 
                     <motion.div initial={{opacity:0, y:300}} whileInView={{opacity:1, y:0}} transition={{delay:1.8, duration:0.6}} viewport={{once:true}}  className={styleContact.section_contact_illustration}>
-                        <Image alt="illustration" src={illustrationPageContact} width={420} height={420}></Image>
+                        <Image loading="lazy" alt="illustration" src={illustrationPageContact} width={420} height={420}></Image>
                     </motion.div>
                 
                     
                 </section>
 
                
-                    <Image alt="illustration" src={groupe105} width={100} height={20} className={styleContact.Group105_1 }></Image>
-                    <Image alt="illustration" src={groupe105} className={styleContact.Group105_2} width={100} height={20}></Image>
+                    <Image loading="lazy" alt="illustration" src={groupe105} width={100} height={20} className={styleContact.Group105_1 }></Image>
+                    <Image loading="lazy" alt="illustration" src={groupe105} className={styleContact.Group105_2} width={100} height={20}></Image>
                 
                 
 
                 <section className={styleContact.section_info}>
-                <Image alt="illustration" src={ellipse} className={styleContact.ellipse1} width={320} height={320}></Image>
-                <Image alt="illustration" src={ellipse} className={styleContact.ellipse2} width={420} height={320}></Image>
-                <motion.div animate = {{x: [0, 10,0,-10,0],y: [0, 10, 0, -10, 0],opacity: [8,9,10],transition: {repeat: Infinity,duration: 20}}}><Image alt="illustration" src={ellipse} className={styleContact.ellipse3} width={320} height={320}></Image></motion.div>
+                <Image loading="lazy" alt="illustration" src={ellipse} className={styleContact.ellipse1} width={320} height={320}></Image>
+                <Image loading="lazy" alt="illustration" src={ellipse} className={styleContact.ellipse2} width={420} height={320}></Image>
+                <motion.div animate = {{x: [0, 10,0,-10,0],y: [0, 10, 0, -10, 0],opacity: [8,9,10],transition: {repeat: Infinity,duration: 20}}}><Image loading="lazy" alt="illustration" src={ellipse} className={styleContact.ellipse3} width={320} height={320}></Image></motion.div>
                         <Info srcImage={imgEmail} text={'Email'} altImage={'logo Email'}></Info>
                         <Info srcImage={imgTelephone} text={'Telephone'} altImage={'logo telephone'}></Info>
                         <Info srcImage={imgLocalisation} text={'localisation'} altImage={'logo localisation'}></Info>
@@ -135,9 +135,9 @@ export default function Contact() {
 
 
            
-               <motion.img whileInView={{x:[0,-300,0]}} transition={{repeat:Infinity, duration:5, repeatDelay:5 }} alt="illustration" src={groupe105} className={styleContact.Group105_3}  width={100} height={20}></motion.img>
-               <motion.img whileInView={{x:[0,-300,0]}} transition={{repeat:Infinity, duration:5, repeatDelay:10}} alt="illustration" src={groupe105} className={styleContact.Group105_4} width={100} height={20}></motion.img>   
-                <motion.img whileInView={{x:[0,-300,0]}} transition={{repeat:Infinity, duration:5, repeatDelay:15}} alt="illustration" src={groupe105} className={styleContact.Group105_5} width={100} height={20}></motion.img>
+               <motion.img loading="lazy" whileInView={{x:[0,-300,0]}} transition={{repeat:Infinity, duration:5, repeatDelay:5 }} alt="illustration" src={groupe105} className={styleContact.Group105_3}  width={100} height={20}></motion.img>
+               <motion.img loading="lazy" whileInView={{x:[0,-300,0]}} transition={{repeat:Infinity, duration:5, repeatDelay:10}} alt="illustration" src={groupe105} className={styleContact.Group105_4} width={100} height={20}></motion.img>   
+                <motion.img loading="lazy" whileInView={{x:[0,-300,0]}} transition={{repeat:Infinity, duration:5, repeatDelay:15}} alt="illustration" src={groupe105} className={styleContact.Group105_5} width={100} height={20}></motion.img>
             
                 
             <div id="formContact"><ContatezNous></ContatezNous></div>

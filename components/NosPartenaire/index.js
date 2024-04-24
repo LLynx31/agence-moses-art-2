@@ -6,7 +6,7 @@ function Partenaire({imgPartenaire}){
     
     return (
         <div className={stylesPatrenaire.div_partenaire}>
-            <Image className={stylesPatrenaire.logo} alt="logo des partenaires" src={imgPartenaire} width={150} height={150}></Image>
+            <Image loading="lazy" className={stylesPatrenaire.logo} alt="logo des partenaires" src={imgPartenaire} width={90} height={90}></Image>
         </div>
         
     )

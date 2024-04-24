@@ -77,8 +77,8 @@ export default function SectionService() {
     }
     return (
         <motion.div variants={animSec} initial="hidden" whileInView="visible" viewport={{once: true}} className={styleService.layout_section}>
-            <Image className={styleService.illustration1} alt='illustration' src={illustration1} width={250} height={250}></Image>
-            <Image className={styleService.illustration2} alt='illustration' src={illustration2} width={500} height={500}></Image>
+            <Image loading='lazy' className={styleService.illustration1} alt='illustration' src={illustration1} width={250} height={250}></Image>
+            <Image loading='lazy' className={styleService.illustration2} alt='illustration' src={illustration2} width={500} height={500}></Image>
             <motion.div variants={animTop} className={styleService.layout_top}>
                 <div className={styleService.section_introduction}>Nos services</div>
                 <h1 className={styleService.section_title}>Nos différents Services</h1>

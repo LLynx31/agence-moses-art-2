@@ -13,7 +13,7 @@ import Image from "next/image"
 function Banner(){
     return (
             <div className={styleFormation.Banner}>
-                <div className={styleFormation.Banner_title}>Nos <span>Formations</span></div>
+                <div className={styleFormation.Banner_title}><span style={{color:'#F6AA06'}}>Formation<br></br></span>Bientot disponible</div>
             </div>
         )
 }
@@ -21,7 +21,7 @@ function Banner(){
 function SectionDescription(){
     return(
        <section className={styleFormation.section_description}>
-            <Image alt="image formation"></Image>
+            <Image loading="lazy" alt="image formation"></Image>
             <h1 className={styleFormation.section_title}>Découvrez nos <span style={{color: '#F6AA06'}}>Formations</span></h1>
             <p>Pour suivre et accompagner les demandes croissantes de nos clients, nous avons mis en place des formations.. Nos formations sont conçues pour répondre aux besoins spécifiques de nos clients, et sont animées par des formateurs experts dans leur domaine.</p> 
        </section> 
@@ -104,7 +104,7 @@ function FormationDiv({colorLink = '#F6AA06', changeInformationFormation}){
     return (
         <div className={styleFormation.layoutFormation}>
             <div>
-                <Image className={styleFormation.imageFormation} src={rectangle96} width={300} height={300} alt="image des formation" ></Image>
+                <Image loading="lazy" className={styleFormation.imageFormation} src={rectangle96} width={300} height={300} alt="image des formation" ></Image>
             </div>
             
             <div className={styleFormation.bloc_text}>
@@ -155,10 +155,10 @@ export default function Formation(){
             <ProgressBar></ProgressBar>
             <Banner></Banner>
             
-            <motion.div initial={{opacity:0, x:-300}} animate={{opacity:1, x:0}} transition={{duration:1}}><SectionDescription></SectionDescription></motion.div>
+            {/*<motion.div initial={{opacity:0, x:-300}} animate={{opacity:1, x:0}} transition={{duration:1}}><SectionDescription></SectionDescription></motion.div>
             <motion.div initial={{opacity:0}} animate={{opacity:1}} transition={{duration:3}}><SectionOffre></SectionOffre></motion.div>
             <Equipe></Equipe>
-            <SendProject background={{first: '#0F8383', second: '#F6AA06'}}>Nous n`attendons que  <span style={{color: '#F6AA06'}}>Vous</span> </SendProject>
+    <SendProject background={{first: '#0F8383', second: '#F6AA06'}}>Nous n`attendons que  <span style={{color: '#F6AA06'}}>Vous</span> </SendProject>*/     }
             <ContactezNous></ContactezNous>
             <Footer></Footer>
             </motion.div>

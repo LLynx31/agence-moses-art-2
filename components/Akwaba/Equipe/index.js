@@ -13,7 +13,7 @@ import { motion } from "framer-motion"
 function Profil({imgSrc, alt}){
     return(
         <div className="layout-profil">
-            <Image src={imgSrc} alt={alt} width={400} height={500}></Image>
+            <Image loading='lazy' src={imgSrc} alt={alt} width={400} height={500}></Image>
         </div>
     )
 }

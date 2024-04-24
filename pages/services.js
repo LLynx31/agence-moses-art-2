@@ -182,21 +182,21 @@ function SectionService() {
             </motion.div>
 
 
-            <motion.img variants={animIllustration} className={styleServcie.illustrationRond} width={25} alt="illustration" src={illustrationRond}></motion.img>
-            <motion.img variants={animIllustration} className={styleServcie.illustrationCroixOrange} width={25} alt="illustration" src={illustrationCroixOrange}></motion.img>
-            <motion.img variants={animIllustration} className={styleServcie.illustrationCroixVert} width={25} alt="illustration" src={illustrationCroixVert}></motion.img>
-            <motion.img variants={animIllustration} className={styleServcie.illustrationRond1} width={25} alt="illustration" src={illustrationRond}></motion.img>
-            <motion.img variants={animIllustration} className={styleServcie.illustrationCroixOrange1} width={25} alt="illustration" src={illustrationCroixOrange}></motion.img>
-            <motion.img variants={animIllustration}className={styleServcie.illustrationCroixVert1} width={25} alt="illustration" src={illustrationCroixVert}></motion.img>
-            <motion.img variants={animIllustration} className={styleServcie.illustrationRond2} width={25} alt="illustration" src={illustrationRond}></motion.img>
-            <motion.img variants={animIllustration} className={styleServcie.illustrationCroixOrange2} width={25} alt="illustration" src={illustrationCroixOrange}></motion.img>
-            <motion.img variants={animIllustration} className={styleServcie.illustrationCroixVert2} width={25} alt="illustration" src={illustrationCroixVert}></motion.img>
-            <motion.img variants={animIllustration} className={styleServcie.illustrationRond3} width={25} alt="illustration" src={illustrationRond}></motion.img>
-            <motion.img variants={animIllustration} className={styleServcie.illustrationCroixOrange3} width={25} alt="illustration" src={illustrationCroixOrange}></motion.img>
-            <motion.img variants={animIllustration} className={styleServcie.illustrationCroixVert3} width={25} alt="illustration" src={illustrationCroixVert}></motion.img>
-            <motion.img variants={animIllustration} className={styleServcie.illustrationRond4} width={25} alt="illustration" src={illustrationRond}></motion.img>
-            <motion.img variants={animIllustration} className={styleServcie.illustrationCroixOrange4} width={25} alt="illustration" src={illustrationCroixOrange}></motion.img>
-            <motion.img variants={animIllustration} className={styleServcie.illustrationCroixVert4} width={25} alt="illustration" src={illustrationCroixVert}></motion.img>
+            <motion.img loading="lazy" variants={animIllustration} className={styleServcie.illustrationRond} width={25} alt="illustration" src={illustrationRond}></motion.img>
+            <motion.img loading="lazy" variants={animIllustration} className={styleServcie.illustrationCroixOrange} width={25} alt="illustration" src={illustrationCroixOrange}></motion.img>
+            <motion.img loading="lazy" variants={animIllustration} className={styleServcie.illustrationCroixVert} width={25} alt="illustration" src={illustrationCroixVert}></motion.img>
+            <motion.img loading="lazy" variants={animIllustration} className={styleServcie.illustrationRond1} width={25} alt="illustration" src={illustrationRond}></motion.img>
+            <motion.img loading="lazy" variants={animIllustration} className={styleServcie.illustrationCroixOrange1} width={25} alt="illustration" src={illustrationCroixOrange}></motion.img>
+            <motion.img loading="lazy" variants={animIllustration}className={styleServcie.illustrationCroixVert1} width={25} alt="illustration" src={illustrationCroixVert}></motion.img>
+            <motion.img loading="lazy" variants={animIllustration} className={styleServcie.illustrationRond2} width={25} alt="illustration" src={illustrationRond}></motion.img>
+            <motion.img loading="lazy" variants={animIllustration} className={styleServcie.illustrationCroixOrange2} width={25} alt="illustration" src={illustrationCroixOrange}></motion.img>
+            <motion.img loading="lazy" variants={animIllustration} className={styleServcie.illustrationCroixVert2} width={25} alt="illustration" src={illustrationCroixVert}></motion.img>
+            <motion.img loading="lazy" variants={animIllustration} className={styleServcie.illustrationRond3} width={25} alt="illustration" src={illustrationRond}></motion.img>
+            <motion.img loading="lazy" variants={animIllustration} className={styleServcie.illustrationCroixOrange3} width={25} alt="illustration" src={illustrationCroixOrange}></motion.img>
+            <motion.img loading="lazy" variants={animIllustration} className={styleServcie.illustrationCroixVert3} width={25} alt="illustration" src={illustrationCroixVert}></motion.img>
+            <motion.img loading="lazy" variants={animIllustration} className={styleServcie.illustrationRond4} width={25} alt="illustration" src={illustrationRond}></motion.img>
+            <motion.img loading="lazy" variants={animIllustration} className={styleServcie.illustrationCroixOrange4} width={25} alt="illustration" src={illustrationCroixOrange}></motion.img>
+            <motion.img loading="lazy" variants={animIllustration} className={styleServcie.illustrationCroixVert4} width={25} alt="illustration" src={illustrationCroixVert}></motion.img>
         </motion.div>
     )
 }
@@ -212,10 +212,10 @@ function ServiceDiv({serviceTitle,children,link,logo}){
     return (
         <div className={styleServcie.layout_service} onClick={ () => handleDiv(link)}>
             <div className={styleServcie.enteteService}>
-                <div style={{position:'relative', height:'60px', width:'60px'}} className={styleServcie.ampoule}><Image fill  alt="ampoule d'idée" src={logo}></Image></div>
+                <div style={{position:'relative', height:'60px', width:'60px'}} className={styleServcie.ampoule}><Image loading="lazy" fill  alt="ampoule d'idée" src={logo}></Image></div>
                 <h1 className={styleServcie.service_title}>{serviceTitle}</h1>
             </div>
-            <div className={styleServcie.group3} style={{width:'45px', height:'4px'}}><Image fill alt="illustration" src={group3}></Image></div>
+            <div className={styleServcie.group3} style={{width:'45px', height:'4px'}}><Image loading="lazy" fill alt="illustration" src={group3}></Image></div>
             <p>{children}</p>
         </div>
     )

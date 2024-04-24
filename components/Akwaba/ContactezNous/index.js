@@ -44,7 +44,7 @@ function FormContact(){
     return(
         <form className={styleContactezNous.formulaire} onSubmit={handleSubmit}>
 
-            <Image src={illustrationFormulaire} width={450} height={500} quality={100} className={styleContactezNous.illustrationFormulaire} alt="femme qui sourit"></Image>
+            <Image loading='lazy' src={illustrationFormulaire} width={450} height={500} quality={100} className={styleContactezNous.illustrationFormulaire} alt="femme qui sourit"></Image>
 
             <div className={styleContactezNous.champ}>
                     <input type="text" name="full_name" className={styleContactezNous.full_name} onChange={(e) => setFullname(e.target.value)} placeholder='Nom & Prenom'  required></input>
@@ -120,7 +120,7 @@ export default function ContatezNous({children}) {
     const animTitre = {
         hidden: {
             opacity: 0,
-            x: 50
+            x: 10
         },
 
         visible: {
@@ -182,16 +182,16 @@ export default function ContatezNous({children}) {
     
     return (
         <motion.div id='contact' variants={animSec} whileInView="visible" initial="hidden" viewport={{once: true}}  className={styleContactezNous.layout_contactez_nous}>
-            <motion.img variants={animIllustration} whileInView="whileInView" className={styleContactezNous.illustration1} alt='illustration' src={illustration1} width={80} height={80}></motion.img>
-            <motion.img variants={animIllustration} whileInView="whileInView" className={styleContactezNous.illustration2} alt='illustration' src={illustration2} width={80} height={80}></motion.img>
+            <motion.img loading='lazy' variants={animIllustration} whileInView="whileInView" className={styleContactezNous.illustration1} alt='illustration' src={illustration1} width={80} height={80}></motion.img>
+            <motion.img loading='lazy' variants={animIllustration} whileInView="whileInView" className={styleContactezNous.illustration2} alt='illustration' src={illustration2} width={80} height={80}></motion.img>
             <div className={styleContactezNous.back_form}> 
-                <motion.h1 variants={animTitre} className={styleContactezNous.contactez_nous_title}>Prenez rendez-vous !</motion.h1>
+                <motion.h1 variants={animTitre} className={styleContactezNous.contactez_nous_title}>Prenez rendez-vous !!!</motion.h1>
                 <motion.p variants={animP}>N’hésitez pas à nous contacter pour vous <br></br>démarquez des autres</motion.p>
                     <motion.div variants={animReseau} className={styleContactezNous.reseau}>
-                        <div style={styleReseau}><a href=''><Image fill alt="facebook" className='facebook' src={facebook}  ></Image></a></div>
-                        <div style={styleReseau}><a href=''><Image fill alt="instagram" className='instagram' src={instagram}></Image></a></div>
-                        <div style={styleReseau}><a href=''><Image fill  alt="linkedin" className='linkedin' src={linkedin} ></Image></a></div>
-                        <div style={styleReseau}><a href=''><Image fill alt="Email" className='Email' src={email} ></Image></a></div>  
+                        <div style={styleReseau}><a href=''><Image loading='lazy' fill alt="facebook" className='facebook' src={facebook}  ></Image></a></div>
+                        <div style={styleReseau}><a href=''><Image loading='lazy' fill alt="instagram" className='instagram' src={instagram}></Image></a></div>
+                        <div style={styleReseau}><a href=''><Image loading='lazy' fill  alt="linkedin" className='linkedin' src={linkedin} ></Image></a></div>
+                        <div style={styleReseau}><a href=''><Image loading='lazy' fill alt="Email" className='Email' src={email} ></Image></a></div>  
                     </motion.div>
             </div>
             <motion.div variants={animForm}><FormContact /></motion.div>
@@ -199,9 +199,9 @@ export default function ContatezNous({children}) {
             <div className={styleContactezNous.rs}>
                 <div className={styleContactezNous.title_rs}>suivez nous</div>
                 <div className={styleContactezNous.img_rs}>
-                    <Image alt="illustration" src={imgInstagramContactezNous} width={25} height={25}></Image>
-                    <Image alt="illustration" src={imgFacebookContactezNous} width={25} height={25}></Image>
-                    <Image alt="illustration" src={imgLinkedInContactezNous} width={25} height={25}></Image>
+                    <Image loading='lazy' alt="illustration" src={imgInstagramContactezNous} width={25} height={25}></Image>
+                    <Image loading='lazy' alt="illustration" src={imgFacebookContactezNous} width={25} height={25}></Image>
+                    <Image loading='lazy' alt="illustration" src={imgLinkedInContactezNous} width={25} height={25}></Image>
                     
                 </div>
                 

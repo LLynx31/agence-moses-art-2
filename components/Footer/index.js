@@ -14,10 +14,10 @@ export default function Footer(){
     return(
         <div className={styleFooter.layout_footer}>
             <div className={styleFooter.layout_info}>
-                <Image className={styleFooter.logo} alt="Moses Agence Moses" width={200} height={100} src={logo}></Image >
+                <Image loading='lazy' className={styleFooter.logo} alt="Moses Agence Moses" width={200} height={100} src={logo}></Image >
                 <div className={styleFooter.contact}>
                     <h1 className={styleFooter.title}>Nos contacts</h1>
-                    <div style={styleLine}><Image fill alt="illustration"  src={lineFooter} ></Image ></div>
+                    <div style={styleLine}><Image loading='lazy' fill alt="illustration"  src={lineFooter} ></Image ></div>
                     <div className={styleFooter.number}>27 35 99 28 12</div>
                     <div className={styleFooter.number}>+225 07 87 444 029</div>
                     <div className={styleFooter.number}>+225 01 42 666 360</div>
@@ -25,17 +25,17 @@ export default function Footer(){
 
                 <div className={styleFooter.localiation}>
                     <h1 className={styleFooter.title}>localisation</h1>
-                    <div style={styleLine}><Image fill alt="illustration" src={lineFooter} ></Image ></div>
+                    <div style={styleLine}><Image loading='lazy' fill alt="illustration" src={lineFooter} ></Image ></div>
                     <div className={styleFooter.lieu}>Abidjan, Koumassi</div>
                 </div>
 
                 <div className={styleFooter.suivez_nous}>
                     <h1 className={styleFooter.title}>reseau</h1>
-                    <div style={styleLine}><Image fill alt="reseau" src={lineFooter} ></Image ></div>
+                    <div style={styleLine}><Image loading='lazy' fill alt="reseau" src={lineFooter} ></Image ></div>
                     <div className='reseau'>
-                        <div style={styleReseau}><a href=''><Image fill alt="facebook" className='facebook' src={facebook}  ></Image></a></div>
-                        <div style={styleReseau}><a href=''><Image fill alt="instagram" className='instagram' src={instagram}></Image></a></div>
-                        <div style={styleReseau}><a href=''><Image fill alt="linkedin" className='linkedin' src={linkedin} ></Image></a></div>
+                        <div style={styleReseau}><a href=''><Image loading='lazy' fill alt="facebook" className='facebook' src={facebook}  ></Image></a></div>
+                        <div style={styleReseau}><a href=''><Image loading='lazy' fill alt="instagram" className='instagram' src={instagram}></Image></a></div>
+                        <div style={styleReseau}><a href=''><Image loading='lazy' fill alt="linkedin" className='linkedin' src={linkedin} ></Image></a></div>
                     </div>
                 </div>
             </div>

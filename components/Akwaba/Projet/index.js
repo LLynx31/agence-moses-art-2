@@ -49,8 +49,8 @@ export default function SectionProjet() {
     } 
     const projet3 = {
         arrierePlan: "url('/assets/Inkedpage18.jpg')",
-        image: "",
-        description: "url('/assets/Inkedpage18.jpg')",
+        image: "url('/assets/Inkedpage18.jpg')",
+        description: "",
         client: ""
     } 
     const projet4 = {
@@ -186,7 +186,7 @@ export default function SectionProjet() {
 
     return(
         <motion.div variants={animSectProjet} initial="hidden" whileInView="visible" viewport={{once: true}} className={styleProjet.layout_section_projets}>
-            <motion.img animate={{
+            <motion.img loading='lazy' animate={{
                 x: [0, 10, 0, -10, 0, -20, 0, 20,0],
                 y: [0, 10, 0, -10, 0, -20, 0, 20,0]
             }} transition={{repeat:Infinity, duration:16, delay: 1}} className={styleProjet.illustration1} src={illustration1} width={50} height={50}></motion.img>

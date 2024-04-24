@@ -127,19 +127,19 @@ function Presentation() {
 
 
 export default function SectionPresenattion (){
-    const image = 'assets/Image_Akwaba/Qui_sommes_nous.jpg'
+    const image = 'assets/site version web/acceuil.jpg'
     const illustration1 = '/assets/Calque7.svg'
     const illustration2 = '/assets/Calque81.svg'
     const illustration3 = '/assets/Calque61.svg'
 
     return (
         <div className={stylePresentation.layout_section}>
-            <motion.img variants={animImg} initial= "hidden" whileInView="visible" viewport={{once:true}} width={450} height={450} className={stylePresentation.image} src={image} alt='Femme sur son telephone'></motion.img>
+            <motion.img loading='lazy' variants={animImg} initial= "hidden" whileInView="visible" viewport={{once:true}} width={450} height={450} className={stylePresentation.image} src={image} alt='Femme sur son telephone'></motion.img>
             <Presentation></Presentation>
             <div className={stylePresentation.div_btn}><motion.button onClick={() => document.location.href = '#contact'} whileHover={{scale: 1.1}} className={stylePresentation.button_contact}>Contactez Nous</motion.button></div>
-            <motion.img variants={animIllustration} animate="animate" initial="hidden" alt='illustration' width={40} height={40} className={stylePresentation.illustration1} src={illustration1}></motion.img>
-            <motion.img  variants={animIllustration} animate="animate" initial="hidden" alt='illustration' width={50} height={50} className={stylePresentation.illustration2} src={illustration2}></motion.img>
-            <motion.img variants={animIllustration} animate="animate" initial="hidden" alt='illustration' width={60} height={60} className={stylePresentation.illustration3} src={illustration3}></motion.img>
+            <motion.img loading='lazy' variants={animIllustration} animate="animate" initial="hidden" alt='illustration' width={40} height={40} className={stylePresentation.illustration1} src={illustration1}></motion.img>
+            <motion.img loading='lazy'  variants={animIllustration} animate="animate" initial="hidden" alt='illustration' width={40} height={40} className={stylePresentation.illustration2} src={illustration2}></motion.img>
+            <motion.img loading='lazy' variants={animIllustration} animate="animate" initial="hidden" alt='illustration' width={60} height={60} className={stylePresentation.illustration3} src={illustration3}></motion.img>
         </div>
         
     )

@@ -7,7 +7,7 @@ import { motion } from "framer-motion";
 function TemoignageClient ({text, name, groupe}) {
     const illustrationTemoignage = 'assets/illustrationTemoignage.svg'
    return( <div className={styleTemoignage.layout_temoignage_client}>
-            <Image alt="trait orange penché" src={illustrationTemoignage} width={'50'} height={'50'}></Image>
+            <Image loading="lazy" alt="trait orange penché" src={illustrationTemoignage} width={'50'} height={'50'}></Image>
             <p className={styleTemoignage.text}>
                 {text}
             </p>
@@ -165,15 +165,15 @@ function Description(){
                 <motion.button variants={animBtn} whileHover="onHover" onClick={() => document.location.href = '/contact'}>Rapprochez vous</motion.button>
             </div>
             <div className={styleTemoignage.layout_right}>
-                <Image alt="illustration" src={illustration1} className={styleTemoignage.illustration_1} width={400}
+                <Image loading="lazy" alt="illustration" src={illustration1} className={styleTemoignage.illustration_1} width={400}
                 height={449}></Image>
-                <Image alt="illustration" src={illustration2} className={styleTemoignage.illustration_2} width={400}
+                <Image loading="lazy" alt="illustration" src={illustration2} className={styleTemoignage.illustration_2} width={400}
                 height={400}></Image>
-                <Image alt="illustration" src={illustration3} className={styleTemoignage.illustration_3} width={300}
+                <Image loading="lazy" alt="illustration" src={illustration3} className={styleTemoignage.illustration_3} width={300}
                 height={300}></Image>
             </div>
-            <motion.img src={illustration4} variants={animIllustration} whileInView="whileInView" alt="illustration" className={styleTemoignage.illustration_4} width={60} height={60}></motion.img>
-            <motion.img src={illustration4} variants={animIllustration} whileInView="whileInView" alt="illustration" className={styleTemoignage.illustration_5} width={60} height={60}></motion.img>
+            <motion.img loading="lazy" src={illustration4} variants={animIllustration} whileInView="whileInView" alt="illustration" className={styleTemoignage.illustration_4} width={60} height={60}></motion.img>
+            <motion.img loading="lazy" src={illustration4} variants={animIllustration} whileInView="whileInView" alt="illustration" className={styleTemoignage.illustration_5} width={60} height={60}></motion.img>
         </motion.div>
     )
 }
@@ -206,8 +206,8 @@ export default function Temoignage() {
         <motion.div initial={{ opacity: 0, y: 100 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} transition={{duration:1, delay:0.3}}>
         
             <div className={styleTemoignage.section}>
-                <motion.img variants={animIllustration} initial="hidden" whileInView="whileInView"  alt="illustration" className={styleTemoignage.illustration} src={illustration} width={100} height={100}></motion.img>
-                <motion.img variants={animIllustration} initial="hidden" whileInView="whileInView" alt="illustration" className={styleTemoignage.illustration2} src={illustration} width={100} height={100}></motion.img>
+                <motion.img loading="lazy" variants={animIllustration} initial="hidden" whileInView="whileInView"  alt="illustration" className={styleTemoignage.illustration} src={illustration} width={100} height={100}></motion.img>
+                <motion.img loading="lazy" variants={animIllustration} initial="hidden" whileInView="whileInView" alt="illustration" className={styleTemoignage.illustration2} src={illustration} width={100} height={100}></motion.img>
                 <div className={styleTemoignage.introduction}>Nos Partenaires</div>
                 <h1 className={styleTemoignage.titre_section}>Ce Qu’ils Pensent <br></br> De Nous</h1>
             </div>

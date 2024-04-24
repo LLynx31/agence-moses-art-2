@@ -37,7 +37,7 @@ function DivService({img, imgAlt, titre, children}){
     return (
         <div className={stylesService.service}>
             <motion.div variants={animImg}  viewport={{once: true}} className={stylesService.div_img} >
-                <Image className={stylesService.img_service} src={img} alt={imgAlt} height={100} width={100}></Image>
+                <Image loading="lazy" className={stylesService.img_service} src={img} alt={imgAlt} height={100} width={100}></Image>
             </motion.div>
 
             <motion.div variants={animText}  viewport={{once: true}}>

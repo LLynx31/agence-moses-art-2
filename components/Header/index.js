@@ -47,26 +47,26 @@ export default function Header({akwaba = false, presentation = false, service = 
     return (
         <motion.div layout className={isOpen ? stylesHeader.conteneurOpen : stylesHeader.conteneur }>
             <div ref={scopes} className={isOpen ? stylesHeader.layoutHearderOpen : stylesHeader.layoutHearder} style={styleHeader}>
-                <Image className={stylesHeader.logo} alt="Agence Moses Art" src={logo} width={110} height={75} />
+                <Image loading='lazy' className={stylesHeader.logo} alt="Agence Moses Art" src={logo} width={110} height={75} />
                 <nav className={isOpen ? stylesHeader.navOpen :stylesHeader.nav }>
                     <ul className={isOpen ? stylesHeader.ulOpen : stylesHeader.ul}>
                         <li ref={ akwaba ? scopes_1 : null} className={isOpen ? stylesHeader.liOpen : stylesHeader.li}><Link className={stylesHeader.link} href="/" style={akwaba ? stylePageActif : stylePageInactif}>Akwaba</Link></li>
-                        <li ref={ presentation ? scopes_1 : null} className={isOpen ? stylesHeader.liOpen : stylesHeader.li}><Link className={stylesHeader.link} href="/presentation" style={presentation ? stylePageActif : stylePageInactif}>presentation</Link></li>
-                        <li ref={ service ? scopes_1 : null} className={isOpen ? stylesHeader.liOpen : stylesHeader.li}><Link className={stylesHeader.link} href="/services" style={service ? stylePageActif : stylePageInactif}>services</Link></li>
-                        <li ref={ formation ? scopes_1 : null} className={isOpen ? stylesHeader.liOpen : stylesHeader.li}><Link className={stylesHeader.link} href="/formation" style={formation ? stylePageActif : stylePageInactif}>formation</Link></li>
-                        <li ref={ studio ? scopes_1 : null} className={isOpen ? stylesHeader.liOpen : stylesHeader.li}><Link className={stylesHeader.link} href="/studio" style={studio ? stylePageActif : stylePageInactif}>studio</Link></li>
-                        <li ref={ contact ? scopes_1 : null} className={isOpen ? stylesHeader.liOpen : stylesHeader.li}><Link className={stylesHeader.link} href="/contact" style={contact ? stylePageActif : stylePageInactif}>contact</Link></li>
+                        <li ref={ presentation ? scopes_1 : null} className={isOpen ? stylesHeader.liOpen : stylesHeader.li}><Link className={stylesHeader.link} href="/presentation" style={presentation ? stylePageActif : stylePageInactif}>Presentation</Link></li>
+                        <li ref={ service ? scopes_1 : null} className={isOpen ? stylesHeader.liOpen : stylesHeader.li}><Link className={stylesHeader.link} href="/services" style={service ? stylePageActif : stylePageInactif}>Services</Link></li>
+                        <li ref={ formation ? scopes_1 : null} className={isOpen ? stylesHeader.liOpen : stylesHeader.li}><Link className={stylesHeader.link} href="/formation" style={formation ? stylePageActif : stylePageInactif}>Formation</Link></li>
+                        <li ref={ studio ? scopes_1 : null} className={isOpen ? stylesHeader.liOpen : stylesHeader.li}><Link className={stylesHeader.link} href="/studio" style={studio ? stylePageActif : stylePageInactif}>Studio</Link></li>
+                        <li ref={ contact ? scopes_1 : null} className={isOpen ? stylesHeader.liOpen : stylesHeader.li}><Link className={stylesHeader.link} href="/contact" style={contact ? stylePageActif : stylePageInactif}>Contact</Link></li>
                         
                     </ul>
                        
-                    <button className={isOpen ? stylesHeader.toogle_menu_close : stylesHeader.hidden} onClick={()=> {setOpen(false)}} ><Image alt="menu" src={closeMenu} width={26} height={27}></Image></button>
+                    <button className={isOpen ? stylesHeader.toogle_menu_close : stylesHeader.hidden} onClick={()=> {setOpen(false)}} ><Image loading='lazy' alt="menu" src={closeMenu} width={26} height={27}></Image></button>
                 </nav>
 
                 <div className={isOpen ? stylesHeader.layout_whatsappOpen : stylesHeader.layout_whatsapp}>
-                        <div><Image alt='logo whatsapp' width={25} height={25} src={"/assets/logo_whatsapp.svg"}></Image></div>
-                        <div className={stylesHeader.numero_whatsapp}>+2250787444029</div>
+                        <div><Image loading='lazy' alt='logo whatsapp' width={25} height={25} src={"/assets/logo_whatsapp.svg"}></Image></div>
+                        <Link style={{textDecoration:'none'}} href={"https://wa.me/2250787444029"} target='blank'><div className={stylesHeader.numero_whatsapp}>+2250787444029</div></Link>
     </div>
-                <button className={isOpen ? stylesHeader.hidden : stylesHeader.toogle_menu} onClick={()=> {setOpen(true)}} ><Image alt="menu" src={menu} width={36} height={19}></Image></button>
+                <button className={isOpen ? stylesHeader.hidden : stylesHeader.toogle_menu} onClick={()=> {setOpen(true)}} ><Image loading='lazy' alt="menu" src={menu} width={36} height={19}></Image></button>
             </div>
             <ProgressBar></ProgressBar>
         </motion.div>

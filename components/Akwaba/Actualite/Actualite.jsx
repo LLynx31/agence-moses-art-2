@@ -4,6 +4,8 @@ import { Swiper, SwiperSlide } from 'swiper/react';
 import { Carousel } from "react-responsive-carousel";
 import "react-responsive-carousel/lib/styles/carousel.css";
 
+import { motion } from "framer-motion";
+
 function Actualité({img, imgAlt, titre, children}){
     return(
         <div className={style.actualite}>
@@ -22,7 +24,7 @@ export default function SectionActualite(){
     return(
 
         <>
-            <h1 className={style.section_titre}>Nos <span>Actualités</span></h1>
+            <motion.h1 initial={{opacity:0,y:100}} viewport={{once:true}} whileInView={{opacity:1,y:0, transition:{duration:0.3}}} className={style.section_titre}>Nos <span>Actualités</span></motion.h1>
         
             <div className={style.section}>
             <Carousel

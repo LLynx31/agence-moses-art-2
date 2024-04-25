@@ -80,7 +80,7 @@ export default function SectionService() {
             <Image loading='lazy' className={styleService.illustration1} alt='illustration' src={illustration1} width={250} height={250}></Image>
             <Image loading='lazy' className={styleService.illustration2} alt='illustration' src={illustration2} width={500} height={500}></Image>
             <motion.div variants={animTop} className={styleService.layout_top}>
-                <div className={styleService.section_introduction}>Nos services</div>
+                <motion.div className={styleService.section_introduction}>Nos services</motion.div>
                 <h1 className={styleService.section_title}>Nos différents Services</h1>
                 <p className={styleService.description_section}>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut laboreUt enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo con</p>
             </motion.div>

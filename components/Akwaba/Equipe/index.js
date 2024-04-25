@@ -95,8 +95,8 @@ export default function Equipe() {
         <div className="layout-equipe">
             <motion.img className='illustration' width={60} src={calque6} alt='illustration' whileInView={{ rotate: 360, x: [0, -100, 0] }} transition={{ duration: 20, repeat: Infinity }} style={{ position: "absolute", top: -40, right: 200 }}></motion.img>
             <motion.img className='illustration'width={60} src={calque6} alt='illustration' whileInView={{rotate:360, x:[0,100,0]}} transition={{duration: 20, repeat:Infinity}} style={{position: "absolute", top: -40, left: 200}}></motion.img>
-            <div className="introduction">Rencontrez nos experts</div>
-           <h1 className="equipe-title">Notre team</h1> 
+            <motion.div initial={{opacity:0,y:100}} viewport={{once:true}} whileInView={{opacity:1,y:0, transition:{duration:0.3,}}} className="introduction">Rencontrez nos experts</motion.div>
+           <motion.h1 initial={{opacity:0,y:100}} viewport={{once:true}} whileInView={{opacity:1,y:0, transition:{duration:0.6}}} className="equipe-title">Notre team</motion.h1> 
             <CarouselEquipe></CarouselEquipe>
             <motion.img className='illustration'width={60} src={calque6} alt='illustration' whileInView={{ rotate: 360, x: [0, -100, 0] }} transition={{ duration: 20, repeat: Infinity }} style={{ position: "absolute", bottom: 0, right: 200 }}></motion.img>
             <motion.img className='illustration'width={60} src={calque6} alt='illustration' whileInView={{rotate:360, x:[0,100,0]}} transition={{duration: 20, repeat:Infinity}} style={{position: "absolute", bottom: 0, left: 200}}></motion.img>

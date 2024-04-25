@@ -33,7 +33,7 @@ function App() {
         <motion.div initial={{y: 200, opacity: 0}} animate={{y:0, opacity:1}} transition={{duration: 0.8}}><Banner /></motion.div>
       <Presentation />
         <div style={{height: 50, backgroundColor: '#0F83838C', width: '100%', margin: '150px 0px 100px 0px', opacity:0.5}}></div>
-        <h1 className={stylePresentation.section_service_title}>Nos <span>Services</span></h1>
+        <motion.h1 initial={{opacity:0,y:100}} viewport={{once:true}} whileInView={{opacity:1,y:0, transition:{duration:0.3}}} className={stylePresentation.section_service_title}>Nos <span>Services</span></motion.h1>
       <Service></Service>
       <div style={{height: 50, backgroundColor: '#0F83838C', width: '100%', margin: '100px 0px 0px', opacity:0.5}}></div>
       <SectionApproche></SectionApproche>

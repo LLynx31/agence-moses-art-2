@@ -21,7 +21,7 @@
 .title {
     color: #0F8383;
 font-family: Montserrat;
-font-size: 20px;
+font-size: 18px;
 font-style: normal;
 font-weight: 600;
 line-height: normal;
@@ -30,7 +30,7 @@ line-height: normal;
 .number {
     color: #000;
 font-family: Montserrat;
-font-size: 18px;
+font-size: 14px;
 font-style: normal;
 font-weight: 500;
 line-height: normal;
@@ -39,7 +39,7 @@ line-height: normal;
 .lieu {
     color: #000;
 font-family: Montserrat;
-font-size: 18px;
+font-size: 14px;
 font-style: normal;
 font-weight: 500;
 line-height: normal;
@@ -55,7 +55,7 @@ line-height: normal;
 .copyright {
     color: #FFF;
 font-family: Montserrat;
-font-size: 15px;
+font-size: 12px;
 font-style: normal;
 font-weight: 600;
 line-height: normal;

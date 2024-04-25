@@ -1,11 +1,12 @@
 .layout_section {
-    background-color: #FCF9F2;
+    background-color: #FFF;
 }
 
 .section_titre {
     color: #000;
     font-family: Montserrat;
-    font-size: x-large;
+    font-size: 60px;
+    text-transform: uppercase;
     font-style: normal;
     font-weight: 600;
     line-height: normal;
@@ -16,20 +17,16 @@
 }
 
 .section_titre span {
-    color: #F6AA06;
+    color: #000;
 }
 
 .img {
     display: block;
     margin: auto;
-    width: 700px;
+    width: 600px;
 }
 
-@media screen and (max-width: 1024px) {
-    .img {
-        width: 620px;
-    }
-}
+
 
 @media screen and (max-width: 640px) {
     .img {

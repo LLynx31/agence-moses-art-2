@@ -1,7 +1,7 @@
 .layoutPartenaire {
     display: grid;
-    grid-template-columns: repeat(6,150px);
-    gap: 30px;
+    grid-template-columns: repeat(6,90px);
+    gap: 15px;
     width: -moz-fit-content;
     width: fit-content;
     margin: auto;
@@ -22,15 +22,16 @@
     color: #000;
     text-align: center;
     font-family: 'Montserrat';
-    font-size: x-large;
+    font-size: 40px;
     font-style: normal;
-    font-weight: 600;
+    font-weight: 800;
+    text-transform: uppercase;
     line-height: normal;
 }
 
 @media screen and (max-width:1024px) {
     .layoutPartenaire {
-        grid-template-columns: repeat(5,100px);
+        grid-template-columns: repeat(5,90px);
         gap: 30px;
     }
 
@@ -42,25 +43,25 @@
 
 @media screen and (max-width:768px) {
     .layoutPartenaire {
-        grid-template-columns: repeat(4,80px);
+        grid-template-columns: repeat(4,90px);
         gap: 30px;
     }
 
     .logo {
-        width: 80px;
-        height: 80px;
+        width: 90px;
+        height: 90px;
     }
 }
 
 
 @media screen and (max-width:640px) {
     .layoutPartenaire {
-        grid-template-columns: repeat(2,125px);
-        gap: 30px;
+        grid-template-columns: repeat(3,90px);
+        gap: 12px;
     }
 
     .logo {
-        width: 125px;
-        height: 125px;
+        width: 90px;
+        height: 90px;
     }
 }

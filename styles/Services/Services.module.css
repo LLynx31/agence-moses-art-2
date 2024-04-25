@@ -1,6 +1,6 @@
 .Banner {
     height: 100vh;
-    background-image: url('../../public/assets/Images_Service/banières_nos_services_.jpg');
+    background-image: url('/assets/Images_Service/banières_nos_services_.jpg');
     background-repeat: no-repeat;
     background-size: cover;
     z-index: 0;
@@ -13,7 +13,7 @@
     font-family: Montserrat;
     font-size: 64px;
     font-style: normal;
-    font-weight: 600;
+    font-weight: 700;
     line-height: 130%; /* 83.2px */
     letter-spacing: 1.28px;
     padding-left: 200px;
@@ -34,17 +34,14 @@
     color: #000;
     text-align: center;
     font-family: 'Montserrat';
-    font-size: 20px;
+    font-size: 40px;
     font-style: normal;
-    font-weight: 700;
+    font-weight: 800;
+    text-transform: uppercase;
     line-height: 120%; /* 57.6px */
-    text-transform: capitalize;
     margin-bottom: 0px;
 }
 
-.section_service_title span {
-    color: #F6AA06;
-}
 
 .layout_section_service .section_service_description {
     color: rgba(0, 0, 0, 0.80);
@@ -96,6 +93,22 @@ margin-top: 10px;
     position: relative;
     z-index: 1;
     cursor: pointer;
+    transition: all 0.2s;
+}
+
+.layout_service:hover {
+    border-radius: 10px;
+    background: #0F8383;
+    box-shadow: 0px 0px 40px 0px rgba(0, 0, 0, 0.10);
+
+}
+
+.layout_service:hover p{
+    color: rgba(255, 255, 255, 0.50);
+}
+
+.layout_service:hover .service_title {
+    color: #fff;
 }
 
 .enteteService {
@@ -218,12 +231,14 @@ margin-top: 10px;
 
     .Banner {
         height: 90vh;
+        background-image: url('/assets/version_mobile/nos service version mobile.jpg');
+        height: 500px;
     }
     
     .Banner_title {
-        padding-top: 30vh;
+        padding-top: 10vh;
         margin-left: 10px;
-        font-size: 40px;
+        font-size: 30px;
         padding-left: 10px;
     }
 

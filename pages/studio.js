@@ -10,7 +10,9 @@ import { useRouter } from "next/router"
 import Link from "next/link"
 
 function Banner() {
-    return <div className={styleStudio.Banner}> <div className={styleStudio.Banner_title}><span>Studio</span> <br></br>Bientot disponible</div></div>
+    return <div className={styleStudio.Banner}>
+    <div className={styleStudio.Banner_title}><motion.div initial={{opacity:0, y:20}} animate={{opacity:1,y:0}} transition={{duration:0.3,delay:1.2}} ><span  style={{color:'#F6AA06'}}>Studio<br></br></span></motion.div><motion.div initial={{opacity:0, y:20}} animate={{opacity:1,y:0}} transition={{duration:0.3,delay:1.8}}>Bientot disponible</motion.div></div>
+</div>
 }
 
 function Projet({image,titre,lien}) {

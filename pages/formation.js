@@ -10,10 +10,12 @@ import ContactezNous from '../components/Akwaba/ContactezNous'
 import { motion } from "framer-motion";
 import ProgressBar from "../components/ProgressBar"
 import Image from "next/image"
+
 function Banner(){
+
     return (
             <div className={styleFormation.Banner}>
-                <div className={styleFormation.Banner_title}><span style={{color:'#F6AA06'}}>Formation<br></br></span>Bientot disponible</div>
+                <div className={styleFormation.Banner_title}><motion.div initial={{opacity:0, y:20}} animate={{opacity:1,y:0}} transition={{duration:0.3,delay:1.2}} ><span  style={{color:'#F6AA06'}}>Formation<br></br></span></motion.div><motion.div initial={{opacity:0, y:20}} animate={{opacity:1,y:0}} transition={{duration:0.3,delay:1.8}}>Bientot disponible</motion.div></div>
             </div>
         )
 }

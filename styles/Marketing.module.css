@@ -1,83 +1,43 @@
-.service {
-    width: -moz-fit-content;
-    width: fit-content;
-    margin: auto;
-}
-
-.layout_offre {
+.layoutBaner {
     width: 100%;
-    background-color: #F6AA06;
-    padding: 50px 60px;
+    height: 100vh;
+    background-color: #076965;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
-.offre {
-    display: grid;
-    grid-template-columns: 500px 500px;
-    gap: 50px;
-    width: -moz-fit-content;
+.titleBaner {
     width: fit-content;
-    margin: auto;
+    padding: 50px 50px;
+    background-color: #0D948D;
+    color: #fff;
+    text-transform: uppercase;
+    font-size: 50px;
+    font-family: 'montserrat';
+    font-weight: 800;
 }
 
-.avantage, .processus {
-    width: 100%;
-}
-
-.avantage_block_layout, .processus_block_layout {
+.sectionLayout {
+    margin-bottom: 70px;
     display: grid;
-    grid-template-columns: 500px 500px;
-    gap: 50px;
-    width: -moz-fit-content;
-    width: fit-content;
-    margin: auto;
-    margin-bottom: 50px;
+    grid-template-columns: 1fr 1fr;
 }
 
-.avantage_titre, .processus_titre {
-    color: #000;
-    text-align: center;
-    font-family: Montserrat;
-    font-size: xx-large;
-    font-style: normal;
+.blockLayout {
+    padding: 100px 120px;
+    letter-spacing: 2px;
+}
+
+.titleBlock {
+    font-family: 'montserrat';
+    font-size: 30px;
+    font-weight: 900; 
+}
+
+.paragraphe {
+    font-family: 'montserrat';
+    font-size: 16px;
     font-weight: 600;
-    line-height: 161%; /* 57.96px */
-}
-
-.avantage_description, .processus_description {
-    width: 100%;
-    margin: auto;
-
-    color: #000;
-    text-align: center;
-    font-family: Montserrat;
-    font-size: large;
-    font-style: normal;
-    font-weight: 400;
-    line-height: 161%; /* 38.64px */
-    margin-bottom: 50px;
-}
-
-.avantage_conclusion {
-    color: #000;
-    text-align: center;
-    font-family: Montserrat;
-    font-size: medium;
-    font-style: normal;
-    font-weight: 400;
-    line-height: 161%; /* 38.64px */
-    width: 750px;
-    margin: auto;
-    margin-top: 100px;
-    margin-bottom: 100px;
-}
-
-@media screen and (max-width:640px) {
-    .avantage_block_layout, .processus_block_layout {
-
-        grid-template-columns: 350px;
-    }
-
-    .avantage_conclusion {
-        width: 305px;
-    }
+    
 }

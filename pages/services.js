@@ -90,7 +90,7 @@ function SectionService() {
         },
         {
             titleService: 'Events',
-            descriptionService: "DNous vous conseillons sur des stratégies qui mettent à profit tous les canaux de communication disponibles entre vous et votre cible.",
+            descriptionService: "Nous vous conseillons sur des stratégies qui mettent à profit tous les canaux de communication disponibles entre vous et votre cible.",
             link: "/service/events"
         },
         {

@@ -6,7 +6,7 @@ import Image from 'next/image'
 import { useState } from 'react'
 
 
-export default function Header({akwaba = false, presentation = false, service = false, formation = false, studio=false, contact = false, headerColor = '#0F8383', scroll}) {
+export default function Header({akwaba = false, presentation = false, service = false, formation = false, studio=false, contact = false, projet = false, headerColor = '#0F8383', scroll}) {
 
         const [scopes, animate] = useAnimate()
         const [scopes_1, animate_1] = useAnimate()
@@ -53,9 +53,11 @@ export default function Header({akwaba = false, presentation = false, service = 
                         <li ref={ akwaba ? scopes_1 : null} className={isOpen ? stylesHeader.liOpen : stylesHeader.li}><Link className={stylesHeader.link} href="/" style={akwaba ? stylePageActif : stylePageInactif}>Akwaba</Link></li>
                         <li ref={ presentation ? scopes_1 : null} className={isOpen ? stylesHeader.liOpen : stylesHeader.li}><Link className={stylesHeader.link} href="/presentation" style={presentation ? stylePageActif : stylePageInactif}>Presentation</Link></li>
                         <li ref={ service ? scopes_1 : null} className={isOpen ? stylesHeader.liOpen : stylesHeader.li}><Link className={stylesHeader.link} href="/services" style={service ? stylePageActif : stylePageInactif}>Services</Link></li>
+                        <li ref={ projet ? scopes_1 : null} className={isOpen ? stylesHeader.liOpen : stylesHeader.li}><Link className={stylesHeader.link} href="/projets" style={projet ? stylePageActif : stylePageInactif}>Projets</Link></li>
                         <li ref={ formation ? scopes_1 : null} className={isOpen ? stylesHeader.liOpen : stylesHeader.li}><Link className={stylesHeader.link} href="/formation" style={formation ? stylePageActif : stylePageInactif}>Formation</Link></li>
                         <li ref={ studio ? scopes_1 : null} className={isOpen ? stylesHeader.liOpen : stylesHeader.li}><Link className={stylesHeader.link} href="/studio" style={studio ? stylePageActif : stylePageInactif}>Studio</Link></li>
                         <li ref={ contact ? scopes_1 : null} className={isOpen ? stylesHeader.liOpen : stylesHeader.li}><Link className={stylesHeader.link} href="/contact" style={contact ? stylePageActif : stylePageInactif}>Contact</Link></li>
+                        
                         
                     </ul>
                        

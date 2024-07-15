@@ -1,9 +1,5 @@
-import { useEffect } from "react";
 import styleProjet from "../../../styles/Akwaba/Projet.module.css";
-import Image from "next/image";
 import { motion } from "framer-motion";
-import { useState, useRef } from "react";
-
 function Projet({ titre, arriereplan, changeDetail }) {
   return (
     <div
@@ -160,7 +156,7 @@ export default function SectionProjet() {
       <motion.h1 variants={animTitre} className={styleProjet.section_title}>
         Nos Projets Récents
       </motion.h1>
-      <div className={styleProjet.projet_range}>
+
         <motion.div
           variants={animProjetLR}
           className={styleProjet.projet_range1}
@@ -213,7 +209,6 @@ export default function SectionProjet() {
            
           ></Projet>
         </motion.div>
-      </div>
     </motion.div>
   );
 }

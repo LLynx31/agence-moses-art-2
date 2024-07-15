@@ -75,11 +75,11 @@ export default function page(){
             <div className={style.layoutContact}>
                 <div className={style.layoutContactBloc} style={{backgroundColor:'#11868A', color:'white'}}>
                     <div>j'ai un projet également</div>
-                    <button onClick={()=>router.push('/contact')} style={{color:'black', backgroundColor:'#EDEDED'}}>soumettre</button>
+                    <button onClick={()=>router.push('/contact#formContact')} style={{color:'black', backgroundColor:'#EDEDED'}}>soumettre</button>
                 </div>
                 <div className={style.layoutContactBloc} style={{backgroundColor:'#EDEDED', color:'black'}}>
                     <div>voir d'autres projets</div>
-                    <button onClick={()=>router.push('/')} style={{color:'white', backgroundColor:'#11868A'}}>voir +</button>
+                    <button onClick={()=>router.push('/projets')} style={{color:'white', backgroundColor:'#11868A'}}>voir +</button>
                 </div>
             </div>
 

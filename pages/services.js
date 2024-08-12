@@ -5,34 +5,95 @@ import Footer from "../components/Footer";
 import ProgressBar from "../components/ProgressBar";
 import Image from "next/image";
 import { motion, useAnimate } from "framer-motion";
-import { SectionDomaineCompetence } from "./presentation";
 import SendProject from "@/components/SendProject";
-import SectionOffre, { Offre } from "@/components/offre";
+import { baseUrl } from "@/config/config";
 
 import { useEffect, useState } from "react";
+import BannerLoader from "@/components/loading/BannerLoader";
+
+
 
 export function Banner() {
   const formation = [
     "Conseils en communication 360",
     "Publicité",
     "Marketing Digital",
-    "Developpement d'appli Web et Mobile",
-    "Design graphic",
+    "Développement d'appli Web et Mobile",
+    "Design graphique",
     "Digitalisation des Services",
     "Production Audio Visuelle",
     "Events",
     "Impression tout support",
   ];
+
   const [isNumFormation, setNumFormation] = useState(0);
   const [scopes, animate] = useAnimate();
+  const [isBannerBig, setBannerBig] = useState(null);
+  const [isBannerSmall, setBannerSmall] = useState(null);
+  const [windowWidth, setWindowWidth] = useState(0);
+
+  useEffect(() => {
+    if (typeof window !== "undefined") {
+      setWindowWidth(window.innerWidth);
+
+      const handleResize = () => {
+        setWindowWidth(window.innerWidth);
+      };
+
+      window.addEventListener("resize", handleResize);
+      return () => window.removeEventListener("resize", handleResize);
+    }
+  }, []);
+
+  const styleBanner = {
+    backgroundImage:
+      windowWidth > 640
+        ? `url(${baseUrl + isBannerBig})`
+        : `url(${baseUrl + isBannerSmall})`,
+  };
+
+  useEffect(() => {
+    getBannerBig();
+    getBannerSmall();
+  }, []);
+
+  async function getBannerBig() {
+    try {
+      const response = await fetch(
+        baseUrl + "/api/banniere-service?populate=*"
+      );
+      if (!response.ok) {
+        const error = await response.json();
+        throw error;
+      }
+      const responseParse = await response.json();
+      setBannerBig(responseParse.data.attributes.Image.data.attributes.url);
+    } catch (error) {
+      console.log(error);
+    }
+  }
+
+  async function getBannerSmall() {
+    try {
+      const response = await fetch(
+        baseUrl + "/api/banniere-service-mobile?populate=*"
+      );
+      if (!response.ok) {
+        const error = await response.json();
+        throw error;
+      }
+      const responseParse = await response.json();
+      setBannerSmall(responseParse.data.attributes.Image.data.attributes.url);
+    } catch (error) {
+      console.log(error);
+    }
+  }
 
   useEffect(() => {
     const time = setInterval(() => {
-      if (isNumFormation >= 8) {
-        setNumFormation(0);
-      } else {
-        setNumFormation(isNumFormation + 1);
-      }
+      setNumFormation((prevNum) =>
+        prevNum >= formation.length - 1 ? 0 : prevNum + 1
+      );
 
       animate(scopes.current, {
         opacity: [0, 1],
@@ -43,12 +104,15 @@ export function Banner() {
     }, 2000);
 
     return () => clearInterval(time);
-  });
+  }, [animate, formation.length, scopes]);
 
-  return (
-    <div className={styleServcie.Banner}>
+  return isBannerBig ? (
+    <div style={styleBanner} className={styleServcie.Banner}>
       <div className={styleServcie.Banner_title}>
-        Découvrez<br></br>ce que nous faisons<br></br>
+        Découvrez
+        <br />
+        ce que nous faisons
+        <br />
         <motion.span
           ref={scopes}
           initial={{ opacity: 0, y: 5 }}
@@ -60,6 +124,8 @@ export function Banner() {
         </motion.span>
       </div>
     </div>
+  ) : (
+    <BannerLoader />
   );
 }
 

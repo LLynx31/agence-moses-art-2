@@ -6,8 +6,34 @@ import style from "@/styles/Marketing.module.css";
 import ContatezNous from "@/components/Akwaba/ContactezNous";
 import Image from "next/image";
 import { Fade, Zoom } from "react-awesome-reveal";
+import { useEffect, useState } from "react";
+import { baseUrl } from "@/config/config";
+import BannerLoader from "@/components/loading/BannerLoader";
+
 
 export default function Marketing() {
+  const [isBanner, setBanner] = useState(null);
+
+  useEffect(() => {
+    getBanner();
+  }, []);
+
+  async function getBanner() {
+    try {
+      const response = await fetch(
+        baseUrl + "/api/banniere-service-event?populate=*"
+      );
+      if (!response.ok) {
+        const error = await response.json();
+        throw error;
+      }
+      const responseParse = await response.json();
+      //console.log(responseParse.data.attributes.Image.data.attributes.url);
+      setBanner(responseParse.data.attributes.Image.data.attributes.url);
+    } catch (error) {
+      console.log(error);
+    }
+  }
   return (
     <div>
       <Head>
@@ -20,9 +46,16 @@ export default function Marketing() {
       <ProgressBar></ProgressBar>
 
       <Fade triggerOnce>
-        <div className={style.layoutBaner}>
-          <div className={style.titleBaner}>BANNIERE</div>
-        </div>
+        {isBanner ? (
+          <div
+            style={{
+              backgroundImage: `url(${baseUrl + isBanner})`,
+            }}
+            className={style.layoutBaner}
+          ></div>
+        ) : (
+          <BannerLoader></BannerLoader>
+        )}
       </Fade>
 
       <div className={style.sectionLayout}>
@@ -31,7 +64,7 @@ export default function Marketing() {
           className={style.blockLayout}
           style={{ backgroundColor: "#FFC403" }}
         >
-          <h1 className={style.titleBlock}>Exper</h1>
+          <h1 className={style.titleBlock}>Expertise</h1>
           <p className={style.paragraphe}>
             Nous disposons d'une expertise et d'une expérience approfondies dans
             la planification et l'organisation d'événements. Nous connaissons

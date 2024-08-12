@@ -3,13 +3,15 @@ import stylePresentation from "../styles/Presentation/Presentation.module.css";
 import Footer from "../components/Footer";
 import Service from "../components/Service";
 import Head from "next/head";
-import SendProject from "../components/SendProject";
 import Image from "next/image";
 import ContactezNous from "../components/Akwaba/ContactezNous";
 import { motion } from "framer-motion";
 import Equipe from "../components/Akwaba/Equipe";
-import ProgressBar from "../components/ProgressBar";
 import { useRef, useState, useEffect } from "react";
+import { baseUrl } from "@/config/config";
+import TextLoader from "@/components/loading/TextLoader";
+import ImageLoader from "@/components/loading/ImageLoader";
+import BannerLoader from "@/components/loading/BannerLoader";
 
 function SectionDescription() {
   const illustrationDescriptionOrange =
@@ -154,6 +156,47 @@ function SectionDescription() {
     },
   };
 
+  const [isDescription1, setDescription1] = useState(null);
+  const [isDescription2, setDescription2] = useState(null);
+  useEffect(() => {
+    getDescription1();
+    getDescription2();
+  }, []);
+
+  async function getDescription1() {
+    try {
+      const response = await fetch(
+        baseUrl + "/api/description-1-page-presentation?populate=*"
+      );
+      if (!response.ok) {
+        const error = await response.json();
+        throw error;
+      }
+      const responseParse = await response.json();
+      //console.log(responseParse.data.attributes.Text)
+      setDescription1(responseParse.data.attributes.Text);
+    } catch (error) {
+      console.log(error);
+    }
+  }
+
+  async function getDescription2() {
+    try {
+      const response = await fetch(
+        baseUrl + "/api/description-2-page-presentation?populate=*"
+      );
+      if (!response.ok) {
+        const error = await response.json();
+        throw error;
+      }
+      const responseParse = await response.json();
+      //console.log(responseParse.data.attributes.Image.data.attributes.url);
+      setDescription2(responseParse);
+    } catch (error) {
+      console.log(error);
+    }
+  }
+
   return (
     <motion.section
       variants={animSec}
@@ -183,12 +226,25 @@ function SectionDescription() {
         <h1 className={stylePresentation.section_description_title}>
           Qui sommes nous ?
         </h1>
-        <motion.p variants={animP}>
-          Créée en 2019 dont l’objectif est d’aider les Petites, Moyennes et
-          Grandes <br></br>entreprises à mieux se faire connaitre et à résoudre
-          l’ensemble de leurs <br></br>besoins et problématiques de
-          communication
-        </motion.p>
+        <motion.div
+          style={{ width: "75%", textAlign: "center" }}
+          variants={animP}
+        >
+          {isDescription1 ? (
+            <p>{isDescription1}</p>
+          ) : (
+            <div
+              style={{
+                width: "100%",
+                display: "flex",
+                justifyContent: "center",
+                alignItems: "center",
+              }}
+            >
+              <TextLoader lineCount={3}></TextLoader>
+            </div>
+          )}
+        </motion.div>
       </div>
 
       <div className={stylePresentation.layout_section_description_role}>
@@ -202,33 +258,37 @@ function SectionDescription() {
           >
             NOUS CONCEVONS,CREONS DES STARTEGIES DE COMMUNICATION ADAPTEES.
           </motion.h1>
-          <motion.p
+          <motion.div
             variants={animRoleP}
             initial="hidden"
             whileInView="visible"
             viewport={{ once: true }}
           >
-            Moses Art est une agence de communication 360 qui accompagne ses
-            clients dans le developpement de leur image de marque. Pour cela ,
-            elle couvre à la fois la création et la diffusion des campagnes de
-            communication et marketing sur l’ensemble des supports
-            indispensables à la prise de contact avec les cibles. Cela prend en
-            compte les canaux online et offline globale.
-          </motion.p>
+            {isDescription2 ? (
+              <p>{isDescription2.data.attributes.Text}</p>
+            ) : (
+              <TextLoader lineCount={8}></TextLoader>
+            )}
+          </motion.div>
         </div>
 
         <div className={stylePresentation.illustration_role}>
-          <motion.img
-            loading="lazy"
-            width={450}
-            height={500}
-            variants={animImgRole}
-            initial="hidden"
-            whileInView="visible"
-            viewport={{ once: true }}
-            src={illustrationRole}
-            className={stylePresentation.illustrationRole}
-          ></motion.img>
+          {isDescription2 && (
+            <motion.img
+              loading="lazy"
+              width={450}
+              height={500}
+              variants={animImgRole}
+              initial="hidden"
+              whileInView="visible"
+              viewport={{ once: true }}
+              src={
+                baseUrl +
+                isDescription2.data.attributes.Image.data.attributes.url
+              }
+              className={stylePresentation.illustrationRole}
+            ></motion.img>
+          )}
         </div>
 
         <motion.img
@@ -338,6 +398,47 @@ function SectionPrincipes() {
     },
   };
 
+  const [isPrincipe1, setPrincipe1] = useState(null);
+  const [isPrincipe2, setPrincipe2] = useState(null);
+  useEffect(() => {
+    getPrincipe1();
+    getPrincipe2();
+  }, []);
+
+  async function getPrincipe1() {
+    try {
+      const response = await fetch(
+        baseUrl + "/api/principe-1-page-presentation?populate=*"
+      );
+      if (!response.ok) {
+        const error = await response.json();
+        throw error;
+      }
+      const responseParse = await response.json();
+      //console.log(responseParse.data.attributes.Text);
+      setPrincipe1(responseParse);
+    } catch (error) {
+      console.log(error);
+    }
+  }
+
+  async function getPrincipe2() {
+    try {
+      const response = await fetch(
+        baseUrl + "/api/principe-2-page-presentation?populate=*"
+      );
+      if (!response.ok) {
+        const error = await response.json();
+        throw error;
+      }
+      const responseParse = await response.json();
+      //console.log(responseParse.data.attributes.Image.data.attributes.url);
+      setPrincipe2(responseParse);
+    } catch (error) {
+      console.log(error);
+    }
+  }
+
   return (
     <motion.section
       variants={animSec}
@@ -396,24 +497,29 @@ function SectionPrincipes() {
           variants={animPrincipe1}
           className={stylePresentation.layout_principe_1}
         >
-          <Image
-            alt="illustration"
-            loading="lazy"
-            src={principeImg1}
-            width={350}
-            height={350}
-            quality={100}
-            className={stylePresentation.principe_img_1}
-          ></Image>
+          {isPrincipe1 ? (
+            <Image
+              alt="illustration"
+              loading="lazy"
+              src={
+                baseUrl + isPrincipe1.data.attributes.Image.data.attributes.url
+              }
+              width={350}
+              height={350}
+              quality={100}
+              className={stylePresentation.principe_img_1}
+            ></Image>
+          ) : (
+            <ImageLoader></ImageLoader>
+          )}
           {/*<Image loading='lazy'  
                     width={94} alt="illustration"  height={94} src={carreOrange} className={stylePresentation.CarreOrange} ></Image>*/}
 
-          <p>
-            Notre approche est selon laquelle ,les menaces ne doivent plus être
-            perçues comme des dangers mes plutôt comme des opportunités et des
-            challenges pour mieux affirmer votre présence sur le marché des
-            affaires.
-          </p>
+          {isPrincipe1 ? (
+            <p>{isPrincipe1.data.attributes.Text}</p>
+          ) : (
+            <TextLoader lineCount={7}></TextLoader>
+          )}
         </motion.div>
 
         <motion.div
@@ -430,20 +536,29 @@ function SectionPrincipes() {
             className={stylePresentation.carreVert}
           ></Image>
 
-          <p>
-            Nous pensons qu’il n’existe pas de modèle de communication pret à
-            l’emploi. C’est pourquoi chaque projet est pensé , étudié et adapté
-            à la cible pour susciter le sentiment et faire jaillir les émotions
-            recherchées.
-          </p>
-          <Image
-            loading="lazy"
-            alt="illustration"
-            className={stylePresentation.principe_img_2}
-            width={500}
-            height={500}
-            src={principeImg2}
-          ></Image>
+          {isPrincipe2 ? (
+            <p>{isPrincipe2.data.attributes.Text}</p>
+          ) : (
+            <div style={{ marginLeft: 20 }}>
+              <TextLoader lineCount={7}></TextLoader>
+            </div>
+          )}
+          {isPrincipe2 ? (
+            <Image
+              loading="lazy"
+              alt="illustration"
+              className={stylePresentation.principe_img_2}
+              width={500}
+              height={500}
+              src={
+                baseUrl + isPrincipe2.data.attributes.Image.data.attributes.url
+              }
+            ></Image>
+          ) : (
+            <div style={{ marginLeft: 20 }}>
+              <ImageLoader></ImageLoader>
+            </div>
+          )}
         </motion.div>
       </div>
     </motion.section>
@@ -845,6 +960,28 @@ export function SectionRealisation() {
 }
 
 export default function Presentation() {
+  const [isBanner, setBanner] = useState(null);
+
+  useEffect(() => {
+    getBanner();
+  }, []);
+
+  async function getBanner() {
+    try {
+      const response = await fetch(
+        baseUrl + "/api/banniere-presentation?populate=*"
+      );
+      if (!response.ok) {
+        const error = await response.json();
+        throw error;
+      }
+      const responseParse = await response.json();
+      //console.log(responseParse.data.attributes.Image.data.attributes.url);
+      setBanner(responseParse.data.attributes.Image.data.attributes.url);
+    } catch (error) {
+      console.log(error);
+    }
+  }
   return (
     <>
       <Head>
@@ -859,16 +996,23 @@ export default function Presentation() {
         animate={{ opacity: 1, y: 0 }}
         transition={{ duration: 1 }}
       >
-        <div
-          className={stylePresentation.layout_banner_presentation_presentation}
-        >
-          <div className="Banner_title">
-            <div className={stylePresentation.t_1}>Agence</div>
-            <div className={stylePresentation.t_2}>MOSES ART</div>
-            <br />
-            <div className={stylePresentation.t_3}>AGENCE 360</div>
+        {isBanner ? (
+          <div
+            style={{ backgroundImage: `url(${baseUrl + isBanner})` }}
+            className={
+              stylePresentation.layout_banner_presentation_presentation
+            }
+          >
+            <div className="Banner_title">
+              <div className={stylePresentation.t_1}>Agence</div>
+              <div className={stylePresentation.t_2}>MOSES ART</div>
+              <br />
+              <div className={stylePresentation.t_3}>AGENCE 360</div>
+            </div>
           </div>
-        </div>
+        ) : (
+          <BannerLoader></BannerLoader>
+        )}
         <SectionDescription></SectionDescription>
         <div
           style={{

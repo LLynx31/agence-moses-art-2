@@ -2,18 +2,82 @@ import Header from "../components/Header";
 import Head from "next/head";
 import styleFormation from "../styles/Formation/Formation.module.css";
 import Footer from "../components/Footer";
-import SendProject from "../components/SendProject";
-import Equipe from "../components/Akwaba/Equipe";
 import Link from "next/link";
-import { useState, useRef } from "react";
+import { useState, useRef, useEffect } from "react";
 import ContactezNous from "../components/Akwaba/ContactezNous";
 import { motion } from "framer-motion";
 import ProgressBar from "../components/ProgressBar";
 import Image from "next/image";
+import { baseUrl } from "@/config/config";
+import BannerLoader from "@/components/loading/BannerLoader";
 
 function Banner() {
-  return (
-    <div className={styleFormation.Banner}>
+  const [isBannerBig, setBannerBig] = useState(null);
+  const [isBannerSmall, setBannerSmall] = useState(null);
+  const [windowWidth, setWindowWidth] = useState(0);
+
+  useEffect(() => {
+    if (typeof window !== "undefined") {
+      setWindowWidth(window.innerWidth);
+
+      const handleResize = () => {
+        setWindowWidth(window.innerWidth);
+      };
+
+      window.addEventListener("resize", handleResize);
+      return () => window.removeEventListener("resize", handleResize);
+    }
+  }, []);
+
+  const styleBanner = {
+    backgroundImage:
+      windowWidth > 640
+        ? `url(${baseUrl + isBannerBig})`
+        : `url(${baseUrl + isBannerSmall})`,
+  };
+
+  useEffect(() => {
+    getBannerBig();
+    getBannerSmall();
+  }, []);
+
+  async function getBannerBig() {
+    try {
+      const response = await fetch(
+        baseUrl + "/api/banniere-formation?populate=*"
+      );
+      if (!response.ok) {
+        const error = await response.json();
+        throw error;
+      }
+      const responseParse = await response.json();
+      setBannerBig(responseParse.data.attributes.Image.data.attributes.url);
+    } catch (error) {
+      console.log(error);
+    }
+  }
+
+  async function getBannerSmall() {
+    try {
+      const response = await fetch(
+        baseUrl + "/api/banniere-formation-mobile?populate=*"
+      );
+      if (!response.ok) {
+        const error = await response.json();
+        throw error;
+      }
+      const responseParse = await response.json();
+      setBannerSmall(responseParse.data.attributes.Image.data.attributes.url);
+    } catch (error) {
+      console.log(error);
+    }
+  }
+  
+  return isBannerBig ? (
+    <div
+      style={styleBanner}
+      className={styleFormation.Banner}
+    >
       <div className={styleFormation.Banner_title}>
         <motion.div
           initial={{ opacity: 0, y: 20 }}
@@ -33,6 +97,8 @@ function Banner() {
         </motion.div>
       </div>
     </div>
+  ) : (
+    <BannerLoader></BannerLoader>
   );
 }
 
@@ -235,11 +301,6 @@ export default function Formation() {
         <ContactezNous></ContactezNous>
         <Footer></Footer>
       </motion.div>
-      <Head>
-        <link rel="preconnect" href="https://fonts.googleapis.com" />
-        <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin />
-        <title>Agence MOSES ART</title>
-      </Head>
     </>
   );
 }

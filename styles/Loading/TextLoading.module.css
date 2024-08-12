@@ -1,0 +1,30 @@
+@keyframes pulse {
+  0% {
+    background-color: #d1d5db; /* bg-gray-300 */
+  }
+  50% {
+    background-color: #9ca3af; /* bg-gray-400 */
+  }
+  100% {
+    background-color: #d1d5db; /* bg-gray-300 */
+  }
+}
+
+.textLoader {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem; /* space-y-2 */
+}
+
+.textLoaderItem {
+  height: 1rem; /* h-4 */
+  background-color: #9ca3af; /* bg-gray-400 */
+  border-radius: 0.25rem; /* rounded */
+  animation: pulse 1.5s infinite ease-in-out;
+}
+
+@media (min-width: 640px) {
+  .textLoaderItem {
+    height: 1.5rem; /* h-6 */
+  }
+}

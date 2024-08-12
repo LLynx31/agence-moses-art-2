@@ -7,8 +7,34 @@ import ContatezNous from "@/components/Akwaba/ContactezNous";
 import Image from "next/image";
 import { Fade, Zoom } from "react-awesome-reveal";
 
+import { useEffect, useState } from "react";
+import { baseUrl } from "@/config/config";
+import BannerLoader from "@/components/loading/BannerLoader";
+
 
 export default function Marketing() {
+  const [isBanner, setBanner] = useState(null);
+
+  useEffect(() => {
+    getBanner();
+  }, []);
+
+  async function getBanner() {
+    try {
+      const response = await fetch(
+        baseUrl + "/api/banniere-service-impression?populate=*"
+      );
+      if (!response.ok) {
+        const error = await response.json();
+        throw error;
+      }
+      const responseParse = await response.json();
+      //console.log(responseParse.data.attributes.Image.data.attributes.url);
+      setBanner(responseParse.data.attributes.Image.data.attributes.url);
+    } catch (error) {
+      console.log(error);
+    }
+  }
   return (
     <div>
       <Head>
@@ -21,9 +47,16 @@ export default function Marketing() {
       <ProgressBar></ProgressBar>
 
       <Fade triggerOnce>
-        <div className={style.layoutBaner}>
-          <div className={style.titleBaner}>BANNIERE</div>
-        </div>
+        {isBanner ? (
+          <div
+            style={{
+              backgroundImage: `url(${baseUrl + isBanner})`,
+            }}
+            className={style.layoutBaner}
+          ></div>
+        ) : (
+          <BannerLoader></BannerLoader>
+        )}
       </Fade>
 
       <div className={style.sectionLayout}>

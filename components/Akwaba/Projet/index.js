@@ -1,20 +1,46 @@
 import styleProjet from "../../../styles/Akwaba/Projet.module.css";
 import { motion } from "framer-motion";
-function Projet({ titre, arriereplan, changeDetail }) {
+import { useState, useEffect } from "react";
+import { baseUrl } from "@/config/config";
+import ImageLoader from "@/components/loading/ImageLoader";
+import Link from "next/link";
+
+function Projet({ titre, arriereplan }) {
   return (
     <div
       className={styleProjet.layout_projet}
-      style={{ backgroundImage: arriereplan }}
+      style={{ backgroundImage: `url(${baseUrl + arriereplan})` }}
     >
       <div>
         <h1>{titre}</h1>
-        <a href="/projet/3dsupplychain">détails</a>
+        <Link href="/projet">détails </Link>
       </div>
     </div>
   );
 }
 
 export default function SectionProjet() {
+  const [isProjets, setProjets] = useState(null);
+
+  useEffect(() => {
+    getProjets();
+  }, []);
+
+  async function getProjets() {
+    try {
+      const response = await fetch(baseUrl + "/api/projets?populate=*");
+      if (!response.ok) {
+        const error = await response.json();
+        throw error;
+      }
+      const responseParse = await response.json();
+      setProjets(responseParse.data);
+      //console.log(responseParse.data)
+    } catch (error) {
+      console.log(error);
+    }
+  }
+
   const projet1 = {
     arrierePlan: "url('/assets/Inkedpage7.jpg')",
     image: "url('/assets/Inkedpage7.jpg')",
@@ -157,58 +183,20 @@ export default function SectionProjet() {
         Nos Projets Récents
       </motion.h1>
 
-        <motion.div
-          variants={animProjetLR}
-          className={styleProjet.projet_range1}
-        >
-          <Projet
-            titre={"Titre"}
-            arriereplan={projet1.arrierePlan}
-            
-          ></Projet>
-          <Projet
-            titre={"Titre"}
-            arriereplan={projet2.arrierePlan}
-            
-          ></Projet>
-          <Projet
-            titre={"Titre"}
-            arriereplan={projet3.arrierePlan}
-            
-          ></Projet>
-
-          <Projet
-            titre={"Titre"}
-            arriereplan={projet4.arrierePlan}
-      
-          ></Projet>
-          <Projet
-            titre={"Titre"}
-            arriereplan={projet5.arrierePlan}
-     
-          ></Projet>
-          <Projet
-            titre={"Titre"}
-            arriereplan={projet6.arrierePlan}
-         
-          ></Projet>
-
-          <Projet
-            titre={"Titre"}
-            arriereplan={projet7.arrierePlan}
-           
-          ></Projet>
-          <Projet
-            titre={"Titre"}
-            arriereplan={projet8.arrierePlan}
-           
-          ></Projet>
-          <Projet
-            titre={"Titre"}
-            arriereplan={projet9.arrierePlan}
-           
-          ></Projet>
-        </motion.div>
+      <motion.div variants={animProjetLR} className={styleProjet.projet_range1}>
+        {isProjets ? (
+          isProjets.map((projet) => (
+            <Projet key={projet.attributes.Banniere_Projet.data.attributes.url} titre={projet.attributes.Titre} arriereplan={projet.attributes.Banniere_Projet.data.attributes.url}></Projet>
+          ))
+        ) : (
+          <>
+            <ImageLoader></ImageLoader>
+            <ImageLoader></ImageLoader>
+            <ImageLoader></ImageLoader>
+            <ImageLoader></ImageLoader>
+          </>
+        )}
+      </motion.div>
     </motion.div>
   );
 }

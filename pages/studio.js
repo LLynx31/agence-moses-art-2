@@ -1,17 +1,82 @@
 import Head from "next/head";
 import Header from "../components/Header";
-import styleStudio from "../styles/Studio/Studio.module.css";
+import styleStudio from "../styles/Formation/Formation.module.css";
 import Footer from "../components/Footer";
 import ContatezNous from "@/components/Akwaba/ContactezNous";
-import { SectionRealisation } from "../pages/presentation";
 import ProgressBar from "../components/ProgressBar";
 import { motion } from "framer-motion";
 import { useRouter } from "next/router";
 import Link from "next/link";
+import { useEffect, useState } from "react";
+import BannerLoader from "@/components/loading/BannerLoader";
+import { baseUrl } from "@/config/config";
 
 function Banner() {
-  return (
-    <div className={styleStudio.Banner}>
+  const [isBannerBig, setBannerBig] = useState(null);
+  const [isBannerSmall, setBannerSmall] = useState(null);
+  const [windowWidth, setWindowWidth] = useState(0);
+
+  useEffect(() => {
+    if (typeof window !== "undefined") {
+      setWindowWidth(window.innerWidth);
+
+      const handleResize = () => {
+        setWindowWidth(window.innerWidth);
+      };
+
+      window.addEventListener("resize", handleResize);
+      return () => window.removeEventListener("resize", handleResize);
+    }
+  }, []);
+
+  const styleBanner = {
+    backgroundImage:
+      windowWidth > 640
+        ? `url(${baseUrl + isBannerBig})`
+        : `url(${baseUrl + isBannerSmall})`,
+  };
+
+  useEffect(() => {
+    getBannerBig();
+    getBannerSmall();
+  }, []);
+
+  async function getBannerBig() {
+    try {
+      const response = await fetch(
+        baseUrl + "/api/banniere-studio?populate=*"
+      );
+      if (!response.ok) {
+        const error = await response.json();
+        throw error;
+      }
+      const responseParse = await response.json();
+      setBannerBig(responseParse.data.attributes.Image.data.attributes.url);
+    } catch (error) {
+      console.log(error);
+    }
+  }
+
+  async function getBannerSmall() {
+    try {
+      const response = await fetch(
+        baseUrl + "/api/banniere-studio-mobile?populate=*"
+      );
+      if (!response.ok) {
+        const error = await response.json();
+        throw error;
+      }
+      const responseParse = await response.json();
+      setBannerSmall(responseParse.data.attributes.Image.data.attributes.url);
+    } catch (error) {
+      console.log(error);
+    }
+  }
+  return isBannerBig ? (
+    <div
+      style={styleBanner}
+      className={styleStudio.Banner}
+    >
       <div className={styleStudio.Banner_title}>
         <motion.div
           initial={{ opacity: 0, y: 20 }}
@@ -31,6 +96,8 @@ function Banner() {
         </motion.div>
       </div>
     </div>
+  ) : (
+    <BannerLoader></BannerLoader>
   );
 }
 

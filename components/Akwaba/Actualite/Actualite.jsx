@@ -1,99 +1,130 @@
-import style from "@/styles/Actualite.module.css"
-import { Swiper, SwiperSlide } from 'swiper/react';
-
-import { Carousel } from "react-responsive-carousel";
+import style from "@/styles/Actualite.module.css";
+import { useEffect, useState, useRef } from "react";
+import { baseUrl } from "@/config/config";
 import "react-responsive-carousel/lib/styles/carousel.css";
-
+import { register } from "swiper/element/bundle";
 import { motion } from "framer-motion";
+import ImageLoader from "@/components/loading/ImageLoader";
 
-function Actualité({img, imgAlt, titre, children}){
-    return(
-        <div className={style.actualite}>
-            <div className={style.img_actualite}>
-                <img src={img} alt={imgAlt}></img>
-            </div>
-            <div style={{color:'white'}}>
-                ezfzefjezifzfzfnn
-            </div>
-        </div>
-    )
+register();
+
+function Actualité({ img, imgAlt, children }) {
+  return (
+    <div className={style.actualite}>
+      <div className={style.divImg}>
+        <img src={baseUrl + img} alt={imgAlt}></img>
+      </div>
+
+      <div
+        style={{
+          color: "black",
+          width: 300,
+          margin: "auto",
+          textAlign: "justify",
+        }}
+      >
+        {children}
+      </div>
+    </div>
+  );
 }
 
+export default function SectionActualite() {
+  const [isActualites, setActualites] = useState(null);
+  const swiperRef = useRef(null);
 
-export default function SectionActualite(){
-    return(
+  useEffect(() => {
+    Object.assign(swiperRef.current, {
+      speed: 500,
+      cssMode: true,
+      pagination: {
+        clickable: true,
+      },
+      freeMode:{
+        enable: true
+      },
+      navigation: true,
+      breakpoints: {
+        640: {
+          slidesPerView: 1,
+          spaceBetween: 20,
+        },
+        768: {
+          slidesPerView: 2,
+          spaceBetween: 40,
+        },
+        1024: {
+          slidesPerView: 3,
+          spaceBetween: 50,
+        },
+      },
+    });
 
-        <>
-            <motion.h1 initial={{opacity:0,y:100}} viewport={{once:true}} whileInView={{opacity:1,y:0, transition:{duration:0.3}}} className={style.section_titre}>Nos <span>Actualités</span></motion.h1>
-        
-            <div className={style.section}>
-            <Carousel
-            autoPlay={true}
-            infiniteLoop={true}
-            showArrows={true}
-            showThumbs={false}
-            showStatus={false}
-            interval={3000}
-            transitionTime={1200}
-            stopOnHover={true}
-            >
-                <div className={style.layout_section}>
-                    <Actualité img={"/assets/site version web/actualité_1.jpg"}></Actualité>
-                    
-                    <Actualité img={"/assets/site version web/actualité_2.jpg"}></Actualité>  
+    return swiperRef.current.initialize();
+  });
 
-                    <Actualité img={"/assets/site version web/actualité_3.jpg"}></Actualité>
-                </div>
+  useEffect(() => {
+    getData();
+  }, []);
+  async function getData() {
+    try {
+      const response = await fetch(baseUrl + "/api/actualites?populate=*");
+      if (!response.ok) {
+        const error = await response.json();
+        throw error;
+      }
+      const responseParse = await response.json();
+      //console.log(responseParse);
+      setActualites(responseParse.data);
+    } catch (error) {
+      console.log(error);
+    }
+  }
+  return (
+    <>
+      <motion.h1
+        initial={{ opacity: 0, y: 100 }}
+        viewport={{ once: true }}
+        whileInView={{ opacity: 1, y: 0, transition: { duration: 0.3 } }}
+        className={style.section_titre}
+      >
+        Nos <span>Actualités</span>
+      </motion.h1>
 
-                <div className={style.layout_section}>
-                    <Actualité></Actualité>
-                    
-                    <Actualité></Actualité>  
-
-                    <Actualité></Actualité>
-                </div>
-                    
-                
-                  
-            </Carousel>
-
-
-            
-            </div>
-
-            <div className={style.section_mobile}>
-            <Carousel
-            autoPlay={true}
-            infiniteLoop={true}
-            showArrows={true}
-            showThumbs={false}
-            showStatus={false}
-            interval={3000}
-            transitionTime={1200}
-            stopOnHover={true}
-            >
-                
-                <Actualité></Actualité>
-                    
-                <Actualité></Actualité>  
-
-                <Actualité></Actualité>
-
-                <Actualité></Actualité>
-
-                <Actualité></Actualité>
-                    
-                <Actualité></Actualité>  
-
-                <Actualité></Actualité>
-                
-                  
-            </Carousel>
-
-
-            
-            </div>
-        </>
-        
-    )
+      <div className={style.section}>
+        <div style={{ marginLeft: 10, marginRight: 10 }}>
+          <swiper-container init="false" free-mode="true" infinit-loop="true" ref={swiperRef}>
+            {isActualites ? (
+              isActualites.map((actualite) => (
+                <swiper-slide key={actualite.id}>
+                  <Actualité
+                    imgAlt={
+                      actualite.attributes.Image_Actualite.data.attributes.name
+                    }
+                    img={
+                      actualite.attributes.Image_Actualite.data.attributes.url
+                    }
+                  >
+                    {actualite.attributes.Description_Actualite}
+                  </Actualité>
+                </swiper-slide>
+              ))
+            ) : (
+              <>
+                <swiper-slide>
+                  <ImageLoader></ImageLoader>
+                </swiper-slide>
+                <swiper-slide>
+                  <ImageLoader></ImageLoader>
+                </swiper-slide>
+                <swiper-slide>
+                  <ImageLoader></ImageLoader>
+                </swiper-slide>
+              </>
+            )}
+          </swiper-container>
+        </div>
+      </div>
+    </>
+  );
 }

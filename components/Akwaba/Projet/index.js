@@ -5,7 +5,7 @@ import { baseUrl } from "@/config/config";
 import ImageLoader from "@/components/loading/ImageLoader";
 import Link from "next/link";
 
-function Projet({ titre, arriereplan }) {
+function Projet({ titre, arriereplan,id }) {
   return (
     <div
       className={styleProjet.layout_projet}
@@ -13,7 +13,7 @@ function Projet({ titre, arriereplan }) {
     >
       <div>
         <h1>{titre}</h1>
-        <Link href="/projet">détails </Link>
+        <Link href={`/projet/${id}`}>détails </Link>
       </div>
     </div>
   );
@@ -40,43 +40,6 @@ export default function SectionProjet() {
       console.log(error);
     }
   }
-
-  const projet1 = {
-    arrierePlan: "url('/assets/Inkedpage7.jpg')",
-    image: "url('/assets/Inkedpage7.jpg')",
-  };
-  const projet2 = {
-    arrierePlan: "url('/assets/Inkedpage14.jpg')",
-    image: "url('/assets/Inkedpage14.jpg')",
-  };
-  const projet3 = {
-    arrierePlan: "url('/assets/Inkedpage18.jpg')",
-    image: "url('/assets/Inkedpage18.jpg')",
-  };
-  const projet4 = {
-    arrierePlan: "url('/assets/Inkedpage13.jpg')",
-    image: "url('/assets/Inkedpage13.jpg')",
-  };
-  const projet5 = {
-    arrierePlan: "url('/assets/Inkedpage10.jpg')",
-    image: "url('/assets/Inkedpage10.jpg')",
-  };
-  const projet6 = {
-    arrierePlan: "url('/assets/Inkedpage9.jpg')",
-    image: "url('/assets/Inkedpage9.jpg')",
-  };
-  const projet7 = {
-    arrierePlan: "url('/assets/Inkedpage19.jpg')",
-    image: "url('/assets/Inkedpage19.jpg')",
-  };
-  const projet8 = {
-    arrierePlan: "url('/assets/sirus_capital.jpg')",
-    image: "url('/assets/sirus_capital.jpg')",
-  };
-  const projet9 = {
-    arrierePlan: "url('/assets/Inkedpage11.jpg')",
-    image: "url('/assets/Inkedpage11.jpg')",
-  };
 
   //const illustration = '/assets/LeftArrow.svg'
   const illustration1 = "/assets/Calque5.svg";
@@ -186,7 +149,7 @@ export default function SectionProjet() {
       <motion.div variants={animProjetLR} className={styleProjet.projet_range1}>
         {isProjets ? (
           isProjets.map((projet) => (
-            <Projet key={projet.attributes.Banniere_Projet.data.attributes.url} titre={projet.attributes.Titre} arriereplan={projet.attributes.Banniere_Projet.data.attributes.url}></Projet>
+            <Projet id={projet.id} key={projet.attributes.Banniere_Projet.data?.attributes.url} titre={projet.attributes.Titre} arriereplan={projet.attributes.Banniere_Projet.data?.attributes.url}></Projet>
           ))
         ) : (
           <>

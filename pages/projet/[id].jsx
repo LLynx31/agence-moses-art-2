@@ -9,120 +9,144 @@ register();
 
 import ProgressBar from "@/components/ProgressBar";
 import { Fade } from "react-awesome-reveal";
-import { useEffect, useState } from "react";
+import { useEffect, useRef, useState } from "react";
 import { baseUrl } from "@/config/config";
+import BannerLoader from "@/components/loading/BannerLoader";
+import TextLoader from "@/components/loading/TextLoader";
+import CarouselLoader from "@/components/loading/CarrouselLoader";
 
 export default function page() {
   const router = useRouter();
-
   const [isProjet, setProjet] = useState(null);
+  const [isIdProjet, setIdProjet] = useState(null);
 
   useEffect(() => {
-    getData();
-    console.log(router.query)
-  }, []);
+    if (router.query.id) {
+      setIdProjet(router.query.id);
+    }
+  }, [router.query.id]);
+
+  useEffect(() => {
+    if (isIdProjet) {
+      getData();
+    }
+  }, [isIdProjet]);
 
   async function getData() {
+    console.log(isIdProjet);
     try {
       const response = await fetch(
-        baseUrl + `/api/projets/${router.query.id}?populate=*`
+        baseUrl + `/api/projets/${isIdProjet}?populate=*`
       );
       if (!response.ok) {
         const error = await response.json();
         throw error;
       }
       const responseParse = await response.json();
-      console.log(responseParse.data.attributes.Image.data.attributes.url);
-      setProjet(responseParse.data.attributes.Image.data.attributes.url);
+      console.log(responseParse);
+      setProjet(responseParse);
     } catch (error) {
       console.log(error);
     }
   }
+
+  const swiperRef = useRef(null);
+
+  useEffect(() => {
+    Object.assign(swiperRef.current, {
+      speed: 500,
+      cssMode: true,
+      pagination: {
+        clickable: true,
+      },
+      freeMode: {
+        enable: true,
+      },
+      navigation: true,
+      breakpoints: {
+        640: {
+          slidesPerView: 1,
+          spaceBetween: 20,
+        },
+        768: {
+          slidesPerView: 2,
+          spaceBetween: 40,
+        },
+        1024: {
+          slidesPerView: 3,
+          spaceBetween: 50,
+        },
+      },
+    });
+
+    return swiperRef.current.initialize();
+  });
   return (
     <>
-      <Header headerColor="black" akwaba scroll={"black"}></Header>
+      <Header headerColor="black" projet scroll={"black"}></Header>
       <ProgressBar></ProgressBar>
       <Fade triggerOnce>
-        <div
-          style={{
-            backgroundImage: "url('/assets/projet/Fond.jpg')",
-          }}
-          className={styleBanner.layoutBaner}
-        ></div>
+        {isProjet ? (
+          <div
+            style={{
+              backgroundImage: `url(${
+                baseUrl +
+                isProjet.data.attributes.Banniere_Projet.data?.attributes.url
+              })`,
+            }}
+            className={styleBanner.layoutBaner}
+          ></div>
+        ) : (
+          <BannerLoader></BannerLoader>
+        )}
       </Fade>
 
       <div className={style.layoutDetailProjet}>
         <h1 className={style.titleDetailProjet}>Le client</h1>
         <hr></hr>
-        <p className={style.paragraphDetailProjet}>
-          3D Supply Chain est une entreprise basée à Guingamp, France,
-          spécialisée dans la vente et la distribution de produits frais, secs
-          et surgelés, avec une volonté d'exporter des produits « Made in Africa
-          » vers le marché européen et la diaspora.
-        </p>
+        {isProjet ? (
+          <p className={style.paragraphDetailProjet}>
+            {isProjet.data.attributes.Description_Client}
+          </p>
+        ) : (
+          <TextLoader lineCount={5}></TextLoader>
+        )}
       </div>
 
       <div className={style.layoutDetailProjet}>
         <h1 className={style.titleDetailProjet}>Le projet</h1>
         <hr></hr>
-        <p className={style.paragraphDetailProjet}>
-          3D Supply Chain a exprimé le désir de digitaliser son activité pour la
-          rendre accessible à un public plus large. Nous avons donc été chargés
-          de réaliser un site mettant en avant toute la gamme de leurs produits,
-          facilitant ainsi les achats en ligne avec des fonctionnalités telles
-          que l'inscription et la création de compte, l'achat et la validation
-          du panier, le suivi de commande, l'historique des commandes, la
-          livraison à domicile, et bien d'autres.
-        </p>
+        {isProjet ? (
+          <p className={style.paragraphDetailProjet}>
+            {isProjet.data.attributes.Description_Projet}
+          </p>
+        ) : (
+          <TextLoader lineCount={5}></TextLoader>
+        )}
       </div>
       <div style={{ marginLeft: 30, marginRight: 30 }}>
         <swiper-container
-          slides-per-view="3"
-          speed="500"
+          init="false"
+          free-mode="true"
           infinit-loop="true"
-          css-mode="true"
-          space-between={30}
-          pagination={true}
-          navigation={true}
+          ref={swiperRef}
         >
-          <swiper-slide>
-            <img
-              style={{ width: "100%" }}
-              loading="lazy"
-              src="assets/projet/slide 1.jpg"
-            ></img>
-          </swiper-slide>
-          <swiper-slide>
-            <img
-              style={{ width: "100%" }}
-              loading="lazy"
-              src="assets/projet/slide 2.jpg"
-            ></img>
-          </swiper-slide>
-          <swiper-slide>
-            <img
-              style={{ width: "100%" }}
-              loading="lazy"
-              src="assets/projet/slide 3.jpg"
-            ></img>
-          </swiper-slide>
-          <swiper-slide>
-            <img
-              style={{ width: "100%" }}
-              loading="lazy"
-              src="assets/projet/slide 4.jpg"
-            ></img>
-          </swiper-slide>
+          {isProjet
+            ? isProjet.data.attributes.Images_Projet.data.map((image) => (
+                <swiper-slide key={`${image.attributes.url.name}`}>
+                  <img
+                    style={{ width: "100%" }}
+                    loading="lazy"
+                    src={baseUrl + image.attributes.url}
+                  ></img>
+                </swiper-slide>
+              ))
+            : <div style={{display:"flex",width:"100%", alignItems:"center", justifyContent:"center"}}><CarouselLoader></CarouselLoader></div>}
         </swiper-container>
       </div>
 
       <div className={style.layoutCommentaireClient}>
-        <h1 className={style.titleCommentaireClient}>commentaire du client</h1>
-        <p className={style.paragraphCommentaireClient}>
-          Lorem ipsum dolor sit amet lorem ipsum dolor sit amet lorem lorem
-          ipsum dolor sit amt ejfjl fgri elfiroei ad vitam eternam hrkfui hd
-          Lorem ipsum ffjru
-        </p>
+        
       </div>
 
       <div className={style.layoutContact}>

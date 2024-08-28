@@ -12,12 +12,15 @@ export default function Banner() {
 
   async function getBanner() {
     try {
-      const response = await fetch(baseUrl + "/api/akwaba?populate=*");
+      const response = await fetch(baseUrl + "/api/akwaba?populate=*", {
+        mode: "cors",
+      });
       if (!response.ok) {
         const error = await response.json();
         throw error;
       }
       const responseParse = await response.json();
+
       setBanner(responseParse.data.attributes.Video.data.attributes.url);
     } catch (error) {
       console.log(error);

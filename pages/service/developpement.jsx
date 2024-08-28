@@ -21,7 +21,7 @@ export default function Marketing() {
   async function getBanner() {
     try {
       const response = await fetch(
-        baseUrl + "/api/banniere-service-design?populate=*"
+        baseUrl + "/api/banniere-service-dev?populate=*"
       );
       if (!response.ok) {
         const error = await response.json();

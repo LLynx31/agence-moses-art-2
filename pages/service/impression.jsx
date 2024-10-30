@@ -36,7 +36,7 @@ export default function Marketing() {
     }
   }
   return (
-    <div>
+    <div className={style.container}>
       <Head>
         <link rel="preconnect" href="https://fonts.googleapis.com" />
         <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin />
@@ -61,10 +61,7 @@ export default function Marketing() {
 
       <div className={style.sectionLayout}>
         <Zoom triggerOnce cascade damping={0.1}>
-          <div
-            className={style.blockLayout}
-            style={{ backgroundColor: "#FFC403" }}
-          >
+          <div className={style.blockLayout}>
             <h1 className={style.titleBlock}>Qualité professionnelle</h1>
             <p className={style.paragraphe}>
               Nous disposons des équipements et des compétences nécessaires pour

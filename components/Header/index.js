@@ -4,6 +4,7 @@ import { useScroll, useAnimate, useMotionValueEvent,motion} from 'framer-motion'
 import ProgressBar from '../ProgressBar'
 import Image from 'next/image'
 import { useState } from 'react'
+import logoagence from '../../public/logoagence.jpg'
 
 
 export default function Header({akwaba = false, presentation = false, service = false, formation = false, studio=false, contact = false, projet = false, headerColor = '#0F8383', scroll}) {
@@ -27,7 +28,7 @@ export default function Header({akwaba = false, presentation = false, service = 
         })
 
 
-        const logo = '/assets/logoHeader.svg'
+        const logo = '../../public/logoagence.jpg'
         const styleHeader = {
             backgroundColor: headerColor
         }
@@ -47,7 +48,7 @@ export default function Header({akwaba = false, presentation = false, service = 
     return (
         <motion.div layout className={isOpen ? stylesHeader.conteneurOpen : stylesHeader.conteneur }>
             <div ref={scopes} className={isOpen ? stylesHeader.layoutHearderOpen : stylesHeader.layoutHearder} style={styleHeader}>
-                <Image loading='lazy' className={stylesHeader.logo} alt="Agence Moses Art" src={logo} width={110} height={75} />
+                <Image loading='lazy' className={stylesHeader.logo} alt="Agence Moses Art" src={logoagence} width={160} height={50} />
                 <nav className={isOpen ? stylesHeader.navOpen :stylesHeader.nav }>
                     <ul className={isOpen ? stylesHeader.ulOpen : stylesHeader.ul}>
                         <li ref={ akwaba ? scopes_1 : null} className={isOpen ? stylesHeader.liOpen : stylesHeader.li}><Link className={stylesHeader.link} href="/" style={akwaba ? stylePageActif : stylePageInactif}>Akwaba</Link></li>

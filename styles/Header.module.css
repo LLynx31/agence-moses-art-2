@@ -158,7 +158,9 @@
 
 @media screen and (max-width:768px) {
     .layoutHearder {
-        display: block;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
     }
     .nav {
         display: none;
@@ -173,8 +175,6 @@
     }
 
     .toogle_menu {
-        float: right;
-        margin-top: 30px;
         margin-right: 20px;
     }
 

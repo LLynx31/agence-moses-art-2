@@ -54,12 +54,13 @@ function CarouselTemoignage() {
     <Carousel
       className="caroussel"
       autoPlay={true}
+      autoFocus={true}
       infiniteLoop={true}
       showArrows={true}
       showThumbs={false}
       showStatus={false}
-      interval={3000}
-      transitionTime={1200}
+      interval={8000}
+      transitionTime={3000}
     >
       {isTemoignages ? (
         isTemoignages.map((temoignage) => (

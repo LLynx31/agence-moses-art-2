@@ -50,7 +50,7 @@ export default function Marketing() {
             backgroundImage:
               `url(${baseUrl + isBanner})`,
             backgroundSize: 'cover',
-            height: '200px',
+            
           }}
           className={style.layoutBaner}
         ></div> : <BannerLoader></BannerLoader>}
@@ -60,7 +60,7 @@ export default function Marketing() {
         <Zoom triggerOnce cascade damping={0.1}>
           <div
             className={style.blockLayout}
-            style={{ backgroundColor: "#FFC403", padding: '20px', textAlign: 'center' }}
+            style={{ backgroundColor: "#FFC403"}}
           >
             <h1 className={style.titleBlock}>Stratégie de communication</h1>
             <p className={style.paragraphe}>
@@ -73,16 +73,16 @@ export default function Marketing() {
           <div className={style.layoutIcone}>
             <Image
               style={{ margin: "auto" }}
-              width={150}
-              height={150}
+              width={100}
+              height={100}
               src={"/assets/IconeService/STRATEGIE.jpg"}
             ></Image>
           </div>
           <div className={style.layoutIcone}>
             <Image
               style={{ margin: "auto" }}
-              width={150}
-              height={150}
+              width={100}
+              height={100}
               src={"/assets/IconeService/Communication interne.jpg"}
             ></Image>
           </div>
@@ -115,16 +115,16 @@ export default function Marketing() {
           <div className={style.layoutIcone}>
             <Image
               style={{ margin: "auto" }}
-              width={150}
-              height={150}
+              width={100}
+              height={100}
               src={"/assets/IconeService/CONTENT CREATOR.jpg"}
             ></Image>
           </div>
           <div className={style.layoutIcone}>
             <Image
               style={{ margin: "auto" }}
-              width={150}
-              height={150}
+              width={100}
+              height={100}
               src={"/assets/IconeService/design & branding.jpg"}
             ></Image>
           </div>
@@ -153,16 +153,16 @@ export default function Marketing() {
           <div className={style.layoutIcone}>
             <Image
               style={{ margin: "auto" }}
-              width={150}
-              height={150}
+              width={100}
+              height={100}
               src={"/assets/IconeService/event.png"}
             ></Image>
           </div>
           <div className={style.layoutIcone}>
             <Image
               style={{ margin: "auto" }}
-              width={150}
-              height={150}
+              width={100}
+              height={100}
               src={"/assets/IconeService/Communication interne.jpg"}
             ></Image>
           </div>

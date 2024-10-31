@@ -16,8 +16,9 @@ import {
 
 import { motion } from "framer-motion";
 import ImageLoader from "@/components/loading/ImageLoader";
+import { useMediaQuery } from 'react-responsive';
 
-function Profil({ imgSrc, alt }) {
+function Profil({ imgSrc, alt, loading }) {
   return (
     <div className="layout-profil">
       <Image
@@ -33,6 +34,7 @@ function Profil({ imgSrc, alt }) {
 
 function CarouselEquipe() {
   const [isEquipes, setEquipes] = useState(null);
+  const isMobile = useMediaQuery({ query: '(max-width: 768px)' });
 
   useEffect(() => {
     getData();
@@ -45,7 +47,6 @@ function CarouselEquipe() {
         throw error;
       }
       const responseParse = await response.json();
-      //console.log(responseParse);
       setEquipes(responseParse.data);
     } catch (error) {
       console.log(error);
@@ -57,7 +58,7 @@ function CarouselEquipe() {
       grabCursor={true}
       centeredSlides={true}
       loop={true}
-      slidesPerView={"auto"}
+      slidesPerView={isMobile ? 1 : "auto"}
       coverflowEffect={{
         rotate: 0,
         stretch: 0,
@@ -65,10 +66,12 @@ function CarouselEquipe() {
         modifier: 2.5,
       }}
       autoplay={{
-        delay: 2000,
+        delay: isMobile ? 4000 : 2000,
+        disableOnInteraction: true,
       }}
-      speed={1500}
-      pagination={{ el: ".swiper-pagination", clickable: false }}
+      speed={800}
+      transitionEffect="fade"
+      pagination={{ el: ".swiper-pagination", clickable: true }}
       navigation={{
         nextEl: ".swiper-button-next",
         prevEl: ".swiper-button-prev",
@@ -76,6 +79,11 @@ function CarouselEquipe() {
       }}
       modules={[EffectCoverflow, Pagination, Navigation, Autoplay]}
       className="swiper_container"
+      onInit={(swiper) => {
+        if (isMobile) {
+          swiper.autoplay.start();
+        }
+      }}
     >
       {isEquipes ? (
         isEquipes.map((equipe) => (
@@ -83,6 +91,7 @@ function CarouselEquipe() {
             <Profil
               imgSrc={equipe.attributes.Personnel.data.attributes.url}
               alt={equipe.attributes.Personnel.data.attributes.name}
+              loading="lazy"
             ></Profil>
           </SwiperSlide>
         ))

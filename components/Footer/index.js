@@ -6,7 +6,7 @@ export default function Footer(){
     const styleLine = {width: '50px', height:'5px', marginBottom: '20px',position:'relative'}
     const styleReseau = {width: '30px',height: '30px', position:'relative',display:'inline-block'}
 
-    const logo = '/assets/logo.svg'
+    const logo = '/assets/logofooter.png'
     const lineFooter = '/assets/LineFooter.svg'
     const facebook = '/assets/FacebookFooter.svg'
     const instagram = '/assets/InstagramFooter.svg'
@@ -14,7 +14,7 @@ export default function Footer(){
     return(
         <div className={styleFooter.layout_footer}>
             <div className={styleFooter.layout_info}>
-                <Image loading='lazy' className={styleFooter.logo} alt="Moses Agence Moses" width={200} height={100} src={logo}></Image >
+                <Image loading='lazy' className={styleFooter.logo} alt="Moses Agence Moses" width={230} height={100} src={logo}></Image >
                 <div className={styleFooter.contact}>
                     <h1 className={styleFooter.title}>Nos contacts</h1>
                     <div style={styleLine}><Image loading='lazy' fill alt="illustration"  src={lineFooter} ></Image ></div>

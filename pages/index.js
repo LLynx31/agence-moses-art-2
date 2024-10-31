@@ -35,7 +35,7 @@ function App() {
       <div
         style={{
           height: 50,
-          backgroundColor: "#0F83838C",
+          backgroundColor: "#FFFFFF",
           width: "100%",
           margin: "150px 0px 100px 0px",
           opacity: 0.5,
@@ -53,7 +53,7 @@ function App() {
       <div
         style={{
           height: 50,
-          backgroundColor: "#0F83838C",
+          backgroundColor: "#FFFFFF",
           width: "100%",
           margin: "100px 0px 0px",
           opacity: 0.5,
@@ -63,7 +63,7 @@ function App() {
       <div
         style={{
           height: 50,
-          backgroundColor: "#0F83838C",
+          backgroundColor: "#FFFFFF",
           width: "100%",
           margin: "0px 0px 100px 0px",
           opacity: 0.5,
@@ -73,7 +73,7 @@ function App() {
       <div
         style={{
           height: 50,
-          backgroundColor: "#0F83838C",
+          backgroundColor: "#FFFFFF",
           width: "100%",
           margin: "100px 0px",
           opacity: 0.5,
@@ -83,7 +83,7 @@ function App() {
       <div
         style={{
           height: 50,
-          backgroundColor: "#0F83838C",
+          backgroundColor: "#FFFFFF",
           width: "100%",
           margin: "50px 0px",
           opacity: 0.5,
@@ -95,7 +95,7 @@ function App() {
       <div
         style={{
           height: 50,
-          backgroundColor: "#0F83838C",
+          backgroundColor: "#FFFFFF",
           width: "100%",
           marginBottom: "50px",
           marginTop: "120px",
@@ -108,7 +108,7 @@ function App() {
       <div
         style={{
           height: 50,
-          backgroundColor: "#0F83838C",
+          backgroundColor: "#FFFFFF",
           width: "100%",
           margin: "100px 0px",
           opacity: 0.5,

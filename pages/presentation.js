@@ -1017,7 +1017,7 @@ export default function Presentation() {
         <div
           style={{
             height: 50,
-            backgroundColor: "#0F83838C",
+            backgroundColor: "#FFFFFF",
             width: "100%",
             margin: "100px 0px",
             opacity: 0.5,
@@ -1029,7 +1029,7 @@ export default function Presentation() {
         <div
           style={{
             height: 50,
-            backgroundColor: "#0F83838C",
+            backgroundColor: "#FFFFFF",
             width: "100%",
             margin: "100px 0px",
             opacity: 0.5,
@@ -1041,7 +1041,7 @@ export default function Presentation() {
         <div
           style={{
             height: 50,
-            backgroundColor: "#0F83838C",
+            backgroundColor: "#FFFFFF",
             width: "100%",
             margin: "100px 0px",
             opacity: 0.5,
@@ -1051,7 +1051,7 @@ export default function Presentation() {
         <div
           style={{
             height: 50,
-            backgroundColor: "#0F83838C",
+            backgroundColor: "#FFFFFF",
             width: "100%",
             margin: "100px 0px",
             opacity: 0.5,

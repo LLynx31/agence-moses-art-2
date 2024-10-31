@@ -62,12 +62,12 @@ export default function Marketing() {
         <Zoom triggerOnce cascade damping={0.1}>
           <div
             className={style.blockLayout}
-            style={{ backgroundColor: "#FFC403" }}
+            style={{ backgroundColor: "#FFC403", padding: "20px", textAlign: "center" }}
           >
-            <h1 className={style.titleBlock}>
+            <h1 className={style.titleBlock} style={{ fontSize: "1.5rem" }}>
               Amélioration de l'expertise client
             </h1>
-            <p className={style.paragraphe}>
+            <p className={style.paragraphe} style={{ fontSize: "1rem" }}>
               La digitalisation permet de proposer des services en ligne, de
               faciliter les transactions et d'offrir une expérience client plus
               fluide et personnalisée.

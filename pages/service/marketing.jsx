@@ -40,6 +40,34 @@ export default function Marketing() {
         <link rel="preconnect" href="https://fonts.googleapis.com" />
         <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin />
         <title>Agence MOSES ART</title>
+        <style>
+          {`
+            @media (max-width: 768px) {
+              .${style.layoutBaner} {
+                height: 200px; // Ajustez la hauteur pour les petits écrans
+                background-size: cover; // Assurez-vous que l'image couvre le conteneur
+              }
+              .${style.sectionLayout} {
+                padding: 10px; // Ajoutez un peu de padding
+              }
+              .${style.blockLayout} {
+                margin: 10px 0; // Ajoutez un margin pour espacer les blocs
+                padding: 15px; // Ajoutez du padding pour le texte
+              }
+              .${style.titleBlock} {
+                font-size: 1.5rem; // Réduisez la taille de la police
+              }
+              .${style.paragraphe} {
+                font-size: 1rem; // Réduisez la taille de la police
+              }
+              .${style.layoutIcone} {
+                display: flex; // Utilisez flex pour centrer les icônes
+                justify-content: center; // Centrez les icônes
+                margin: 10px 0; // Ajoutez un margin pour espacer
+              }
+            }
+          `}
+        </style>
       </Head>
 
       <Header headerColor="black" service scroll={"black"}></Header>

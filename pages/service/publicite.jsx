@@ -1,4 +1,3 @@
-
 import Head from "next/head";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
@@ -63,7 +62,7 @@ export default function Marketing() {
         <Zoom triggerOnce cascade damping={0.1}>
           <div
             className={style.blockLayout}
-            style={{ backgroundColor: "#FFC403" }}
+            style={{ backgroundColor: "#FFC403", padding: "20px", textAlign: "center" }}
           >
             <h1 className={style.titleBlock}>Stratégie publicitaire</h1>
             <p className={style.paragraphe}>
@@ -74,14 +73,14 @@ export default function Marketing() {
           </div>
 
           <div className={style.layoutIcone}>
-            <Image style={{margin:"auto"}}
+            <Image style={{ margin: "auto", maxWidth: "100%", height: "auto" }}
               width={100}
               height={100}
               src={"/assets/IconeService/99999999.png"}
             ></Image>
           </div>
           <div className={style.layoutIcone}>
-            <Image style={{margin:"auto"}}
+            <Image style={{ margin: "auto", maxWidth: "100%", height: "auto" }}
               width={100}
               height={100}
               src={"/assets/IconeService/1087886.png"}
@@ -90,7 +89,7 @@ export default function Marketing() {
 
           <div
             className={style.blockLayout}
-            style={{ backgroundColor: "#076965", color: "white" }}
+            style={{ backgroundColor: "#076965", color: "white", padding: "20px", textAlign: "center" }}
           >
             <h1 className={style.titleBlock}>Création publicitaire</h1>
             <p className={style.paragraphe}>
@@ -112,14 +111,14 @@ export default function Marketing() {
             </p>
           </div>
           <div className={style.layoutIcone}>
-            <Image style={{margin:"auto"}}
+            <Image style={{ margin: "auto", maxWidth: "100%", height: "auto" }}
               width={100}
               height={100}
               src={"/assets/IconeService/567014.png"}
             ></Image>
           </div>
           <div className={style.layoutIcone}>
-            <Image style={{margin:"auto"}}
+            <Image style={{ margin: "auto", maxWidth: "100%", height: "auto" }}
               width={100}
               height={100}
               src={"/assets/IconeService/2856934.png"}

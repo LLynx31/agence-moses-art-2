@@ -48,6 +48,8 @@ export default function page() {
           style={{
             backgroundImage:
               `url(${baseUrl + isBanner})`,
+            backgroundSize: 'cover',
+            height: '200px',
           }}
           className={style.layoutBaner}
         ></div> : <BannerLoader></BannerLoader>}
@@ -58,13 +60,13 @@ export default function page() {
         <Zoom triggerOnce cascade damping={0.1}>
           <div
             className={style.blockLayout}
-            style={{ backgroundColor: "#FFC403" }}
+            style={{ backgroundColor: "#FFC403", padding: '20px', textAlign: 'center' }}
           >
-            <h1 className={style.titleBlock}>Professionnalisme</h1>
+            <h1 className={style.titleBlock}>Stratégie de communication</h1>
             <p className={style.paragraphe}>
-              Nous disposons des compétences et de l'expertise nécessaires pour
-              produire des contenus de haute qualité, avec une attention aux
-              détails et une esthétique visuelle soignée.
+              Nous développons une stratégie globale de communication qui aligne
+              tous les canaux de communication de l&apos;entreprise pour
+              atteindre vos objectifs.
             </p>
           </div>
           <div className={style.layoutIcone}>

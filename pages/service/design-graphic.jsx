@@ -59,10 +59,10 @@ export default function Marketing() {
         <Zoom triggerOnce cascade damping={0.1}>
           <div
             className={style.blockLayout}
-            style={{ backgroundColor: "#FFC403" }}
+            style={{ backgroundColor: "#FFC403", padding: "20px", textAlign: "center" }}
           >
-            <h1 className={style.titleBlock}>Créaticité et expertise</h1>
-            <p className={style.paragraphe}>
+            <h1 className={style.titleBlock} style={{ fontSize: "1.5rem" }}>Créaticité et expertise</h1>
+            <p className={style.paragraphe} style={{ fontSize: "1rem" }}>
               Nous avons une équipe de designers talentueux et créatifs qui sont
               experts dans l'utilisation des principes de design pour créer des
               visuels accrocheurs et esthétiquement plaisants.

@@ -35,7 +35,7 @@ export default function Marketing() {
     }
   }
   return (
-    <div>
+    <div className={style.container}>
       <Head>
         <link rel="preconnect" href="https://fonts.googleapis.com" />
         <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin />

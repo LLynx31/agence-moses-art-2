@@ -8,7 +8,7 @@ import { motion, useAnimate } from "framer-motion";
 import SendProject from "@/components/SendProject";
 import { baseUrl } from "@/config/config";
 
-import { useEffect, useState } from "react";
+import { useEffect, useState, useRef } from "react";
 import BannerLoader from "@/components/loading/BannerLoader";
 
 
@@ -31,6 +31,8 @@ export function Banner() {
   const [isBannerBig, setBannerBig] = useState(null);
   const [isBannerSmall, setBannerSmall] = useState(null);
   const [windowWidth, setWindowWidth] = useState(0);
+
+  const scopesRef = useRef(null);
 
   useEffect(() => {
     if (typeof window !== "undefined") {
@@ -104,7 +106,7 @@ export function Banner() {
     }, 2000);
 
     return () => clearInterval(time);
-  }, [animate, formation.length, scopes]);
+  }, [animate, formation.length, scopesRef]);
 
   return isBannerBig ? (
     <div style={styleBanner} className={styleServcie.Banner}>
@@ -114,7 +116,7 @@ export function Banner() {
         ce que nous faisons
         <br />
         <motion.span
-          ref={scopes}
+          ref={scopesRef}
           initial={{ opacity: 0, y: 5 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.6 }}
@@ -269,74 +271,74 @@ function SectionService() {
       >
         <ServiceDiv
           logo={"/assets/logos_service/communication.svg"}
-          serviceTitle={dataService[0].titleService}
-          link={dataService[0].link}
+          serviceTitle={dataService[0]?.titleService}
+          link={dataService[0]?.link}
         >
-          {dataService[0].descriptionService}
+          {dataService[0]?.descriptionService}
         </ServiceDiv>
 
         <ServiceDiv
           logo={"/assets/logos_service/publicité.svg"}
-          serviceTitle={dataService[1].titleService}
-          link={dataService[1].link}
+          serviceTitle={dataService[1]?.titleService}
+          link={dataService[1]?.link}
         >
-          {dataService[1].descriptionService}
+          {dataService[1]?.descriptionService}
         </ServiceDiv>
 
         <ServiceDiv
           logo={"/assets/logos_service/marketing.svg"}
-          serviceTitle={dataService[2].titleService}
-          link={dataService[2].link}
+          serviceTitle={dataService[2]?.titleService}
+          link={dataService[2]?.link}
         >
-          {dataService[2].descriptionService}
+          {dataService[2]?.descriptionService}
         </ServiceDiv>
 
         <ServiceDiv
           logo={"/assets/logos_service/dev.svg"}
-          serviceTitle={dataService[3].titleService}
-          link={dataService[3].link}
+          serviceTitle={dataService[3]?.titleService}
+          link={dataService[3]?.link}
         >
-          {dataService[3].descriptionService}
+          {dataService[3]?.descriptionService}
         </ServiceDiv>
 
         <ServiceDiv
           logo={"/assets/logos_service/design.svg"}
-          serviceTitle={dataService[4].titleService}
-          link={dataService[4].link}
+          serviceTitle={dataService[4]?.titleService}
+          link={dataService[4]?.link}
         >
-          {dataService[4].descriptionService}
+          {dataService[4]?.descriptionService}
         </ServiceDiv>
 
         <ServiceDiv
           logo={"/assets/logos_service/digital.svg"}
-          serviceTitle={dataService[5].titleService}
-          link={dataService[5].link}
+          serviceTitle={dataService[5]?.titleService}
+          link={dataService[5]?.link}
         >
-          {dataService[5].descriptionService}
+          {dataService[5]?.descriptionService}
         </ServiceDiv>
 
         <ServiceDiv
           logo={"/assets/logos_service/visuelle.svg"}
-          serviceTitle={dataService[6].titleService}
-          link={dataService[6].link}
+          serviceTitle={dataService[6]?.titleService}
+          link={dataService[6]?.link}
         >
-          {dataService[6].descriptionService}
+          {dataService[6]?.descriptionService}
         </ServiceDiv>
 
         <ServiceDiv
           logo={"/assets/logos_service/evenement.svg"}
-          serviceTitle={dataService[7].titleService}
-          link={dataService[7].link}
+          serviceTitle={dataService[7]?.titleService}
+          link={dataService[7]?.link}
         >
-          {dataService[7].descriptionService}
+          {dataService[7]?.descriptionService}
         </ServiceDiv>
 
         <ServiceDiv
           logo={"/assets/logos_service/impression.svg"}
-          serviceTitle={dataService[8].titleService}
-          link={dataService[8].link}
+          serviceTitle={dataService[8]?.titleService}
+          link={dataService[8]?.link}
         >
-          {dataService[8].descriptionService}
+          {dataService[8]?.descriptionService}
         </ServiceDiv>
       </motion.div>
 

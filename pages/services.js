@@ -95,12 +95,12 @@ export function Banner() {
         prevNum >= formation.length - 1 ? 0 : prevNum + 1
       );
 
-      animate(scopes.current, {
+      if(scopes.current){animate(scopes.current, {
         opacity: [0, 1],
         transition: {
           duration: 0.6,
         },
-      });
+      });}
     }, 2000);
 
     return () => clearInterval(time);

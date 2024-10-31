@@ -5,8 +5,33 @@ import styleBanner from "@/styles/Marketing.module.css";
 import { Fade } from "react-awesome-reveal";
 import Projet from "../components/Akwaba/Projet";
 import Footer from "@/components/Footer";
+import { baseUrl } from "@/config/config";
+import { useEffect, useState } from "react";
+import BannerLoader from "@/components/loading/BannerLoader";
 
 export default function PageProjets() {
+  const [isBanner, setBanner] = useState(null);
+
+  useEffect(() => {
+    getBanner();
+  }, []);
+
+  async function getBanner() {
+    try {
+      const response = await fetch(
+        baseUrl + "/api/banniere-projet?populate=*"
+      );
+      if (!response.ok) {
+        const error = await response.json();
+        throw error;
+      }
+      const responseParse = await response.json();
+      //console.log(responseParse.data.attributes.Image.data.attributes.url);
+      setBanner(responseParse.data.attributes.Image.data.attributes.url);
+    } catch (error) {
+      console.log(error);
+    }
+  }
   return (
     <>
       <Head>
@@ -22,9 +47,14 @@ export default function PageProjets() {
         transition={{ duration: 1 }}
       >
         <Fade triggerOnce>
-          <div className={styleBanner.layoutBaner}>
-            <div className={styleBanner.titleBaner}>BANNIERE</div>
-          </div>
+        {isBanner? <div
+          style={{
+            backgroundImage:
+              `url(${baseUrl + isBanner})`,
+            marginBottom:20
+          }}
+          className={styleBanner.layoutBaner}
+        ></div> : <BannerLoader></BannerLoader>}
         </Fade>
 
         <Projet></Projet>

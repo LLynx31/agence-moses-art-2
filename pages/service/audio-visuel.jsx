@@ -49,7 +49,6 @@ export default function page() {
             backgroundImage:
               `url(${baseUrl + isBanner})`,
             backgroundSize: 'cover',
-            height: '200px',
           }}
           className={style.layoutBaner}
         ></div> : <BannerLoader></BannerLoader>}

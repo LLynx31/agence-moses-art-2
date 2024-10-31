@@ -78,8 +78,8 @@ const animImg = {
     opacity: 1,
     y: 0,
     transition: {
-      duration: 1,
-      delay: 0.5,
+      duration: 0.3,
+      delay: 0.2,
     },
   },
 };
@@ -92,7 +92,7 @@ const animIllustration = {
     rotate: 360,
     transition: {
       repeat: Infinity,
-      duration: 8,
+      duration: 3,
     },
   },
 

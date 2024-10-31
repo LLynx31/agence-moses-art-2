@@ -26,7 +26,8 @@ function Profil({ imgSrc, alt }) {
         alt={alt}
         width={400}
         height={500}
-      ></Image>
+        quality={75}
+      />
     </div>
   );
 }
@@ -65,9 +66,9 @@ function CarouselEquipe() {
         modifier: 2.5,
       }}
       autoplay={{
-        delay: 2000,
+        delay: 1000,
       }}
-      speed={1500}
+      speed={800}
       pagination={{ el: ".swiper-pagination", clickable: false }}
       navigation={{
         nextEl: ".swiper-button-next",

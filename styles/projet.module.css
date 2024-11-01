@@ -16,6 +16,7 @@
 
 .paragraphDetailProjet {
     font-size: 14px;
+    line-height: 1.5;
 }
 
 .layoutCommentaireClient {
@@ -23,10 +24,12 @@
     text-align: center;
     padding:0 170px;
     margin-top: 100px;
+    
 }
 
 .titleCommentaireClient { 
     font-size: 25px;
+    
 }
 
 .paragraphCommentaireClient {
@@ -64,6 +67,7 @@
     .layoutCommentaireClient {
         padding:0 50px ;
         text-align: justify;
+        
     }
 
     .layoutDetailProjet {

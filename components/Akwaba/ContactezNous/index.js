@@ -133,7 +133,7 @@ function FormContact() {
   );
 }
 
-export default function ContatezNous({ children }) {
+export default function ContatezNous({ children, contactMessage }) {
   const imgFacebookContactezNous = "/assets/imgFacebookContactezNous.png";
   const imgInstagramContactezNous = "/assets/imgInstagramContactezNous.png";
   const imgLinkedInContactezNous = "/assets/imgLinkedInContactezNous.png";
@@ -280,10 +280,10 @@ export default function ContatezNous({ children }) {
           variants={animTitre}
           className={styleContactezNous.contactez_nous_title}
         >
-          Prenez rendez-vous !!!
+          Prenez rendez-vous !
         </motion.h1>
         <motion.p variants={animP}>
-          N’hésitez pas à nous contacter pour vous <br></br>démarquez des autres
+          {contactMessage}
         </motion.p>
         <motion.div variants={animReseau} className={styleContactezNous.reseau}>
           <div style={styleReseau}>

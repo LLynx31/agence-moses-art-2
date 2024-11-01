@@ -60,3 +60,20 @@
     scale: 1.1;
 } 
 
+@media screen and (max-width: 640px) { 
+    .layoutCommentaireClient {
+        padding:0 50px ;
+        text-align: justify;
+    }
+
+    .layoutDetailProjet {
+        padding: 0 50px;
+        text-align: justify;
+    }
+
+    
+.layoutContact {
+    display: flex;
+    flex-direction: column;
+}
+}

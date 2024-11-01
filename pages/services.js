@@ -161,7 +161,7 @@ function CTA_Service(){
       }
 
       const dataCTA = await response.json()
-      console.log(dataCTA)
+      //console.log(dataCTA)
       setDataCTA(dataCTA)
     } catch (error) {
       

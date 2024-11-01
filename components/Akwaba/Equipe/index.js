@@ -1,33 +1,22 @@
 import React, { useEffect, useState } from "react";
-import { Swiper, SwiperSlide } from "swiper/react";
 import Image from "next/image";
-import "swiper/css";
-import "swiper/css/effect-coverflow";
-import "swiper/css/pagination";
-import "swiper/css/navigation";
+import Slider from "react-slick";
 import { baseUrl } from "@/config/config";
-
-import {
-  EffectCoverflow,
-  Pagination,
-  Navigation,
-  Autoplay,
-} from "swiper/modules";
-
+import "slick-carousel/slick/slick.css";
+import "slick-carousel/slick/slick-theme.css";
 import { motion } from "framer-motion";
 import ImageLoader from "@/components/loading/ImageLoader";
 import { useMediaQuery } from 'react-responsive';
 
 function Profil({ imgSrc, alt, loading }) {
   return (
-    <div className="layout-profil">
-      <Image
+    <div style={{width:'100%'}}>
+      <img
+        style={{width:'100%'}}
         loading="lazy"
         src={baseUrl + imgSrc}
         alt={alt}
-        width={400}
-        height={500}
-      ></Image>
+      ></img>
     </div>
   );
 }
@@ -52,66 +41,54 @@ function CarouselEquipe() {
       console.log(error);
     }
   }
-  return (
-    <Swiper
-      effect={"coverflow"}
-      grabCursor={true}
-      centeredSlides={true}
-      loop={true}
-      slidesPerView={isMobile ? 1 : "auto"}
-      coverflowEffect={{
-        rotate: 0,
-        stretch: 0,
-        depth: 100,
-        modifier: 2.5,
-      }}
-      autoplay={{
-        delay: isMobile ? 4000 : 2000,
-        disableOnInteraction: true,
-      }}
-      speed={800}
-      transitionEffect="fade"
-      pagination={{ el: ".swiper-pagination", clickable: true }}
-      navigation={{
-        nextEl: ".swiper-button-next",
-        prevEl: ".swiper-button-prev",
-        clickable: true,
-      }}
-      modules={[EffectCoverflow, Pagination, Navigation, Autoplay]}
-      className="swiper_container"
-      onInit={(swiper) => {
-        if (isMobile) {
-          swiper.autoplay.start();
-        }
-      }}
-    >
-      {isEquipes ? (
-        isEquipes.map((equipe) => (
-          <SwiperSlide key={equipe.id}>
-            <Profil
-              imgSrc={equipe.attributes.Personnel.data.attributes.url}
-              alt={equipe.attributes.Personnel.data.attributes.name}
-              loading="lazy"
-            ></Profil>
-          </SwiperSlide>
-        ))
-      ) : (
-        <SwiperSlide>
-          <ImageLoader></ImageLoader>
-        </SwiperSlide>
-      )}
 
-      <div className="slider-controler">
-        <div className="swiper-button-prev slider-arrow">
-          <ion-icon name="arrow-back-outline"></ion-icon>
-        </div>
-        <div className="swiper-button-next slider-arrow">
-          <ion-icon name="arrow-forward-outline"></ion-icon>
-        </div>
-        <div className="swiper-pagination"></div>
-      </div>
-    </Swiper>
-  );
+  const settings = {
+    className: "center",
+    centerMode: true,
+    speed: 500,
+    slidesToShow: 3,
+    dots: true,
+    centerPadding: "0px",
+    infinite: true,
+    autoplay: true,
+    slidesToScroll: 1,
+    pauseOnHover: false,
+    responsive: [
+      {
+        breakpoint: 1024,
+        settings: {
+          slidesToShow: 3,
+        }
+      },
+      {
+        breakpoint: 600,
+        settings: {
+          slidesToShow: 2,
+          initialSlide: 2
+        }
+      },
+      {
+        breakpoint: 480,
+        settings: {
+          slidesToShow: 1,
+        }
+      }
+    ]
+  };
+
+
+  return <div style={{padding:"50px"}}>
+    <Slider {...settings}> {isEquipes && isEquipes.map((equipe) => (
+      <Profil
+        key={equipe.id}
+        imgSrc={equipe.attributes.Personnel.data.attributes.url}
+        alt={equipe.attributes.Personnel.data.attributes.name}
+        loading="lazy"
+      ></Profil>
+  ))} </Slider>
+  </div>
+      
+       
 }
 
 export default function Equipe() {

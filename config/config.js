@@ -1,1 +1,1 @@
-export const baseUrl = "https:///admin.agencemosesart.com";
+export const baseUrl = "https://admin.agencemosesart.com";

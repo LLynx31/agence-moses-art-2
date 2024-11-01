@@ -78,21 +78,14 @@ function Banner() {
       className={styleStudio.Banner}
     >
       <div className={styleStudio.Banner_title}>
-        <motion.div
-          initial={{ opacity: 0, y: 20 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.3, delay: 1.2 }}
-        >
-          <span style={{ color: "#F6AA06" }}>
-            Studio<br></br>
-          </span>
-        </motion.div>
+     
         <motion.div
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.3, delay: 1.8 }}
+        style={{ textAlign: 'left', paddingRight: '500px', textShadow: '1px 1px 4px #000000' }}
         >
-          Bientot disponible
+          Réserver <br></br> votre séance <br></br> chez nous !
         </motion.div>
       </div>
     </div>

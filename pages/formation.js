@@ -82,18 +82,10 @@ function Banner() {
         <motion.div
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.3, delay: 1.2 }}
-        >
-          <span style={{ color: "#F6AA06" }}>
-            Formation<br></br>
-          </span>
-        </motion.div>
-        <motion.div
-          initial={{ opacity: 0, y: 20 }}
-          animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.3, delay: 1.8 }}
+          style={{ textAlign: 'left' , paddingRight : '400px'}}
         >
-          Bientot disponible
+         Formez-vous<br></br>  en communication <br></br> chez nous !
         </motion.div>
       </div>
     </div>

@@ -14,6 +14,7 @@ import SectionActualite from "@/components/Akwaba/Actualite/Actualite";
 import SectionApproche from "@/components/Akwaba/Approche";
 import stylePresentation from "@/styles/Presentation/Presentation.module.css";
 
+
 function App() {
   return (
     <div className="contain">
@@ -117,7 +118,8 @@ function App() {
 
       <NosPartenaire></NosPartenaire>
 
-      <ContactezNous></ContactezNous>
+      <ContactezNous contactMessage=' N’hésitez pas à nous contacter pour vous démarquez des autres
+'></ContactezNous>
 
       <Footer></Footer>
     </div>

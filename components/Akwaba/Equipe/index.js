@@ -1,5 +1,4 @@
 import React, { useEffect, useState } from "react";
-import Image from "next/image";
 import Slider from "react-slick";
 import { baseUrl } from "@/config/config";
 import "slick-carousel/slick/slick.css";
@@ -23,7 +22,6 @@ function Profil({ imgSrc, alt, loading }) {
 
 function CarouselEquipe() {
   const [isEquipes, setEquipes] = useState(null);
-  const isMobile = useMediaQuery({ query: '(max-width: 768px)' });
 
   useEffect(() => {
     getData();

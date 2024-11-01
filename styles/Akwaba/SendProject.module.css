@@ -4,7 +4,6 @@
     justify-content: center;
     align-items: center;
     width: 100%;
-    background-image: url("/assets/site version web/banières_nos_service_2 .jpg");
     background-repeat: no-repeat;
     background-size: cover;
     height: 500px;
@@ -80,7 +79,7 @@ line-height: normal;
         background-image: url("/assets/version_mobile/vous avez un projet.jpg");
         background-repeat: no-repeat;
         background-size: contain;
-        margin-top: 0px;
+        margin-top: 20px;
         margin-bottom: 0px;
         padding-left: 0px;
     }

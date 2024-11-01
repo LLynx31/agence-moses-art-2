@@ -131,6 +131,47 @@ export function Banner() {
   );
 }
 
+function CTA_Service(){
+  const [isDataCTA, setDataCTA] = useState(null)
+  const [windowWidth, setWindowWidth] = useState(0);
+
+  useEffect(() => {
+    if (typeof window !== "undefined") {
+      setWindowWidth(window.innerWidth);
+
+      const handleResize = () => {
+        setWindowWidth(window.innerWidth);
+      };
+
+      window.addEventListener("resize", handleResize);
+      return () => window.removeEventListener("resize", handleResize);
+    }
+  }, []);
+
+  useEffect(()=>{
+    getDataCTA()
+  },[])
+
+  async function getDataCTA(){
+    try {
+      const response  =  await fetch( baseUrl +"/api/cta-servive?populate=*" )
+      if(!response.ok){
+        const error  =  await response.json()
+        throw error
+      }
+
+      const dataCTA = await response.json()
+      console.log(dataCTA)
+      setDataCTA(dataCTA)
+    } catch (error) {
+      
+    }
+    
+  }
+
+  return isDataCTA ? <SendProject titre={isDataCTA.data.attributes.Titre} image={windowWidth > 640 ? isDataCTA.data.attributes.Arriere_plan.data.attributes.url : isDataCTA.data.attributes.Arriere_plan_mobile.data.attributes.url} textSipmle={isDataCTA.data.attributes.text_simple}></SendProject> : <BannerLoader></BannerLoader>  
+}
+
 function SectionService() {
   const dataService = [
     {
@@ -521,7 +562,7 @@ export default function Service() {
           <Banner></Banner>
         </motion.div>
         <SectionService></SectionService>
-        <SendProject></SendProject>
+       <CTA_Service></CTA_Service> 
         <Footer></Footer>
       </motion.div>
     </>

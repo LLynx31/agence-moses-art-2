@@ -1,6 +1,6 @@
 .conteneur {
         position: fixed;
-        width: 100%;
+        width: 100vw;
         top: 0;
         left: 0;
         background-color: transparent;

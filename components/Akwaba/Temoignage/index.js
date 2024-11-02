@@ -7,6 +7,10 @@ import { useEffect, useState } from "react";
 import { baseUrl } from "@/config/config";
 import ImageLoader from "@/components/loading/ImageLoader";
 import ReactMarkdown from "react-markdown";
+import "slick-carousel/slick/slick.css";
+import "slick-carousel/slick/slick-theme.css";
+import Slider from "react-slick";
+
 
 function TemoignageClient({ text, name, groupe }) {
   const illustrationTemoignage = "assets/illustrationTemoignage.svg";
@@ -50,34 +54,35 @@ function CarouselTemoignage() {
     }
   }
 
-  return (
-    <Carousel
-      className="caroussel"
-      autoPlay={true}
-      autoFocus={true}
-      infiniteLoop={true}
-      showArrows={true}
-      showThumbs={false}
-      showStatus={false}
-      interval={8000}
-      transitionTime={3000}
-    >
-      {isTemoignages ? (
-        isTemoignages.map((temoignage) => (
-          <TemoignageClient
-            key={temoignage.id}
-            text={temoignage.attributes.Message}
-            name={temoignage.attributes.Nom_Prenoms}
-            groupe={temoignage.attributes.Entreprise}
-          ></TemoignageClient>
-        ))
-      ) : (
-        <div className={styleTemoignage.layout_temoignage_loader}>
-          <ImageLoader></ImageLoader>
+  const settings = {
+    className: "center",
+    centerMode: true,
+    speed: 2000,
+    autoplaySpeed: 5000,
+    slidesToShow: 1,
+    dots: true,
+    centerPadding: "0px",
+    infinite: true,
+    autoplay: true,
+    slidesToScroll: 1,
+    pauseOnHover: false,
+  };
+
+  return <div style={{padding:"50px"}}>
+          {isTemoignages ? <Slider {...settings}>{
+            isTemoignages.map((temoignage) => 
+              <TemoignageClient
+                key={temoignage.id}
+                text={temoignage.attributes.Message}
+                name={temoignage.attributes.Nom_Prenoms}
+                groupe={temoignage.attributes.Entreprise}
+              ></TemoignageClient>)}</Slider>: 
+            <div className={styleTemoignage.layout_temoignage_loader}>
+              <ImageLoader></ImageLoader>
+            </div>}
         </div>
-      )}
-    </Carousel>
-  );
+
+  
 }
 
 function Description() {

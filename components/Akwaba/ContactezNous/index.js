@@ -3,9 +3,9 @@ import Image from "next/image";
 import { motion } from "framer-motion";
 import { useEffect, useState } from "react";
 import { baseUrl } from "@/config/config";
+import ImageLoader from "@/components/loading/ImageLoader";
 
 function FormContact() {
-  const illustrationFormulaire = "/assets/Image_formulaire/formulaire_.jpg";
 
   const [isFullName, setFullname] = useState("");
   const [isEmail, setEmail] = useState("");
@@ -13,19 +13,28 @@ function FormContact() {
   const [isSecteur, setSecteur] = useState("");
   const [isMessage, setMessage] = useState("");
 
+  const [isImage, setImage] = useState(null)
+
   useEffect(() => {
-    console.log(
-      isFullName +
-        " " +
-        isEmail +
-        " " +
-        isTelephone +
-        " " +
-        isSecteur +
-        " " +
-        isMessage
-    );
-  });
+    ImageFormuakire()
+  },[])
+
+  async function ImageFormuakire(){
+    try {
+      const response  =  await fetch( baseUrl +"/api/image-formulaire?populate=*" )
+      if(!response.ok){
+        const error  =  await response.json()
+        throw error
+      }
+
+      const data = await response.json()
+      //console.log(baseUrl + data.data.attributes.Image.data.attributes.url)
+      setImage(baseUrl + data.data.attributes.Image.data.attributes.url)
+    } catch (error) {
+      console.log(error)
+    }
+    
+  }
 
   const handleSubmit = async (e) => {
     e.preventDefault();
@@ -62,15 +71,15 @@ function FormContact() {
 
   return (
     <form className={styleContactezNous.formulaire} onSubmit={handleSubmit}>
-      <Image
+      {isImage ? <Image
         loading="lazy"
-        src={illustrationFormulaire}
+        src={isImage}
         width={450}
         height={500}
         quality={100}
         className={styleContactezNous.illustrationFormulaire}
         alt="femme qui sourit"
-      ></Image>
+      ></Image> :<ImageLoader></ImageLoader> }
 
       <div className={styleContactezNous.champ}>
         <input

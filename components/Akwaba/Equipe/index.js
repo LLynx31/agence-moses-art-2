@@ -141,6 +141,7 @@ export default function Equipe() {
         viewport={{ once: true }}
         whileInView={{ opacity: 1, y: 0, transition: { duration: 0.3 } }}
         className="introduction"
+        style={{fontSize : '23px', paddingBottom : '10px'}}
       >
         Rencontrez nos experts
       </motion.div>

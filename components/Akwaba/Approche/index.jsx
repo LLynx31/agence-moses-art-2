@@ -34,7 +34,7 @@ export default function SectionApproche() {
         viewport={{ once: true }}
         whileInView={{ opacity: 1, y: 0, transition: { duration: 0.3 } }}
         style={{
-          fontFamily: "montserrat",
+          fontFamily: "AsgardTrial,Montserrat",
           textAlign: "center",
           marginTop: "60px",
           fontSize: "40px",

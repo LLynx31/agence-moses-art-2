@@ -33,7 +33,7 @@ function DivService({ img, imgAlt, titre, link, children }) {
   };
 
   return (
-    <Link href={link} style={{ textDecoration: "none" }}>
+    <Link href={link}  style={{ textDecoration: "none" }}>
       <div className={stylesService.service}>
         <motion.div
           variants={animImg}
@@ -101,6 +101,7 @@ export default function Service() {
       whileInView="visible"
       viewport={{ once: true }}
       className={stylesService.layout_services}
+      
     >
       <motion.div variants={animDivService}>
         <DivService

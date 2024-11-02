@@ -255,7 +255,9 @@ function SectionDescription() {
             whileInView="visible"
             viewport={{ once: true }}
             className={stylePresentation.section_description_role}
+            style={{fontFamily: 'AsgardTrial'}}
           >
+            
             NOUS CONCEVONS,CREONS DES STARTEGIES DE COMMUNICATION ADAPTEES.
           </motion.h1>
           <motion.div
@@ -588,7 +590,9 @@ function SectionService() {
       viewport={{ once: true }}
       className={stylePresentation.section_service}
     >
-      <h1 className={stylePresentation.section_service_title}>
+      <h1 className={stylePresentation.section_service_title} style={{fontFamily : 'AsgardTrial,Montserrat',
+        fontSize : '40px'
+      }}>
         Nos <span>Services</span>
       </h1>
       <div className="section_service_service">

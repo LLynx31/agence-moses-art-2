@@ -47,6 +47,10 @@ function App() {
         viewport={{ once: true }}
         whileInView={{ opacity: 1, y: 0, transition: { duration: 0.3 } }}
         className={stylePresentation.section_service_title}
+        style={{
+          fontFamily: "AsgardTrial,Montserrat",
+          fontSize: "40px",
+        }}
       >
         Nos <span>Services</span>
       </motion.h1>
@@ -118,8 +122,13 @@ function App() {
 
       <NosPartenaire></NosPartenaire>
 
-      <ContactezNous contactMessage=' N’hésitez pas à nous contacter pour vous démarquez des autres
-'></ContactezNous>
+      <ContactezNous contactMessage={
+        <>
+        {'N’hésitez pas à nous contacter pour vous '} <br/>
+        {'démarquez des autres'}
+        </>
+      } 
+></ContactezNous>
 
       <Footer></Footer>
     </div>

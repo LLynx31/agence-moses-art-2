@@ -1,9 +1,20 @@
+/* Ajout de la police AsgardTrial-WideBold */
+@font-face {
+  font-family: 'AsgardTrial';
+  src: url('../public/assets/polices/AsgardTrial-WideRegular.ttf') format('truetype');
+  font-style: normal;
+}
+h1 {
+  font-family: 'AsgardTrial', sans-serif; /* Utilisation de la police AsgardTrial */
+}
+
 * {
   box-sizing: border-box;
 }
 
 body {
   margin: auto;
+  scroll-behavior: smooth;
 }
 
 .carousel-item {

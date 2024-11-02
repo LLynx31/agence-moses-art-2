@@ -87,6 +87,12 @@ export default function SectionActualite() {
         viewport={{ once: true }}
         whileInView={{ opacity: 1, y: 0, transition: { duration: 0.3 } }}
         className={style.section_titre}
+        style={{
+          fontFamily: "AsgardTrial,Montserrat",
+          textAlign: "center",
+          marginTop: "60px",
+          fontSize: "40px",
+        }}
       >
         Nos <span>Actualités</span>
       </motion.h1>

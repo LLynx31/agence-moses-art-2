@@ -12,7 +12,7 @@ export default function Footer(){
     const instagram = '/assets/InstagramFooter.svg'
     const linkedin = '/assets/LinkedInFooter.svg'
     return(
-        <div className={styleFooter.layout_footer}>
+        <div className={styleFooter.layout_footer} style={{backgroundColor:'white'}}>
             <div className={styleFooter.layout_info}>
                 <Image loading='lazy' className={styleFooter.logo} alt="Moses Agence Moses" width={230} height={100} src={logo}></Image >
                 <div className={styleFooter.contact}>

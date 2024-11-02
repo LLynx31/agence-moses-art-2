@@ -304,8 +304,13 @@ export default function Temoignage() {
           width={100}
           height={100}
         ></motion.img>
-        <div className={styleTemoignage.introduction}>Nos Partenaires</div>
-        <h1 className={styleTemoignage.titre_section}>
+        <div style={{fontSize : '23px'}} className={styleTemoignage.introduction}>Nos Partenaires</div>
+        <h1 className={styleTemoignage.titre_section}  style={{
+          fontFamily: "AsgardTrial, Montserrat",
+          textAlign: "center",
+          marginTop: "",
+          fontSize: "40px",
+        }}>
           Ce Qu’ils Pensent <br></br> De Nous
         </h1>
       </div>

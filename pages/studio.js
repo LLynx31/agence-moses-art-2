@@ -194,9 +194,14 @@ export default function Studio() {
         <ProgressBar></ProgressBar>
         <Banner></Banner>
         {/*<SectionProjet></SectionProjet>*/}
-        <ContatezNous></ContatezNous>
+        <ContatezNous contactMessage={
+          <>
+            {'Reserver une séance studio en remplissant '}
+            <br />
+            {' le formulaire !'}
+          </>
+        }></ContatezNous>
         {/*<SectionRealisation></SectionRealisation>*/}
-        <SectionContact></SectionContact>
         <Footer></Footer>
       </motion.div>
     </>

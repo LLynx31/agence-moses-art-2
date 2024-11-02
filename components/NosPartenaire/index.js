@@ -78,7 +78,12 @@ export default function NosPartenaire() {
       viewport={{ once: true }}
       className={stylesPatrenaire.layout_nos_partenaire}
     >
-      <h1 className={stylesPatrenaire.nos_partenaire_title}>
+      <h1 className={stylesPatrenaire.nos_partenaire_title}  style={{
+          fontFamily: "AsgardTrial,Montserrat",
+          textAlign: "center",
+          marginTop: "60px",
+          fontSize: "40px",
+        }}>
         Ils nous font confiance{" "}
       </h1>
 

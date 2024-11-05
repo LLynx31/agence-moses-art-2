@@ -60,26 +60,6 @@ export default function Marketing() {
 
       <div className={style.sectionLayout}>
         <Zoom triggerOnce cascade damping={0.1}>
-          <div
-            className={style.blockLayout}
-            style={{ backgroundColor: "#FFC403" }}
-          >
-            <h1 className={style.titleBlock}>Analyse des besoins</h1>
-            <p className={style.paragraphe}>
-              L'organisation d'un événement implique de nombreux détails
-              logistiques tels que la réservation de lieux, la coordination des
-              horaires, la gestion des fournisseurs, la logistique du transport,
-              etc.
-            </p>
-          </div>
-          <div className={style.layoutIcone}>
-            <Image
-              style={{ margin: "auto" }}
-              width={150}
-              height={150}
-              src={"/assets/IconeService/1907643.png"}
-            ></Image>
-          </div>
           <div className={style.layoutIcone}>
             <Image
               style={{ margin: "auto" }}

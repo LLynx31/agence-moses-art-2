@@ -139,10 +139,10 @@ export default function SectionProjet() {
         width={50}
         height={50}
       ></motion.img>
-      <motion.div variants={animQuiz} className={styleProjet.quiz}>
+      <motion.div variants={animQuiz} style={{textAlign: 'center'}} className={styleProjet.quiz}>
         QU’EST CE QUE NOUS FAISONS ?
       </motion.div>
-      <motion.h1 variants={animTitre} className={styleProjet.section_title}>
+      <motion.h1 variants={animTitre} style={{textAlign: 'center'}}  className={styleProjet.section_title}>
         Nos Projets Récents
       </motion.h1>
 

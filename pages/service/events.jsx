@@ -63,7 +63,7 @@ export default function Marketing() {
       <Zoom triggerOnce cascade damping={0.1}>
         <div
           className={style.blockLayout}
-          style={{ backgroundColor: "#FFC403", padding: '10px' }}
+          style={{ backgroundColor: "#FFC403"}}
         >
           <h1 className={style.titleBlock}>Expertise</h1>
           <p className={style.paragraphe}>
@@ -90,7 +90,7 @@ export default function Marketing() {
         </div>
         <div
           className={style.blockLayout}
-          style={{ backgroundColor: "#076965", color: "white", padding: '10px' }}
+          style={{ backgroundColor: "#076965", color: "white" }}
         >
           <h1 className={style.titleBlock}>Gain de temps et energie</h1>
           <p className={style.paragraphe}>
@@ -103,7 +103,7 @@ export default function Marketing() {
         </div>
         <div
           className={style.blockLayout}
-          style={{ backgroundColor: "#FFC403", padding: '10px' }}
+          style={{ backgroundColor: "#FFC403" }}
         >
           <h1 className={style.titleBlock}>Gestion du budget</h1>
           <p className={style.paragraphe}>
@@ -130,7 +130,7 @@ export default function Marketing() {
         </div>
         <div
           className={style.blockLayout}
-          style={{ backgroundColor: "#076965", color: "white", padding: '10px' }}
+          style={{ backgroundColor: "#076965", color: "white" }}
         >
           <h1 className={style.titleBlock}>Créativité et innovation</h1>
           <p className={style.paragraphe}>
@@ -143,7 +143,7 @@ export default function Marketing() {
         </div>
         <div
           className={style.blockLayout}
-          style={{ backgroundColor: "#FFC403", padding: '10px' }}
+          style={{ backgroundColor: "#FFC403" }}
         >
           <h1 className={style.titleBlock}>Gestion logistique</h1>
           <p className={style.paragraphe}>

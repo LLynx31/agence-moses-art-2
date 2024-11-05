@@ -59,7 +59,7 @@ export default function Marketing() {
         <Zoom triggerOnce cascade damping={0.1}>
           <div
             className={style.blockLayout}
-            style={{ backgroundColor: "#FFC403", padding: "20px", textAlign: "center" }}
+            style={{ backgroundColor: "#FFC403" }}
           >
             <h1 className={style.titleBlock} style={{ fontSize: "1.5rem" }}>Créaticité et expertise</h1>
             <p className={style.paragraphe} style={{ fontSize: "1rem" }}>

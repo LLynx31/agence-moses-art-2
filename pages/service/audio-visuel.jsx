@@ -5,7 +5,7 @@ import ProgressBar from "@/components/ProgressBar";
 import style from "@/styles/Marketing.module.css";
 import ContatezNous from "@/components/Akwaba/ContactezNous";
 import Image from "next/image";
-import { Fade,Zoom } from "react-awesome-reveal";
+import { Fade, Zoom } from "react-awesome-reveal";
 import { useEffect, useState } from "react";
 import { baseUrl } from "@/config/config";
 import BannerLoader from "@/components/loading/BannerLoader";
@@ -44,7 +44,7 @@ export default function page() {
       <Header headerColor="black" service scroll={"black"}></Header>
       <ProgressBar></ProgressBar>
       <Fade triggerOnce>
-        {isBanner? <div
+        {isBanner ? <div
           style={{
             backgroundImage:
               `url(${baseUrl + isBanner})`,
@@ -54,27 +54,10 @@ export default function page() {
         ></div> : <BannerLoader></BannerLoader>}
       </Fade>
 
-      
-        <div className={style.sectionLayout}>
+
+      <div className={style.sectionLayout}>
         <Zoom triggerOnce cascade damping={0.1}>
-          <div
-            className={style.blockLayout}
-            style={{ backgroundColor: "#FFC403", padding: '20px', textAlign: 'center' }}
-          >
-            <h1 className={style.titleBlock}>Stratégie de communication</h1>
-            <p className={style.paragraphe}>
-              Nous développons une stratégie globale de communication qui aligne
-              tous les canaux de communication de l&apos;entreprise pour
-              atteindre vos objectifs.
-            </p>
-          </div>
-          <div className={style.layoutIcone}>
-            <Image style={{margin:"auto"}}
-              width={100}
-              height={100}
-              src={"/assets/IconeService/1446546.png"}
-            ></Image>
-          </div>
+       
           <div className={style.layoutIcone}>
             <Image
               width={100}
@@ -170,9 +153,9 @@ export default function page() {
               créatifs.
             </p>
           </div>
-          </Zoom>
-        </div>
-     
+        </Zoom>
+      </div>
+
 
       <ContatezNous></ContatezNous>
 

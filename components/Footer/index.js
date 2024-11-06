@@ -30,7 +30,7 @@ export default function Footer(){
                 </div>
 
                 <div className={styleFooter.suivez_nous}>
-                    <h1 className={styleFooter.title}>reseau</h1>
+                    <h1 className={styleFooter.title}>reseaux</h1>
                     <div style={styleLine}><Image loading='lazy' fill alt="reseau" src={lineFooter} ></Image ></div>
                     <div className='reseau'>
                         <div style={styleReseau}><a href=''><Image loading='lazy' fill alt="facebook" className='facebook' src={facebook}  ></Image></a></div>

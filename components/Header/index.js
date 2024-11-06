@@ -46,7 +46,7 @@ export default function Header({akwaba = false, presentation = false, service = 
         const menu = '/assets/Group181.svg'
         const closeMenu = '/assets/Group182.svg'
     return (
-        <motion.div layout className={isOpen ? stylesHeader.conteneurOpen : stylesHeader.conteneur }>
+        <motion.div layout className={isOpen ? stylesHeader.conteneurOpen : stylesHeader.conteneur } style={{ overflowX: 'hidden' }}>
             <div ref={scopes} className={isOpen ? stylesHeader.layoutHearderOpen : stylesHeader.layoutHearder} style={styleHeader}>
                 <Image loading='lazy' className={stylesHeader.logo} alt="Agence Moses Art" src={logoagence} width={160} height={50} />
                 <nav className={isOpen ? stylesHeader.navOpen :stylesHeader.nav }>

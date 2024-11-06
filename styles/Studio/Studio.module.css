@@ -162,29 +162,32 @@
     height: 300px;
     margin-bottom: 50px;
     background-size: contain;
+    display: flex;
+    align-items: center;
+    justify-content: center;
   }
 
   .Banner_title {
-    margin-top: 60px;
+    margin-top: 0;
     padding-top: 0;
-    margin-left: 10px;
-    font-size: 30px;
-    padding-left: 10px;
-    font-weight: 700;
+    margin-left: 0;
+    font-size: 24px;
+    padding-left: 0;
   }
 
   .Banner span {
-    font-size: 30px;
+    font-size: 24px;
   }
 
   .layout_section_projet {
-    width: 310px;
+    width: 100%;
     margin: auto;
-    grid-template-columns: 310px;
+    grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
   }
 
   .img_projet {
-    background-size: 310px 450px;
-    width: 290px;
+    background-size: cover;
+    width: 100%;
+    max-width: 290px;
   }
 }

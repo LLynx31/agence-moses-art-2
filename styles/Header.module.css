@@ -5,6 +5,7 @@
         left: 0;
         background-color: transparent;
         z-index: 4;
+        overflow-x: hidden;
 }
 
 .logo {
@@ -19,6 +20,7 @@
     left: 0;
     background-color: transparent;
     z-index: 4;
+    padding: 0 10px;
 }
 
 
@@ -168,6 +170,7 @@
 
     .conteneur{
         background-color: black;
+        overflow-x: hidden;
     }
 
     .toogle_menu, .toogle_menu_close {
@@ -179,7 +182,7 @@
     }
 
     .logo {
-        margin-left: 20px;
+        margin-left: 10px;
     }
 }
 

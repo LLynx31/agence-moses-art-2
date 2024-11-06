@@ -65,15 +65,7 @@ function App() {
         }}
       ></div>
       <SectionApproche></SectionApproche>
-      <div
-        style={{
-          height: 50,
-          backgroundColor: "#FFFFFF",
-          width: "100%",
-          margin: "0px 0px 100px 0px",
-          opacity: 0.5,
-        }}
-      ></div>
+ 
       <Projet></Projet>
       <div
         style={{

@@ -223,28 +223,15 @@ function SectionDescription() {
           src={illustrationDescriptionVert}
           className={stylePresentation.illustrationDescriptionVert}
         ></motion.img>
-        <h1 className={stylePresentation.section_description_title}>
+        <div style={{display:'block', alignItems:'center', justifyContent:'center', padding:'0 70px', margin:'0'}}>
+        <h1 style={{fontSize:'38px', fontFamily:'AsgardTrial', textAlign:'center'}} className={stylePresentation.section_description_title}>
           Qui sommes nous ?
         </h1>
-        <motion.div
-          style={{ width: "75%", textAlign: "center" }}
-          variants={animP}
-        >
-          {isDescription1 ? (
-            <p>{isDescription1}</p>
-          ) : (
-            <div
-              style={{
-                width: "100%",
-                display: "flex",
-                justifyContent: "center",
-                alignItems: "center",
-              }}
-            >
-              <TextLoader lineCount={3}></TextLoader>
-            </div>
-          )}
-        </motion.div>
+        <p style={{lineHeight: '1.7',fontWeight:'regular',fontSize:'20px'}}>L'AGENCE MOSES ART est une agence de communication 360 créée en 2019 à Abidjan en Côte d'Ivoire. Elle accompagne ses clients dans le développement de leur image de marque en couvrant à la fois la création et la diffusion des campagnes de communication et marketing sur l'ensemble des supports indispensables à la prise de contact avec les cibles. Cela prend en compte les canaux online et offline globale.Nous aidons les Petites, Moyennes et Grandes entreprises à mieux se faire connaitre et à résoudre l'ensemble de leurs besoins et problématiques de communication.</p>
+
+        </div>
+      
+      
       </div>
 
       <div className={stylePresentation.layout_section_description_role}>

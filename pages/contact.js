@@ -5,11 +5,11 @@ import styleContact from "../styles/Contact/Contact.module.css"
 import Image from "next/image"
 import Link from "next/link"
 import ContatezNous from "../components/Akwaba/ContactezNous"
-import { motion } from "framer-motion"
+import { color, motion } from "framer-motion"
 
 
 
-function Info({srcImage,altImage, text}) {
+function Info({srcImage,altImage, text,detail}) {
     const Parent = {
         animate:{
             y:[0,-100, 0],
@@ -36,6 +36,9 @@ function Info({srcImage,altImage, text}) {
         <motion.div variants={Parent} whileInView="animate" className={styleContact.layout_info}>
             <motion.div className={styleContact.div_Image_info}><motion.div variants={enfant} animate="animate" ><Image loading="lazy" alt="illustration" src={srcImage} width={50} height={50}></Image></motion.div></motion.div> 
             <div className={styleContact.text_info}>{text}</div>
+            <div style={{fontSize:'17px', fontWeight:'regular', color:'#5C5C5D', textAlign:'center'}} className={styleContact.text_info}>{detail}</div>
+
+            
         </motion.div>
     )
 }
@@ -94,19 +97,18 @@ export default function Contact() {
             </Head>
             <Header contact={true} headerColor="black" scroll={'black'}></Header>
             <div className={styleContact.contain}>
-                <section className={styleContact.section_contact}>
+                <section style={{marginBottom:'2px'}} className={styleContact.section_contact}>
                     <motion.div className={styleContact.section_conatct_text}>
-                        <motion.h1 initial={{opacity:0,x:-100}} whileInView={{opacity:1, x: 0}} transition={{delay:0.2, duration:0.3}}  viewport={{once:true}}  className={styleContact.section_title}>Contact</motion.h1>
+                        <motion.h1 initial={{opacity:0,x:-100}} whileInView={{opacity:1, x: 0}} transition={{delay:0.2, duration:0.3}}  viewport={{once:true}} style={{fontFamily:'AsgardTrial', padding:'0'}}  className={styleContact.section_title}>Contact</motion.h1>
 
-                        <motion.h2 initial={{opacity:0,x:-100}} animate={{opacity:1, x: 0,scale:1.06, rotate:[0,30,0]}} transition={{delay:0.6, duration:1.3}}  className={styleContact.contact_title}>N’hésité Pas. <br></br>Contactez Nous !</motion.h2>
-                        <motion.p initial={{opacity:0,x:-100}} whileInView={{opacity:1, x: 0}} transition={{delay:1, duration:0.3}}  viewport={{once:true}} >Si vous souhaitez en savoir plus sur Triple, ou si vous pensez qu’un partenariat de longue date pourrait aider votre entreprise, écrivez-nous! Nous serions ravis de parler.</motion.p>
+                        <motion.h2 initial={{opacity:0,x:-100}} animate={{opacity:1, x: 0,scale:1.06, rotate:[0,30,0]}} transition={{delay:0.6, duration:1.3}} style={{fontFamily:'AsgardTrial', padding:'0'}}  className={styleContact.contact_title}>Prenez contact avec nous !</motion.h2>
+                        <motion.p initial={{opacity:0,x:-100}} whileInView={{opacity:1, x: 0}} transition={{delay:1, duration:0.3}}  viewport={{once:true}} style={{lineHeight: '1.8', margin: '10px 0'}} >Découvrez comment nous pouvons vous aider à atteindre vos objectifs. Nous sommes impatients de discuter de vos projets et de vos ambitions.</motion.p>
                         <motion.div  initial={{opacity:0}} animate={{opacity:1}} whileInView={{scale:[1,1.1,1], transition:{delay:1.4, duration:0.6, repeat:Infinity, repeatDelay:5}}} transition={{delay:1.4, duration:0.3}} className={styleContact.layout_link_contact}>
                             <Link className={styleContact.link_contact_img} href ='#formContact'><Image loading="lazy" alt="homme au telephone" src={illustartionEmail} width={30} height={30}></Image></Link> 
                             <Link href ='#formContact' className={styleContact.link_contact_text}>Ecrivez nous</Link> 
                         </motion.div>
 
-                        <motion.h2 initial={{opacity:0,x:-100}} whileInView={{opacity:1, x: 0}} transition={{delay:1.8, duration:0.3}} viewport={{once:true}}  className={styleContact.lieu_title}>Où<br></br> nous trouver ?</motion.h2>
-                        <motion.p initial={{opacity:0,x:-100}} whileInView={{opacity:1, x: 0}} transition={{delay:2.2, duration:0.3}}>Vous pouvez nous trouver dans nos locaux a Abidjan , Koumassi Pour un tete.</motion.p>
+                        <motion.h2 initial={{opacity:0,x:-100}} whileInView={{opacity:1, x: 0}} transition={{delay:1.8, duration:0.3}} viewport={{once:true}} style={{fontFamily:'AsgardTrial', padding:'0', fontSize:'40px'}} >Où<br></br> nous trouver ?</motion.h2>
                     </motion.div>
 
                     <motion.div initial={{opacity:0, y:300}} whileInView={{opacity:1, y:0}} transition={{delay:1.8, duration:0.6}} viewport={{once:true}}  className={styleContact.section_contact_illustration}>
@@ -125,10 +127,12 @@ export default function Contact() {
                 <section className={styleContact.section_info}>
                 <Image loading="lazy" alt="illustration" src={ellipse} className={styleContact.ellipse1} width={320} height={320}></Image>
                 <Image loading="lazy" alt="illustration" src={ellipse} className={styleContact.ellipse2} width={420} height={320}></Image>
-                <motion.div animate = {{x: [0, 10,0,-10,0],y: [0, 10, 0, -10, 0],opacity: [8,9,10],transition: {repeat: Infinity,duration: 20}}}><Image loading="lazy" alt="illustration" src={ellipse} className={styleContact.ellipse3} width={320} height={320}></Image></motion.div>
-                        <Info srcImage={imgEmail} text={'Email'} altImage={'logo Email'}></Info>
-                        <Info srcImage={imgTelephone} text={'Telephone'} altImage={'logo telephone'}></Info>
-                        <Info srcImage={imgLocalisation} text={'localisation'} altImage={'logo localisation'}></Info>
+                <motion.div animate = {{x: [0, 10,0,-10,0],y: [0, 10, 0, -10, 0],opacity: [8,9,10,10],transition: {repeat: Infinity,duration: 20}}}><Image loading="lazy" alt="illustration" src={ellipse} className={styleContact.ellipse3} width={320} height={320}></Image></motion.div>
+                        <Info srcImage={imgEmail} text={'Email'} altImage={'logo Email'} detail={<><span style={{display: 'yes',textTransform:'lowercase'}}>mosesart00@gmail.com</span> <br/><span style={{display:'none'}}>aa</span></>}></Info>
+                        <Info srcImage={imgTelephone} text={'Telephone'} altImage={'logo telephone'} detail= <>{'+225 27 21 52 35 70'}<br style={{marginBottom: '0px'}}/>{'+225 07 87 44 40 29'}
+                        </>></Info>
+                        <Info srcImage={imgLocalisation} text={'localisation'} altImage={'logo localisation'} detail= <>{'Abidjan koumassi, Bd'}<br/>{'camp commando'}
+                        </> ></Info>
                 </section>
             </div>
             

@@ -57,10 +57,10 @@ function CarouselTemoignage() {
   const settings = {
     className: "center",
     centerMode: true,
-    speed: 2000,
-    autoplaySpeed: 5000,
+    speed: 3000,
+    autoplaySpeed: 8000,
     slidesToShow: 1,
-    dots: true,
+    dots: false,
     centerPadding: "0px",
     infinite: true,
     autoplay: true,
@@ -68,7 +68,7 @@ function CarouselTemoignage() {
     pauseOnHover: false,
   };
 
-  return <div style={{padding:"50px"}}>
+  return <div style={{padding:"50px", paddingBottom :'90px' }}>
           {isTemoignages ? <Slider {...settings}>{
             isTemoignages.map((temoignage) => 
               <TemoignageClient
@@ -186,7 +186,7 @@ function Description() {
       viewport={{ once: true }}
       className={styleTemoignage.layout_description}
     >
-      <div className={styleTemoignage.layout_left}>
+      <div style={{paddingTop:'60px'}} className={styleTemoignage.layout_left}>
         <motion.h1
           variants={animTitre}
           className={styleTemoignage.description_title}
@@ -209,7 +209,7 @@ function Description() {
           Rapprochez vous
         </motion.button>
       </div>
-      <div className={styleTemoignage.layout_right}>
+      <div style={{paddingTop:'60px'}} className={styleTemoignage.layout_right}>
         <Image
           loading="lazy"
           alt="illustration"
@@ -319,7 +319,7 @@ export default function Temoignage() {
           Ce Qu’ils Pensent <br></br> De Nous
         </h1>
       </div>
-      <div className={styleTemoignage.layout_temoignage}>
+      <div className={styleTemoignage.layout_temoignage} style={{paddingBottom : '80px'}}>
         <h1 className={styleTemoignage.temoignage_title}>
           <span className={styleTemoignage.span}>Témoignages</span>
           <br></br>de nos clients

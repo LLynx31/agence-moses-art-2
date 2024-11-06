@@ -36,10 +36,10 @@ function App() {
       <div
         style={{
           height: 50,
-          backgroundColor: "#FFFFFF",
+          backgroundColor: "transparent",
           width: "100%",
-          margin: "150px 0px 100px 0px",
-          opacity: 0.5,
+          margin: "15px 0px 100px 0px",
+          opacity: 0,
         }}
       ></div>
       <motion.h1
@@ -58,10 +58,10 @@ function App() {
       <div
         style={{
           height: 50,
-          backgroundColor: "#FFFFFF",
+          backgroundColor: "transparent",
           width: "100%",
-          margin: "100px 0px 0px",
-          opacity: 0.5,
+          margin: "15px 0px 0px",
+          opacity: 0,
         }}
       ></div>
       <SectionApproche></SectionApproche>
@@ -78,20 +78,20 @@ function App() {
       <div
         style={{
           height: 50,
-          backgroundColor: "#FFFFFF",
+          backgroundColor: "transparent",
           width: "100%",
-          margin: "100px 0px",
-          opacity: 0.5,
+          margin: "20px 0px",
+          opacity: 0,
         }}
       ></div>
       <Equipe></Equipe>
       <div
         style={{
           height: 50,
-          backgroundColor: "#FFFFFF",
+          backgroundColor: "transparent",
           width: "100%",
-          margin: "50px 0px",
-          opacity: 0.5,
+          margin: "15px 0px",
+          opacity: 0,
         }}
       ></div>
 
@@ -100,11 +100,11 @@ function App() {
       <div
         style={{
           height: 50,
-          backgroundColor: "#FFFFFF",
+          backgroundColor: "transparent",
           width: "100%",
           marginBottom: "50px",
-          marginTop: "120px",
-          opacity: 0.5,
+          marginTop: "80px",
+          opacity: 0,
         }}
       ></div>
 
@@ -115,8 +115,8 @@ function App() {
           height: 50,
           backgroundColor: "#FFFFFF",
           width: "100%",
-          margin: "100px 0px",
-          opacity: 0.5,
+          margin: "70px 0px",
+          opacity: 0,
         }}
       ></div>
 

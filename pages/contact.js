@@ -36,9 +36,7 @@ function Info({srcImage,altImage, text,detail}) {
         <motion.div variants={Parent} whileInView="animate" className={styleContact.layout_info}>
             <motion.div className={styleContact.div_Image_info}><motion.div variants={enfant} animate="animate" ><Image loading="lazy" alt="illustration" src={srcImage} width={50} height={50}></Image></motion.div></motion.div> 
             <div className={styleContact.text_info}>{text}</div>
-            <div style={{fontSize:'17px', fontWeight:'regular', color:'#5C5C5D', textAlign:'center'}} className={styleContact.text_info}>{detail}</div>
-
-            
+            <div style={{fontSize:'15px', fontWeight:'regular', color:'#5C5C5D', textAlign:'center'}} className={styleContact.text_detail}>{detail}</div>     
         </motion.div>
     )
 }
@@ -72,7 +70,6 @@ export default function Contact() {
             }
         }
     }
-    
     
     const animContactText = {
         hidden:  {
@@ -131,7 +128,7 @@ export default function Contact() {
                         <Info srcImage={imgEmail} text={'Email'} altImage={'logo Email'} detail={<><span style={{display: 'yes',textTransform:'lowercase'}}>mosesart00@gmail.com</span> <br/><span style={{display:'none'}}>aa</span></>}></Info>
                         <Info srcImage={imgTelephone} text={'Telephone'} altImage={'logo telephone'} detail= <>{'+225 27 21 52 35 70'}<br style={{marginBottom: '0px'}}/>{'+225 07 87 44 40 29'}
                         </>></Info>
-                        <Info srcImage={imgLocalisation} text={'localisation'} altImage={'logo localisation'} detail= <>{'Abidjan koumassi, Bd'}<br/>{'camp commando'}
+                        <Info srcImage={imgLocalisation} text={'localisation'} altImage={'logo localisation'} detail= <>{'Abidjan koumassi,'}<br/>{'Bd camp commando'}
                         </> ></Info>
                 </section>
             </div>

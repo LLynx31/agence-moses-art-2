@@ -122,9 +122,9 @@ export default function Service() {
           alt={"logo publicité"}
           titre={"Publicité"}
         >
-          Nous develeppons des pubs dans le but d’influencer le consommateur
+          Nous développons des pubs dans le but d’influencer le consommateur
           vis-à-vis de votre marque, votre produit ou de vos services afin d’
-          augmenter votre notoriété, de développer l’image, inciter à l’achat.{" "}
+          augmenter votre notoriété, de développer l’image et d’inciter à l’achat.{" "}
         </DivService>
       </motion.div>
 
@@ -148,8 +148,8 @@ export default function Service() {
           alt={"logo developpement"}
           titre={"Developpement d'appli web et mobile"}
         >
-          Nous concevons des applications web et mobiles sur mésure dans des
-          designs épurés et pour de meilleurs expériences utilisateurs.
+          Nous concevons des applications web et mobiles sur mesure dans des
+          designs épurés et pour de meilleures expériences utilisateurs.
         </DivService>
       </motion.div>
 
@@ -177,7 +177,7 @@ export default function Service() {
         >
           {" "}
           Nous sommes des intégrateurs de technologies numériques dans les
-          processus commerciaux/sociaux, dans le but de les améliorer et de
+          processus commerciaux et sociaux, dans le but de les améliorer et de
           faire performer les entreprises.
         </DivService>
       </motion.div>
@@ -189,9 +189,9 @@ export default function Service() {
           alt={"logo visuelle"}
           titre={"Production Audiovisuelle"}
         >
-          Cadrage , montage video , animation 2D et 3D , assistance en
-          réalisation , direction en photographie , pose de voix off , redaction
-          de script , couverture médiatique d’event.
+          Cadrage, montage vidéo, animation 2D et 3D, assistance en
+          réalisation, direction en photographie, pose de voix off, rédaction
+          de script, couverture médiatique d’événements.
         </DivService>
       </motion.div>
 
@@ -202,8 +202,8 @@ export default function Service() {
           alt={"logo evenement"}
           titre={"Events"}
         >
-          De la conception jusqu’a l’implementation de votre évènement en
-          passant par sa promotion sur les canaux online et ofline
+          De la conception jusqu’à l’implémentation de votre événement en
+          passant par sa promotion sur les canaux en ligne et hors ligne.
         </DivService>
       </motion.div>
 
@@ -214,8 +214,8 @@ export default function Service() {
           alt={"logo communication"}
           titre={"Impression sur tout support"}
         >
-          Parce que vos réalisations mérittent d’etre imprimés sur des supports
-          de qualité , nous gérons la production de tout type de support de
+          Parce que vos réalisations méritent d’être imprimées sur des supports
+          de qualité, nous gérons la production de tout type de support de
           communication.
         </DivService>
       </motion.div>

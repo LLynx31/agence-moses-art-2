@@ -1,11 +1,14 @@
 .Banner {
   background-image: url("/assets/site version web/studio.jpg");
+  height: 100vh;
   background-repeat: no-repeat;
   background-size: cover;
-  height: 100vh;
-  padding-top: 75px;
+  z-index: 0;
+  margin-top: 55px;
   display: flex;
+  align-items: center;
   justify-content: center;
+  width: 100%;
 }
 
 .Banner_title {
@@ -18,11 +21,14 @@
   line-height: normal;
   margin-top: 150px;
   letter-spacing: 1.28px;
+  max-width: 90%;
 }
 
 .Banner span {
   font-size: 64px;
   color: #f6aa06;
+  max-width: 90%;
+  text-align: center;
 }
 
 .layoutProjet {
@@ -158,25 +164,29 @@
 
 @media screen and (max-width: 640px) {
   .Banner {
-    margin-top: 75px;
     height: 300px;
-    margin-bottom: 50px;
-    background-size: contain;
+    background-size: cover;
+    background-position: center;
+    overflow: hidden;
+    padding: 0;
     display: flex;
     align-items: center;
     justify-content: center;
+    width: 100%;
   }
 
   .Banner_title {
-    margin-top: 0;
-    padding-top: 0;
-    margin-left: 0;
     font-size: 24px;
-    padding-left: 0;
+    margin: 0;
+    padding: 0 10px;
+    text-align: center;
+    max-width: 90%;
   }
 
   .Banner span {
-    font-size: 24px;
+    font-size: 20px;
+    max-width: 90%;
+    text-align: center;
   }
 
   .layout_section_projet {

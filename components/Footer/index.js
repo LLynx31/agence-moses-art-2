@@ -24,13 +24,13 @@ export default function Footer(){
                 </div>
 
                 <div className={styleFooter.localiation}>
-                    <h1 className={styleFooter.title}>localisation</h1>
+                    <h1 className={styleFooter.title}>Localisation</h1>
                     <div style={styleLine}><Image loading='lazy' fill alt="illustration" src={lineFooter} ></Image ></div>
                     <div className={styleFooter.lieu}>Abidjan, Koumassi</div>
                 </div>
 
                 <div className={styleFooter.suivez_nous}>
-                    <h1 className={styleFooter.title}>reseaux</h1>
+                    <h1 className={styleFooter.title}>Reseaux</h1>
                     <div style={styleLine}><Image loading='lazy' fill alt="reseau" src={lineFooter} ></Image ></div>
                     <div className='reseau'>
                         <div style={styleReseau}><a href=''><Image loading='lazy' fill alt="facebook" className='facebook' src={facebook}  ></Image></a></div>

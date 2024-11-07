@@ -464,7 +464,7 @@
   }
 }
 
-@media screen and (max-width: 768px) {
+@media screen and (max-width: 1024px) {
   .layout_banner_presentation_presentation {
     padding-top: 30vh;
     padding-left: 40px;
@@ -667,7 +667,7 @@
 
   .layout_domaine_competence {
     display: grid;
-    grid-template-columns: 70px 70px 70px;
+    grid-template-columns: repeat(2,1fr);
     column-gap: 40px;
     row-gap: 40px;
     margin-left: 50px;
@@ -700,6 +700,9 @@
     width: 100vw;
     padding: 120px;
   }
+  .realisation_illustration2{
+    display: none;
+  }
 }
 
 @media screen and (max-width: 320px) {
@@ -716,8 +719,11 @@
   }
 }
 
-@media screen and (max-width: 768px) {
+@media screen and (max-width: 1024px) {
   .layout_domaine_competence {
-    grid-template-columns: repeat(3, 1fr); /* Affichage sur trois colonnes */
+    grid-template-columns: repeat(3, 1fr);
+    justify-content: center;
+    align-items: center;
+    overflow-x: hidden; /* Affichage sur trois colonnes */
   }
 }

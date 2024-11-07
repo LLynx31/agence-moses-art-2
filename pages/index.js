@@ -46,10 +46,11 @@ function App() {
         initial={{ opacity: 0, y: 100 }}
         viewport={{ once: true }}
         whileInView={{ opacity: 1, y: 0, transition: { duration: 0.3 } }}
-        className={stylePresentation.section_service_title}
+        className={`${stylePresentation.section_service_title} `}
         style={{
           fontFamily: "AsgardTrial,Montserrat",
           fontSize: "40px",
+          textAlign:'center'
         }}
       >
         Nos <span>Services</span>

@@ -9,6 +9,7 @@ import { baseUrl } from "@/config/config";
 import { useEffect, useState } from "react";
 import BannerLoader from "@/components/loading/BannerLoader";
 
+
 export default function PageProjets() {
   const [isBanner, setBanner] = useState(null);
 

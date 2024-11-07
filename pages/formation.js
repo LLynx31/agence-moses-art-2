@@ -83,7 +83,7 @@ function Banner() {
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.3, delay: 1.8 }}
-          style={{ textAlign: 'left' , paddingRight : '400px'}}
+          style={{ textAlign: 'left' , paddingRight : '400px',  marginLeft: windowWidth <= 1024 ? '280px' : '0'}}
         >
          Formez-vous<br></br>  en communication <br></br> chez nous !
         </motion.div>

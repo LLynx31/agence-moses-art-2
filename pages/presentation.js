@@ -1005,27 +1005,11 @@ export default function Presentation() {
           <BannerLoader></BannerLoader>
         )}
         <SectionDescription></SectionDescription>
-        <div
-          style={{
-            height: 50,
-            backgroundColor: "#FFFFFF",
-            width: "100%",
-            margin: "100px 0px",
-            opacity: 0.5,
-          }}
-        ></div>
+ 
         <SectionPrincipes></SectionPrincipes>
 
         <SectionService></SectionService>
-        <div
-          style={{
-            height: 50,
-            backgroundColor: "#FFFFFF",
-            width: "100%",
-            margin: "100px 0px",
-            opacity: 0.5,
-          }}
-        ></div>
+
         <SectionDomaineCompetence></SectionDomaineCompetence>
 
         <SectionRealisation></SectionRealisation>
@@ -1034,20 +1018,12 @@ export default function Presentation() {
             height: 50,
             backgroundColor: "#FFFFFF",
             width: "100%",
-            margin: "100px 0px",
-            opacity: 0.5,
+            margin: "10px 0px",
+            opacity: 0,
           }}
         ></div>
         <Equipe></Equipe>
-        <div
-          style={{
-            height: 50,
-            backgroundColor: "#FFFFFF",
-            width: "100%",
-            margin: "100px 0px",
-            opacity: 0.5,
-          }}
-        ></div>
+   
         <ContactezNous></ContactezNous>
 
         <Footer></Footer>

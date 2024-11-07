@@ -314,3 +314,43 @@ text-transform: capitalize;
         font-weight: 200;
     }
 }
+
+@media screen and (max-width:1024px) {
+    .section_contact {
+        margin-bottom: 100px;
+        padding-left: 20px;
+    }
+
+    .section_contact_illustration {
+        width: 45%;
+    }
+
+    .section_conatct_text {
+        width: 400px;
+    }
+
+    .section_title {
+        font-size: 36px;
+    }
+
+    .contact_title, .lieu_title {
+        font-size: 32px;
+    }
+
+    .section_contact p {
+        font-size: 16px;
+    }
+
+    .layout_link_contact {
+        width: 200px;
+        padding: 8px 15px;
+    }
+
+    .layout_info {
+        
+        width: 200px;
+        padding: 12px;
+        margin: 9px;
+        
+    }
+}

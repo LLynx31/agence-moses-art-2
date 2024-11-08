@@ -148,7 +148,7 @@ export default function Marketing() {
         </Zoom>
       </div>
 
-      <ContatezNous></ContatezNous>
+      <ContatezNous  title={'Demander un devis'}></ContatezNous>
 
       <Footer></Footer>
     </div>

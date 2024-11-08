@@ -290,7 +290,7 @@ export default function Formation() {
             <motion.div initial={{opacity:0}} animate={{opacity:1}} transition={{duration:3}}><SectionOffre></SectionOffre></motion.div>
             <Equipe></Equipe>
     <SendProject background={{first: '#0F8383', second: '#F6AA06'}}>Nous n`attendons que  <span style={{color: '#F6AA06'}}>Vous</span> </SendProject>*/}
-        <ContactezNous contactMessage={
+        <ContactezNous title={'Prener rendez-vous'} contactMessage={
               <>
               {'N’hésitez pas à nous contacter pour vous '} <br/>
               {'faire former aux metiers du digital'}

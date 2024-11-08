@@ -89,9 +89,8 @@ export default function page() {
           >
             <h1 className={style.titleBlock}>Large diffusion</h1>
             <p className={style.paragraphe}>
-              Nous pouvons également vous aider à diffuser vos contenus sur
-              différentes plateformes, telles que les réseaux sociaux, les sites
-              web, la télévision, etc., pour atteindre un public plus large et
+              Nous pouvons vous aider à diffuser vos contenus sur
+              diverses plateformes pour atteindre un public plus large et
               maximiser l'impact de vos vidéos.
             </p>
           </div>
@@ -114,28 +113,10 @@ export default function page() {
               src={"/assets/IconeService/5062832.png"}
             ></Image>
           </div>
-          <div className={style.layoutIcone}>
-          <Image style={{ margin: "auto", maxWidth: "100%", height: "auto" }}
-              width={100}
-              height={100}
-              src={"/assets/IconeService/1134590.png"}
-            ></Image>
-          </div>
-          <div
-            className={style.blockLayout}
-            style={{ backgroundColor: "#076965", color: "white" }}
-          >
-            <h1 className={style.titleBlock}>Gain de temps et d'efforts</h1>
-            <p className={style.paragraphe}>
-              En confiant la production de vos contenus audiovisuels à notre
-              agence, vous pouvez vous concentrer sur d'autres aspects de votre
-              entreprise, tandis que nous gerons tous les aspects techniques et
-              créatifs.
-            </p>
-          </div>
+          
         </Zoom>
       </div>
-      <ContatezNous></ContatezNous>
+      <ContatezNous  title={'Demander un devis'}></ContatezNous>
       <Footer></Footer>
     </div>
   );

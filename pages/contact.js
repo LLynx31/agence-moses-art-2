@@ -141,7 +141,7 @@ export default function Contact() {
                 <motion.img loading="lazy" whileInView={{x:[0,-300,0]}} transition={{repeat:Infinity, duration:5, repeatDelay:15}} alt="illustration" src={groupe105} className={styleContact.Group105_5} width={100} height={20}></motion.img>
             
                 
-            <div id="formContact"><ContatezNous></ContatezNous></div>
+            <div id="formContact"><ContatezNous title={'Prener rendez-vous'}></ContatezNous></div>
             <div className={styleContact.map}>
                 <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3972.8553089345855!2d-3.963455826470727!3d5.285262194692955!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0xfc1ef5ea512a9f5%3A0xa9fd57d7eb0e72a!2sAgence%20Moses%20Art!5e0!3m2!1sfr!2sci!4v1690559368873!5m2!1sfr!2sci" width="600" height="400" style={{ border: 0 }} allowFullScreen="" loading="lazy" referrerPolicy="no-referrer-when-downgrade"></iframe>
             </div>

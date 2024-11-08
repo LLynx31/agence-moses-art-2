@@ -1024,7 +1024,7 @@ export default function Presentation() {
         ></div>
         <Equipe></Equipe>
 
-        <ContactezNous></ContactezNous>
+        <ContactezNous  title={'Prener rendez-vous'}></ContactezNous>
 
         <Footer></Footer>
       </motion.div>

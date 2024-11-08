@@ -83,7 +83,7 @@ function Banner() {
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.3, delay: 1.8 }}
-          style={{ textAlign: 'left', paddingRight: '500px', textShadow: '1px 1px 4px #000000', marginLeft: windowWidth <= 1024 ? '140px' : '0', marginTop: windowWidth <= 1024 ? '-80px' : '0' }}
+          style={{ textAlign: 'left', paddingRight: '500px', marginLeft: windowWidth <= 1024 ? '140px' : '0', marginTop: windowWidth <= 1024 ? '-80px' : '0' }}
         >
           Réserver <br></br> votre séance <br></br> chez nous !
         </motion.div>
@@ -194,7 +194,7 @@ export default function Studio() {
         <ProgressBar></ProgressBar>
         <Banner></Banner>
         {/*<SectionProjet></SectionProjet>*/}
-        <ContatezNous contactMessage={
+        <ContatezNous  title={'Prener rendez-vous'} contactMessage={
           <>
             {'Reserver une séance studio en remplissant '}
             <br />

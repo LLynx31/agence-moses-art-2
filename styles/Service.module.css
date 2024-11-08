@@ -74,11 +74,14 @@
         display: grid;
         grid-template-columns: 1fr 1fr;
     }
-
+    .div_img {
+        width: 100%;
+    }
     .service {
         margin: auto;
     }
 }
+
 
 @media screen and (max-width: 640px) {
     .layout_services {
@@ -90,4 +93,3 @@
         margin: auto;
     }
 }
-

@@ -44,7 +44,6 @@ export default function Marketing() {
 
       <Header headerColor="black" service scroll={"black"}></Header>
       <ProgressBar></ProgressBar>
-
       <Fade triggerOnce>
         {isBanner ? (
           <div
@@ -57,12 +56,11 @@ export default function Marketing() {
           <BannerLoader></BannerLoader>
         )}
       </Fade>
-
       <div className={style.sectionLayout}>
         <Zoom triggerOnce cascade damping={0.1}>
           <div
             className={style.blockLayout}
-            style={{ backgroundColor: "#FFC403"}}
+            style={{ backgroundColor: "#FFC403" }}
           >
             <h1 className={style.titleBlock}>Stratégie publicitaire</h1>
             <p className={style.paragraphe}>

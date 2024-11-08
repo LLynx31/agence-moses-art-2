@@ -50,6 +50,7 @@ export default function Marketing() {
           <div
             style={{
               backgroundImage: `url(${baseUrl + isBanner})`,
+              backgroundSize :'cover',
             }}
             className={style.layoutBaner}
           ></div>
@@ -64,10 +65,10 @@ export default function Marketing() {
             className={style.blockLayout}
             style={{ backgroundColor: "#FFC403" }}
           >
-            <h1 className={style.titleBlock} style={{ fontSize: "1.5rem" }}>
+            <h1 className={style.titleBlock} >
               Amélioration de l'expertise client
             </h1>
-            <p className={style.paragraphe} style={{ fontSize: "1rem" }}>
+            <p className={style.paragraphe}>
               La digitalisation permet de proposer des services en ligne, de
               faciliter les transactions et d'offrir une expérience client plus
               fluide et personnalisée.
@@ -75,7 +76,6 @@ export default function Marketing() {
           </div>
           <div className={style.layoutIcone}>
             <Image
-              style={{ margin: "auto" }}
               width={100}
               height={100}
               src={"/assets/IconeService/9849590.png"}
@@ -83,7 +83,6 @@ export default function Marketing() {
           </div>
           <div className={style.layoutIcone}>
             <Image
-              style={{ margin: "auto" }}
               width={100}
               height={100}
               src={"/assets/IconeService/1599926.png"}
@@ -117,7 +116,6 @@ export default function Marketing() {
           </div>
           <div className={style.layoutIcone}>
             <Image
-              style={{ margin: "auto" }}
               width={100}
               height={100}
               src={"/assets/IconeService/1521641.png"}
@@ -125,7 +123,6 @@ export default function Marketing() {
           </div>
           <div className={style.layoutIcone}>
             <Image
-              style={{ margin: "auto" }}
               width={100}
               height={100}
               src={"/assets/IconeService/2103533.png"}
@@ -145,7 +142,6 @@ export default function Marketing() {
         </Zoom>
       </div>
       <ContatezNous></ContatezNous>
-
       <Footer></Footer>
     </div>
   );

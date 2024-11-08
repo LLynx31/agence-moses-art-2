@@ -63,8 +63,8 @@ export default function Marketing() {
           <div className={style.layoutIcone}>
             <Image
               style={{ margin: "auto" }}
-              width={150}
-              height={150}
+              width={100}
+              height={100}
               src={"/assets/IconeService/4599811.png"}
             ></Image>
           </div>
@@ -92,16 +92,16 @@ export default function Marketing() {
           <div className={style.layoutIcone}>
             <Image
               style={{ margin: "auto" }}
-              width={150}
-              height={150}
+              width={100}
+              height={100}
               src={"/assets/IconeService/1336494.png"}
             ></Image>
           </div>
           <div className={style.layoutIcone}>
             <Image
               style={{ margin: "auto" }}
-              width={150}
-              height={150}
+              width={100}
+              height={100}
               src={"/assets/IconeService/1541504.png"}
             ></Image>
           </div>
@@ -132,8 +132,8 @@ export default function Marketing() {
           <div className={style.layoutIcone}>
             <Image
               style={{ margin: "auto" }}
-              width={150}
-              height={150}
+              width={100}
+              height={100}
               src={"/assets/IconeService/6822231.png"}
             ></Image>
           </div>

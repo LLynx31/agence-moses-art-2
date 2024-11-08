@@ -40,42 +40,22 @@ export default function page() {
         <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin />
         <title>Agence MOSES ART</title>
       </Head>
-
       <Header headerColor="black" service scroll={"black"}></Header>
       <ProgressBar></ProgressBar>
       <Fade triggerOnce>
-        {isBanner ? <div
+        {isBanner ?
+        ( <div
           style={{
             backgroundImage:
               `url(${baseUrl + isBanner})`,
-            backgroundSize: 'cover',
+              backgroundSize:'cover'
           }}
           className={style.layoutBaner}
-        ></div> : <BannerLoader></BannerLoader>}
+        ></div> ) : (<BannerLoader></BannerLoader> )}
       </Fade>
-
-
       <div className={style.sectionLayout}>
         <Zoom triggerOnce cascade damping={0.1}>
-       
-          <div className={style.layoutIcone}>
-            <Image
-              width={100}
-              height={100}
-              src={"/assets/IconeService/1126453.png"}
-            ></Image>
-          </div>
-          <div
-            className={style.blockLayout}
-            style={{ backgroundColor: "#076965", color: "white" }}
-          >
-            <h1 className={style.titleBlock}>Créativité</h1>
-            <p className={style.paragraphe}>
-              Nous sommes composés de professionnels créatifs qui apportent des
-              idées originales et innovantes à vos projets, en les rendant plus
-              attrayants et mémorables.
-            </p>
-          </div>
+        
           <div
             className={style.blockLayout}
             style={{ backgroundColor: "#FFC403" }}
@@ -91,13 +71,13 @@ export default function page() {
           </div>
           <div className={style.layoutIcone}>
             <Image
-              width={100}
-              height={100}
+              width={80}
+              height={80}
               src={"/assets/IconeService/6351302.png"}
             ></Image>
           </div>
           <div className={style.layoutIcone}>
-            <Image
+          <Image style={{ margin: "auto", maxWidth: "100%", height: "auto" }}
               width={100}
               height={100}
               src={"/assets/IconeService/6386311.png"}
@@ -128,14 +108,14 @@ export default function page() {
             </p>
           </div>
           <div className={style.layoutIcone}>
-            <Image
+          <Image style={{ margin: "auto", maxWidth: "100%", height: "auto" }}
               width={100}
               height={100}
               src={"/assets/IconeService/5062832.png"}
             ></Image>
           </div>
           <div className={style.layoutIcone}>
-            <Image
+          <Image style={{ margin: "auto", maxWidth: "100%", height: "auto" }}
               width={100}
               height={100}
               src={"/assets/IconeService/1134590.png"}
@@ -155,10 +135,7 @@ export default function page() {
           </div>
         </Zoom>
       </div>
-
-
       <ContatezNous></ContatezNous>
-
       <Footer></Footer>
     </div>
   );

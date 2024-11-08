@@ -6,7 +6,6 @@ import style from "@/styles/Marketing.module.css";
 import ContatezNous from "@/components/Akwaba/ContactezNous";
 import Image from "next/image";
 import { Fade, Zoom } from "react-awesome-reveal";
-
 import { useEffect, useState } from "react";
 import { baseUrl } from "@/config/config";
 import BannerLoader from "@/components/loading/BannerLoader";
@@ -51,6 +50,7 @@ export default function Marketing() {
           <div
             style={{
               backgroundImage: `url(${baseUrl + isBanner})`,
+              backgroundSize:'cover'
             }}
             className={style.layoutBaner}
           ></div>
@@ -73,14 +73,14 @@ export default function Marketing() {
             </p>
           </div>
           <div className={style.layoutIcone}>
-            <Image
+          <Image style={{ margin: "auto", maxWidth: "100%", height: "auto" }}
               width={100}
               height={100}
               src={"/assets/IconeService/1446546.png"}
             ></Image>
           </div>
           <div className={style.layoutIcone}>
-            <Image
+          <Image style={{ margin: "auto", maxWidth: "100%", height: "auto" }}
               width={100}
               height={100}
               src={"/assets/IconeService/4298590.png"}
@@ -90,12 +90,11 @@ export default function Marketing() {
             className={style.blockLayout}
             style={{ backgroundColor: "#076965", color: "white" }}
           >
-            <h1 className={style.titleBlock}>Option de personnalisation</h1>
-            <p className={style.paragraphe}>
-              Vous pouvez personnaliser vos supports imprimés selon vos besoins
-              et préférences, que ce soit en termes de design, de taille, de
-              couleur ou de matériau. Cela vous permet de créer des supports
-              uniques et adaptés à votre marque ou événement.
+            <h1 className={style.titleBlock} style={{ fontSize: '1rem' }}>Option de personnalisation</h1>
+            <p className={style.paragraphe} style={{ fontSize: '1rem' }}>
+              Vous pouvez personnaliser vos supports imprimés selon vos besoins,
+              que ce soit en design, taille, couleur ou matériau, pour créer des
+              supports uniques adaptés à votre marque ou événement.
             </p>
           </div>
           <div
@@ -111,7 +110,7 @@ export default function Marketing() {
             </p>
           </div>
           <div className={style.layoutIcone}>
-            <Image
+          <Image style={{ margin: "auto", maxWidth: "100%", height: "auto" }}
               width={100}
               height={100}
               src={"/assets/IconeService/1268053.png"}
@@ -149,7 +148,7 @@ export default function Marketing() {
             </p>
           </div>
           <div className={style.layoutIcone}>
-            <Image
+          <Image style={{ margin: "auto", maxWidth: "100%", height: "auto" }}
               width={100}
               height={100}
               src={"/assets/IconeService/3938366.png"}
@@ -185,7 +184,7 @@ export default function Marketing() {
             </p>
           </div>
           <div className={style.layoutIcone}>
-            <Image
+          <Image style={{ margin: "auto", maxWidth: "100%", height: "auto" }}
               width={100}
               height={100}
               src={"/assets/IconeService/39898.png"}

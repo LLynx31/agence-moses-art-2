@@ -69,18 +69,16 @@ export default function Marketing() {
             </p>
           </div>
           <div className={style.layoutIcone}>
-            <Image
-              style={{ margin: "auto" }}
-              width={150}
-              height={150}
+          <Image style={{ margin: "auto", maxWidth: "100%", height: "auto" }}
+              width={100}
+              height={100}
               src={"/assets/IconeService/1126453.png"}
             ></Image>
           </div>
           <div className={style.layoutIcone}>
-            <Image
-              style={{ margin: "auto" }}
-              width={150}
-              height={150}
+          <Image style={{ margin: "auto", maxWidth: "100%", height: "auto" }}
+              width={100}
+              height={100}
               src={"/assets/IconeService/6351302.png"}
             ></Image>
           </div>
@@ -109,18 +107,16 @@ export default function Marketing() {
             </p>
           </div>
           <div className={style.layoutIcone}>
-            <Image
-              style={{ margin: "auto" }}
-              width={150}
-              height={150}
+          <Image style={{ margin: "auto", maxWidth: "100%", height: "auto" }}
+              width={100}
+              height={100}
               src={"/assets/IconeService/1892654.png"}
             ></Image>
           </div>
           <div className={style.layoutIcone}>
             <Image
-              style={{ margin: "auto" }}
-              width={150}
-              height={150}
+              width={100}
+              height={100}
               src={"/assets/IconeService/1134590.png"}
             ></Image>
           </div>
@@ -148,10 +144,9 @@ export default function Marketing() {
             </p>
           </div>
           <div className={style.layoutIcone}>
-            <Image
-              style={{ margin: "auto" }}
-              width={150}
-              height={150}
+          <Image style={{ margin: "auto", maxWidth: "100%", height: "auto" }}
+              width={100}
+              height={100}
               src={"/assets/IconeService/5398428.png"}
             ></Image>
           </div>

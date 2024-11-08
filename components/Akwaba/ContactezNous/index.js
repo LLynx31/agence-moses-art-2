@@ -289,7 +289,7 @@ export default function ContatezNous({ children, contactMessage }) {
           variants={animTitre}
           className={styleContactezNous.contactez_nous_title}
         >
-          Prenez rendez-vous !
+          Prenez rendez-vous 
         </motion.h1>
         <motion.p variants={animP}>
           {contactMessage}

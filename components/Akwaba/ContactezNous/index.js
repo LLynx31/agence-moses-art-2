@@ -346,30 +346,7 @@ export default function ContatezNous({ children, contactMessage }) {
       </motion.div>
 
       <div className={styleContactezNous.rs}>
-        <div className={styleContactezNous.title_rs}>suivez nous</div>
-        <div className={styleContactezNous.img_rs}>
-          <Image
-            loading="lazy"
-            alt="illustration"
-            src={imgInstagramContactezNous}
-            width={25}
-            height={25}
-          ></Image>
-          <Image
-            loading="lazy"
-            alt="illustration"
-            src={imgFacebookContactezNous}
-            width={25}
-            height={25}
-          ></Image>
-          <Image
-            loading="lazy"
-            alt="illustration"
-            src={imgLinkedInContactezNous}
-            width={25}
-            height={25}
-          ></Image>
-        </div>
+       
       </div>
     </motion.div>
   );

@@ -1,7 +1,7 @@
 .layout_footer {
     display: flex;
     flex-direction: column;
-    margin-top: 60px;
+    margin-top: 5px;
     background: rgba(15, 131, 131, 0.03);
     width:100%
 }

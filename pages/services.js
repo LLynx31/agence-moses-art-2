@@ -296,12 +296,14 @@ function SectionService() {
       <motion.h1
         variants={animIllustration}
         className={styleServcie.section_service_title}
+        style = {{fontFamily:'AsgardTrial',fontSize:'40px'}}
       >
         Nos <span>Services</span>
       </motion.h1>
       <motion.p
         variants={animIllustration}
         className={styleServcie.section_service_description}
+        style={{paddingBottom:'30px'}}
       >
         Découvrez l`ensemble de nos services
       </motion.p>

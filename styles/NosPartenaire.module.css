@@ -1,19 +1,18 @@
 .layoutPartenaire {
     display: grid;
     grid-template-columns: repeat(6,90px);
-    gap: 15px;
+    gap: 40px;
     width: -moz-fit-content;
     width: fit-content;
-    margin: auto;
-    margin-top: 20px;
-    margin-bottom: 20px;
+    margin:  auto;
+    margin-bottom: 10px;
 }
 
 .layout_nos_partenaire {
     display: flex;
     flex-direction: column;
     align-items: center;
-    margin-top: 100px;
+    margin-top: 50px;
     margin-bottom: 100px;
     background-color: #FFFFFF
 }
@@ -27,6 +26,10 @@
     font-weight: 800;
     text-transform: uppercase;
     line-height: normal;
+}
+.logo{
+    width: 110px;
+    height: 110px;
 }
 
 @media screen and (max-width:1024px) {

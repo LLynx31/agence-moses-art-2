@@ -488,9 +488,7 @@ function SectionPrincipes() {
             <Image
               alt="illustration"
               loading="lazy"
-              src={
-                baseUrl + isPrincipe1.data.attributes.Image.data.attributes.url
-              }
+              src={isPrincipe1.data?.attributes?.Image?.data?.attributes?.url}
               width={350}
               height={350}
               quality={100}
@@ -537,9 +535,7 @@ function SectionPrincipes() {
               className={stylePresentation.principe_img_2}
               width={500}
               height={500}
-              src={
-                baseUrl + isPrincipe2.data.attributes.Image.data.attributes.url
-              }
+              src={isPrincipe2.data?.attributes?.Image?.data?.attributes?.url}
             ></Image>
           ) : (
             <div style={{ marginLeft: 20 }}>

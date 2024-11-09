@@ -103,15 +103,7 @@ function App() {
 
       <SectionActualite></SectionActualite>
 
-      <div
-        style={{
-          height: 50,
-          backgroundColor: "#FFFFFF",
-          width: "100%",
-          margin: "70px 0px",
-          opacity: 0,
-        }}
-      ></div>
+ 
 
       <NosPartenaire></NosPartenaire>
 

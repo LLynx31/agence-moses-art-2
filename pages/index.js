@@ -53,7 +53,7 @@ function App() {
           textAlign:'center'
         }}
       >
-        Nos <span>Services</span>
+        <span style={{ display: 'block' }}>Nos</span> <span>Services</span>
       </motion.h1>
       <Service></Service>
       <div

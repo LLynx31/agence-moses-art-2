@@ -139,7 +139,14 @@ export default function SectionProjet() {
         width={50}
         height={50}
       ></motion.img>
-      <motion.div variants={animQuiz}  style={{textAlign:'center', fontFamily:'Montserrat'}} >
+      <motion.div 
+        variants={animQuiz}  
+        style={{ 
+          textAlign: 'center', 
+          fontFamily: 'Montserrat', 
+          paddingTop: window.innerWidth < 640 ? '30px' : '0' // Ajout d'un padding top pour mobile
+        }} 
+      >
         QU’EST CE QUE NOUS FAISONS ?
       </motion.div>
       <motion.h1 variants={animTitre} style={{textAlign:'center', fontSize:'40px'}} >

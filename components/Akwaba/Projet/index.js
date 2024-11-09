@@ -144,7 +144,7 @@ export default function SectionProjet() {
         style={{ 
           textAlign: 'center', 
           fontFamily: 'Montserrat', 
-          paddingTop: window.innerWidth < 640 ? '30px' : '0' // Ajout d'un padding top pour mobile
+          paddingTop: typeof window !== 'undefined' && window.innerWidth < 640 ? '30px' : '0' // Vérification si 'window' est défini
         }} 
       >
         QU’EST CE QUE NOUS FAISONS ?

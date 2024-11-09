@@ -55,8 +55,8 @@ export default function Header({akwaba = false, presentation = false, service = 
                         <li ref={ presentation ? scopes_1 : null} className={isOpen ? stylesHeader.liOpen : stylesHeader.li}><Link className={stylesHeader.link} href="/presentation" style={presentation ? stylePageActif : stylePageInactif}>Presentation</Link></li>
                         <li ref={ service ? scopes_1 : null} className={isOpen ? stylesHeader.liOpen : stylesHeader.li}><Link className={stylesHeader.link} href="/services" style={service ? stylePageActif : stylePageInactif}>Services</Link></li>
                         <li ref={ projet ? scopes_1 : null} className={isOpen ? stylesHeader.liOpen : stylesHeader.li}><Link className={stylesHeader.link} href="/projets" style={projet ? stylePageActif : stylePageInactif}>Projets</Link></li>
-                        <li ref={ formation ? scopes_1 : null} className={isOpen ? stylesHeader.liOpen : stylesHeader.li}><Link className={stylesHeader.link} href="/formation" style={formation ? stylePageActif : stylePageInactif}>Formation</Link></li>
-                        <li ref={ studio ? scopes_1 : null} className={isOpen ? stylesHeader.liOpen : stylesHeader.li}><Link className={stylesHeader.link} href="/studio" style={studio ? stylePageActif : stylePageInactif}>Studio</Link></li>
+                        {/* <li ref={ formation ? scopes_1 : null} className={isOpen ? stylesHeader.liOpen : stylesHeader.li}><Link className={stylesHeader.link} href="/formation" style={formation ? stylePageActif : stylePageInactif}>Formation</Link></li> */}
+                        {/* <li ref={ studio ? scopes_1 : null} className={isOpen ? stylesHeader.liOpen : stylesHeader.li}><Link className={stylesHeader.link} href="/studio" style={studio ? stylePageActif : stylePageInactif}>Studio</Link></li> */}
                         <li ref={ contact ? scopes_1 : null} className={isOpen ? stylesHeader.liOpen : stylesHeader.li}><Link className={stylesHeader.link} href="/contact" style={contact ? stylePageActif : stylePageInactif}>Contact</Link></li>
                         
                         

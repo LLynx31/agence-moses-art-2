@@ -21,7 +21,7 @@ function Projet({ titre, arriereplan,id }) {
 
 export default function SectionProjet() {
   const [isProjets, setProjets] = useState(null);
-  const [visibleCount, setVisibleCount] = useState(8); // Nombre de projets visibles initialement
+  const [visibleCount, setVisibleCount] = useState(4); // Nombre de projets visibles initialement
 
   useEffect(() => {
     getProjets();

@@ -107,10 +107,10 @@ function App() {
 
       <NosPartenaire></NosPartenaire>
 
-      <ContactezNous title={'Prener rendez-vous'} contactMessage={
+      <ContactezNous title={'Prenez rendez-vous'} contactMessage={
         <>
-        {'N’hésitez pas à nous contacter pour vous '} <br/>
-        {'démarquez des autres'}
+        {"Contactez nous aujourd'hui pour "} <br/>
+        {'concrétiser votre idée de projet'}
         </>
       } 
 ></ContactezNous>

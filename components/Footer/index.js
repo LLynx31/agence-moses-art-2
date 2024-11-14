@@ -33,9 +33,9 @@ export default function Footer(){
                     <h1 className={styleFooter.title}>Reseaux</h1>
                     <div style={styleLine}><Image loading='lazy' fill alt="reseau" src={lineFooter} ></Image ></div>
                     <div className='reseau'>
-                        <div style={styleReseau}><a href=''><Image loading='lazy' fill alt="facebook" className='facebook' src={facebook}  ></Image></a></div>
-                        <div style={styleReseau}><a href=''><Image loading='lazy' fill alt="instagram" className='instagram' src={instagram}></Image></a></div>
-                        <div style={styleReseau}><a href=''><Image loading='lazy' fill alt="linkedin" className='linkedin' src={linkedin} ></Image></a></div>
+                        <div style={styleReseau}><a href='https://www.facebook.com/Mosesartinfo '><Image loading='lazy' fill alt="facebook" className='facebook' src={facebook}  ></Image></a></div>
+                        <div style={styleReseau}><a href='https://www.instagram.com/agencemosesart/profilecard/?igsh=MXB6MHVhazl5Y2t1ag=='><Image loading='lazy' fill alt="instagram" className='instagram' src={instagram}></Image></a></div>
+                        <div style={styleReseau}><a href='https://www.linkedin.com/company/groupe-moses-art/'><Image loading='lazy' fill alt="linkedin" className='linkedin' src={linkedin} ></Image></a></div>
                     </div>
                 </div>
             </div>

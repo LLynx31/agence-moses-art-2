@@ -296,7 +296,7 @@ export default function ContatezNous({ children, contactMessage, title }) {
         </motion.p>
         <motion.div variants={animReseau} className={styleContactezNous.reseau}>
           <div style={styleReseau}>
-            <a href="">
+            <a href="https://www.facebook.com/Mosesartinfo ">
               <Image
                 loading="lazy"
                 fill
@@ -307,7 +307,7 @@ export default function ContatezNous({ children, contactMessage, title }) {
             </a>
           </div>
           <div style={styleReseau}>
-            <a href="">
+            <a href="https://www.instagram.com/agencemosesart/profilecard/?igsh=MXB6MHVhazl5Y2t1ag==">
               <Image
                 loading="lazy"
                 fill
@@ -318,7 +318,7 @@ export default function ContatezNous({ children, contactMessage, title }) {
             </a>
           </div>
           <div style={styleReseau}>
-            <a href="">
+            <a href="https://www.linkedin.com/company/groupe-moses-art/">
               <Image
                 loading="lazy"
                 fill
@@ -329,8 +329,8 @@ export default function ContatezNous({ children, contactMessage, title }) {
             </a>
           </div>
           <div style={styleReseau}>
-            <a href="">
-              <Image
+          <a href="mailto:mosesart00@gmail.com"> 
+          <Image
                 loading="lazy"
                 fill
                 alt="Email"

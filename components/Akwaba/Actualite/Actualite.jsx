@@ -20,7 +20,8 @@ function Actualité({ img, imgAlt, children }) {
           color: "black",
           width: 300,
           margin: "auto",
-          textAlign: "justify",
+          fontFamily:'Montserrat',
+          
         }}
       >
         {children}

@@ -3,11 +3,11 @@ import Head from "next/head";
 import { motion } from "framer-motion";
 import styleBanner from "@/styles/Marketing.module.css";
 import { Fade } from "react-awesome-reveal";
-import Projet from "../components/Akwaba/Projet";
 import Footer from "@/components/Footer";
 import { baseUrl } from "@/config/config";
 import { useEffect, useState } from "react";
 import BannerLoader from "@/components/loading/BannerLoader";
+import Projet from '@/components/Projet'
 
 
 export default function PageProjets() {

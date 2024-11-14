@@ -1,4 +1,4 @@
-import styleProjet from "../../../styles/Akwaba/Projet.module.css";
+import styleProjet from "../../styles/Akwaba/Projet.module.css";
 import { motion } from "framer-motion";
 import { useState, useEffect } from "react";
 import { baseUrl } from "@/config/config";
@@ -21,7 +21,6 @@ function Projet({ titre, arriereplan,id }) {
 
 export default function SectionProjet() {
   const [isProjets, setProjets] = useState(null);
-  const [visibleCount, setVisibleCount] = useState(8); // Nombre de projets visibles initialement
 
   useEffect(() => {
     getProjets();
@@ -156,7 +155,7 @@ export default function SectionProjet() {
 
       <motion.div variants={animProjetLR} className={styleProjet.projet_range1}>
         {isProjets ? (
-          isProjets.slice(0, visibleCount).map((projet) => (
+          isProjets.map((projet) => (
             <Projet id={projet.id} key={projet.attributes.Banniere_Projet.data?.attributes.url} titre={projet.attributes.Titre} arriereplan={projet.attributes.Banniere_Projet.data?.attributes.url}></Projet>
           ))
         ) : (
@@ -168,17 +167,6 @@ export default function SectionProjet() {
           </>
         )}
       </motion.div>
-      {isProjets && visibleCount < isProjets.length && ( // Vérifie s'il y a plus de projets à afficher
-                     <Link href="/projets" style={{ textDecoration: 'none', textAlign: 'center' ,fontSize:'15px', fontFamily:'Montserrat',color:'black'}}>
-
-         <button style={{ cursor:'pointer',textDecoration: 'none', height: '50px', width: '130px',  }}>
-            <Link href="/projets" style={{ textDecoration: 'none', textAlign: 'center' ,fontSize:'15px', fontFamily:'Montserrat',color:'black'}}>
-              Voir plus
-            </Link>
-          </button>
-                      </Link>
-
-      )}
     </motion.div>
   );
 }

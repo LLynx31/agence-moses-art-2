@@ -93,7 +93,7 @@ export default function NosPartenaire() {
             <motion.div key={partenaire.id} variants={animPartenaire}>
               <Partenaire
                 imgPartenaire={
-                  partenaire.attributes.Logo_Partenaire.data.attributes.url
+                  partenaire.attributes?.Logo_Partenaire?.data?.attributes?.url || partenaire.attributes?.Logo_Partenaire?.data?.attributes?.fallbackUrl
                 }
               ></Partenaire>
             </motion.div>
